@@ -31,7 +31,14 @@ h1, h2, h3, h4, h5 {
 }
 
 .block-2 {
+	background: #f6f6f6;
+}
 
+.block-2 h1 {
+  font-size: 32px;
+  color: rgb(122, 122, 122);
+  text-align: center;
+  text-shadow: 1.5px 2.598px 0px rgba(252, 252, 252, 0.392);
 }
 
 .block-2 .list-col2 {
@@ -41,9 +48,16 @@ h1, h2, h3, h4, h5 {
 
 .block-2 .list-col2 h1 {
 	font-size: 22px;
-	color: #807022;
 	line-height: 19px;
 	padding: 0 0 0 99px;
+}
+
+.block-2 .left h1 {
+	color: #807022;
+}
+
+.block-2 .right h1 {
+	color: #4a7940;
 }
 
 .block-2 .list-col2 div.row {
@@ -61,4 +75,14 @@ h1, h2, h3, h4, h5 {
 	padding: 0 0 0 10px;
 	display: table-cell;
 	vertical-align: middle;
+}
+
+.block-2 .left div.row p {
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(128, 112, 34);
+}
+
+.block-2 .right div.row p {
+	color: #4a7940
 }
