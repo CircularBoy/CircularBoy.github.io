@@ -1,36 +1,56 @@
 $(document).ready(function() {
 
-  $('header .enter').click(function() {
-    $('div.modal').fadeIn(function() {
-      $('div.enter', this).fadeIn();
-    });
+	$('nav.top ul li').click(function() {
+		$('nav.top ul li').removeClass("active");
+		$(this).addClass("active");
+	});
+
+	$('header button').click(function() {
+    $('div.shadow').fadeIn(300);
   });
 
-  $('.img .comm').click(function() {
-    $('div.modal').fadeIn(function() {
-      $('div.comments', this).fadeIn();
-    });
+  $('div.shadow, div.shadow div.cancel').click(function() {
+    $('div.shadow').fadeOut(300);
   });
 
-  $('div.modal div').click(function() {
+  $('div.shadow form').click(function(e) {
+    e.stopPropagation();
+  });
+
+  $('form input[type=submit]').click(function() {
+    i=0;
+
+    if ($('form input[name=name]').val()) {
+      name = $('form input[name=name]').val();
+      $('form input[name=name]').css({ borderColor: '#EEE'});
+    } else {
+      $('form input[name=name]').css({ borderColor: '#FC8787'});
+      i++;
+    }
+
+    if ($('form input[name=phone]').val()) {
+      phone = $('form input[name=phone]').val();
+      $('form input[name=phone]').css({ borderColor: '#EEE'});
+    } else {
+      $('form input[name=phone]').css({ borderColor: '#FC8787'});
+      i++;
+    }
+
+    if (i) {
+      return false;
+    }
+
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: "name="+name+"&phone="+phone,
+      success: function(html) {
+        $('div.shadow').fadeOut(300);
+      }
+    });
     return false;
   });
 
-  $('div.modal').click(function() {
-    $(this).fadeOut(function() {
-      $('div.modal > div').hide();
-    });
-  });
-
-  $('div.modal .close').click(function() {
-    $('div.modal').click();
-  });
-
-  $(function() {
-    $('#menu').slicknav({
-      label: '',
-      prependTo: 'nav',
-    });
-  });
-
 });
+
+ 
