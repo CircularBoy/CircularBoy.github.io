@@ -5,17 +5,7 @@ $(document).ready(function() {
 		$(this).addClass("active");
 	});
 
-	$('header button').click(function() {
-    $('div.shadow').fadeIn(300);
-  });
 
-  $('div.shadow, div.shadow div.cancel').click(function() {
-    $('div.shadow').fadeOut(300);
-  });
-
-  $('div.shadow form').click(function(e) {
-    e.stopPropagation();
-  });
 
   $('form input[type=submit]').click(function() {
     i=0;
@@ -27,6 +17,7 @@ $(document).ready(function() {
       $('form input[name=name]').css({ borderColor: '#FC8787'});
       i++;
     }
+
 
     if ($('form input[name=phone]').val()) {
       phone = $('form input[name=phone]').val();
@@ -46,10 +37,24 @@ $(document).ready(function() {
       data: "name="+name+"&phone="+phone,
       success: function(html) {
         $('div.shadow').fadeOut(300);
+        alert(1)
       }
     });
     return false;
   });
+
+  	$('header button').click(function() {
+    $('div.shadow').fadeIn(300);
+  });
+
+  $('div.shadow, div.shadow div.cancel').click(function() {
+    $('div.shadow').fadeOut(300);
+  });
+
+  $('div.shadow form').click(function(e) {
+    e.stopPropagation();
+  });
+
 
 });
 
