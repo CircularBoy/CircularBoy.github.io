@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-	$('nav.top ul li').click(function() {
+	$('nav.top ul li a').click(function() {
 		$('nav.top ul li').removeClass("active");
-		$(this).addClass("active");
+		$(this).parent().addClass("active");
 	});
 
 
