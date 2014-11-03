@@ -5,7 +5,14 @@ $(document).ready(function() {
 		$(this).parent().addClass("active");
 	});
 
+	$('.block-1 div.sofa').mousemove(function(e) {
+		relX = e.pageX - $(this).offset().left
+		onePer = $(this).width()/100
+		elemWidth = Math.round(relX/onePer)
 
+		$('div:nth-child(2)', this).width(elemWidth+'%')
+		$('div:nth-child(3)', this).css('left', elemWidth+'%')
+	})	
 
   $('form input[type=submit]').click(function() {
     i=0;
