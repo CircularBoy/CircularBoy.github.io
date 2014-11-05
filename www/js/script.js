@@ -12,11 +12,11 @@ $(document).ready(function() {
 
 		$('div:nth-child(2)', this).width(elemWidth+'%')
 		$('div:nth-child(3)', this).css('left', elemWidth+'%')
-	})
- alert(1);
+	});
+
 	$('.block-1 div.sofa div:nth-child(3) img').mousemove(function() {
 		return false;
-	}
+	});
 
   $('form input[type=submit]').click(function() {
     i=0;
