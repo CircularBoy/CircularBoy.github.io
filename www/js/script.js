@@ -8,14 +8,13 @@ $(document).ready(function() {
 	$('.block-1 div.sofa').mousemove(function(e) {
 		relX = e.pageX - $(this).offset().left
 		onePer = $(this).width()/100
-		elemWidth = Math.round(relX/onePer)
+		elemWidth = (relX/onePer)
 
-		$('div:nth-child(2)', this).width(elemWidth+'%')
-		$('div:nth-child(3)', this).css('left', elemWidth+'%')
-	});
-
-	$('.block-1 div.sofa div:nth-child(3) img').mousemove(function() {
-		return false;
+		if (elemWidth >=0 && elemWidth <=100) {
+			$('div:nth-child(2)', this).width(elemWidth+'%')
+			$('div:nth-child(3)', this).css('left', elemWidth+'%')
+		};
+		
 	});
 
   $('form input[type=submit]').click(function() {

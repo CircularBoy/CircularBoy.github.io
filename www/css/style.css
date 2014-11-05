@@ -241,6 +241,7 @@ header button {
 	left: 50%;
 	width: 93px;
 	margin: -32px 0 0 -47px;
+	cursor: pointer;
 }
 
 
