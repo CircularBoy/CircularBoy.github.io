@@ -342,8 +342,8 @@ header button {
 }
 
 .block-3 .wrapper div ul.plus {
-	color: #5c8553;
-	background: #9ce28c url(../img/block-3-plus.png) no-repeat right bottom;
+	color: #496942;
+	background: #BAEAAF url(../img/block-3-plus.png) no-repeat right bottom;
 	border-radius: 6px 6px 0 0;
 }
 
@@ -356,8 +356,8 @@ header button {
 }
 
 .block-3 ul.minus {
-	color: #8b7d3d;
-	background: #ead46d url(../img/block-3-minus.png) no-repeat right bottom;
+	color: #81774A;
+	background: #FFEE9E url(../img/block-3-minus.png) no-repeat right bottom;
 	border-radius: 0 0 6px 6px;
 	background-size: 36%;
 }
@@ -368,7 +368,7 @@ header button {
 }
 
 .block-4 {
-	margin-bottom: 60px;
+	margin-bottom: 10px;
 }
 
 .block-4 h1 {
@@ -480,7 +480,7 @@ header button {
 }
 
 .block-7 {
-	margin: 0 0 60px 0;
+	margin: 0 0 30px 0;
 }
 
 .block-7 h1 {
@@ -516,6 +516,87 @@ header button {
 .block-7 .list-col2 div.row p span {
 	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
+}
+
+.block-8 {
+	margin-bottom: 60px;
+	background: #f6f6f6;
+	padding: 20px 0 20px 0;
+}
+
+.block-8 h1 {
+	font-size: 32px;
+	text-align: center;
+	padding: 0px 0 30px 0;
+}
+
+.block-8 article {
+	padding: 0 100px 0 100px;
+	margin-bottom: 40px;
+}
+
+.block-8 article:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.block-8 article img {
+	float: left;
+	margin: 24px 0 0 0;
+	border-radius: 50%;
+	border: 3px rgba(70, 104, 111, 0.21) solid;
+}
+
+.block-8 article p:nth-child(2) {
+	font-size: 22px;
+	font-family: 'Roboto Condensed', sans-serif;
+	padding: 0px 0 11px 108px;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.block-8 article p:nth-child(3) {
+	padding: 0 0 0 124px;
+}
+
+.block-9 {
+	margin-bottom: 60px
+}
+
+.block-9 h1 {
+	font-size: 32px;
+	text-align: center;
+	padding: 0px 0 30px 0;
+}
+
+.block-9 article {
+	padding: 0 10px 0 10px;
+	margin-bottom: 30px;
+}
+
+.block-9 article:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.block-9 article p:nth-child(1) {
+	font-size: 20px;
+	font-family: 'Roboto Condensed', sans-serif;
+	padding: 5px 10px;
+	margin: 0 0 5px 0;
+	border-radius: 5px;
+	background: #cfeef7;
+	text-shadow: 0 1px 0 #FCFCFC;
+	display: inline-block;
+}
+
+.block-9 article p:nth-child(2) {
+	padding: 0 0 0 10px;
+}
+
+.block-9 article p span {
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 div.shadow {
