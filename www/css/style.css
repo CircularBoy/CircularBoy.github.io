@@ -1,6 +1,9 @@
 * {
 	padding: 0;
 	margin: 0;
+	border: none;
+	outline: none;
+	cursor: default;
 }
 
 a { text-decoration: none;}
@@ -19,6 +22,29 @@ body {
 h1, h2, h3, h4, h5 {
 	font-family: 'Roboto Condensed', sans-serif;
 	font-weight: 400;
+}
+
+.button {
+	border-radius: 5px;
+	padding: 20px 25px 18px 25px;
+	min-width: 212px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #fff;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.green {
+	background-color: rgb(106, 199, 163);
+	box-shadow: 0px 3px 0px #5aac8c;
+}
+
+.blue {
+	background-color: #95bdc9;
+	box-shadow: 0px 3px 0px #7797a1;
 }
 
 .wrapper {
@@ -134,21 +160,6 @@ header button {
 	position: absolute;
 	top: 40px;
 	right: 4px;
-	border-radius: 5px;
-	background-color: rgb(106, 199, 163);
-	box-shadow: 0px 3px 0px #5aac8c;
-	width: 212px;
-	height: 56px;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	color: #fff;
-	font-size: 18px;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	text-transform: uppercase;
-	text-shadow: 0px 2px 0px #5aac8c;
 }
 
 .block-1 {
@@ -597,6 +608,54 @@ header button {
 
 .block-9 article p span {
 	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.block-call {
+	color: #7c8f94;
+	background: #effbff;
+	height: 378px;
+}
+
+.block-call .wrapper > div:first-child {
+	width: 66%;
+	float: left;
+}
+
+.block-call .wrapper > div:last-child {
+	width: 33%;
+	position: relative;
+	float: left;
+}
+
+
+.block-call .wrapper div p {
+	text-align: center;
+	padding: 100px 0px 0 94px;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 24px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.block-call .wrapper .phones {
+	margin: 17px 0 0 120px;
+	padding: 16px 0 0 115px;
+	background: url(../img/block-call-ico.png) no-repeat left top;
+}
+
+.block-call .wrapper div div > span {
+	font-size: 32px;
+	display: block;
+}
+
+.block-call div span span {
+	font-size: 28px;
+
+}
+
+.block-call div button {
+	position: absolute;
+	top: 160px;
+	right: 60px;
 }
 
 div.shadow {
