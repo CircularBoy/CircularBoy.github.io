@@ -1,0 +1,204 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	cursor: default;
+}
+
+a { text-decoration: none;}
+
+nav, menu, ul {
+	list-style: none;
+}
+
+body {
+	background-color: #b4bbc2;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #494949;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+}
+
+.wrapper {
+	background: #fff;
+	width: 1260px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.button {
+	padding: 10px 47px 8px 47px;
+	color: #fff;
+	font-weight: 500;
+	border-radius: 6px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+header {
+	background: #383737;
+	width: 100%;
+	height: 50px;
+}
+
+header .wrapper {
+	background: #383737;
+}
+
+header .wrapper nav {
+	padding: 13px 0 0 40px;
+	float: left;
+}
+
+nav li {
+	float: left;
+	margin: 0 35px 0 0;
+}
+
+nav li:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+nav li a {
+	color: #fff;
+	cursor: pointer;
+}
+
+header .wrapper button {
+	float: right;
+	background: #77bfe5;
+	margin: 7px 40px 0 0;
+}
+
+footer {
+	height: 192px;
+	background: #383737;
+	width: 100%;
+	text-align: center;
+}
+
+footer .wrapper {
+	background: #383737;
+}
+
+footer nav {
+	width: 865px;
+	height: 30px;
+	padding: 36px 0 20px 0;
+	margin: 0 auto;
+}
+
+footer div.soc {
+	width: 204px;
+	margin: 0 auto;
+}
+
+footer div.soc:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+footer div.soc ul li {
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+footer div.soc ul li:last-child {
+	margin: 0;
+}
+
+footer div.soc li:nth-child(1) a {
+	display: block;
+	width: 36px;
+	height: 36px;
+	background: url(../img/soc-ico.png) no-repeat 0px 0px;
+}
+
+footer div.soc li:nth-child(2) a {
+	display: block;
+	width: 36px;
+	height: 36px;
+	background: url(../img/soc-ico.png) no-repeat -36px 0px;
+}
+
+footer div.soc li:nth-child(3) a {
+	display: block;
+	width: 36px;
+	height: 36px;
+	background: url(../img/soc-ico.png) no-repeat -72px 0px;
+}
+
+footer div.soc li:nth-child(4) a {
+	display: block;
+	width: 36px;
+	height: 36px;
+	background: url(../img/soc-ico.png) no-repeat -108px 0px;
+}
+
+footer p.copy {
+	margin: 28px 0 0 0;
+	font-size: 14px;
+}
+
+div.shadow {
+	display: none;
+	position: fixed;
+	left:0;top: 0;right:0;bottom: 0;
+	background: rgba(0, 0, 0, 0.41);
+	z-index: 3000;
+}
+
+div.shadow form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -105px 0 0 -125px;
+	width: 250px;
+	height: 205px;
+	background: #fff;
+	border-radius: 7px;
+}
+
+div.shadow form input{
+	width: 210px;
+	outline: 0;
+	margin: 5px 20px;
+	padding: 10px 0px;
+	border: 0;
+	border-bottom: 2px #EEE solid;
+}
+
+div.shadow form input[type=submit] {
+	margin-top: 20px;
+	border-radius: 5px;
+	padding: 17px;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+	background: #EEE;
+	border: 1px #E0E0E0 solid;
+	box-shadow: 0 0 3px #CCCCCC, inset 0 0 5px #FAFAFA;
+}
+
+div.shadow form input:nth-child(1) {
+	margin-top: 20px;
+}
+
+div.shadow form div.cancel {
+	position: absolute;
+	left: 228px;
+	top: 0px;
+	width: 20px;
+	height: 20px;
+	background: url(../img/cancel.png) no-repeat;
+	background-size: 115%;
+	cursor: pointer;
+}
