@@ -1,0 +1,310 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	cursor: default;
+}
+
+a { text-decoration: none;}
+
+nav, menu, ul {
+	list-style: none;
+}
+
+body {
+	background-color: #b4bbc2;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #494949;
+}
+
+.wrapper {
+	width: 1260px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.button {
+	padding: 10px 47px 8px 47px;
+	color: #fff;
+	font-weight: 500;
+	border-radius: 6px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+header {
+	
+}
+
+header .wrapper {
+	
+}
+
+header nav {
+	width: 100%;
+	height: 50px;
+	background: #383737;
+}
+
+nav ul {
+	padding: 13px 0 0 40px;
+	float: left;
+}
+
+nav li {
+	float: left;
+	margin: 0 35px 0 0;
+}
+
+nav li:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+nav li a {
+	color: #fff;
+	cursor: pointer;
+}
+
+header .wrapper button {
+	float: right;
+	background: #77bfe5;
+	margin: 7px 40px 0 0;
+}
+
+header .wrapper .cover {
+	height: 182px;
+	background: #fff;
+}
+
+header div.logo {
+	padding: 50px 0 65px 40px;
+	float: left;
+	width: 300px;
+}
+
+header div.logo a {
+	text-decoration: none;
+}
+
+header div.logo img {
+	float: left;
+	padding: 0 20px 0 0;
+}
+
+header div.logo section {
+	padding: 7px 0 0 0;
+}
+
+header div.logo section h1 {
+	font-size: 30px;
+	font-weight: 500;
+	color: #262626;
+}
+
+header div.logo section h2 {
+	font-size: 18px;
+	font-weight: 300;
+	color: #383737;
+	line-height: 10px;
+}
+
+header div.last {
+	float: right;
+	width: 706px;
+	height: 152px;
+	position: relative;
+	padding: 0 32px 0 32px;
+	margin: 14px 82px 0 0;
+}
+
+header div.last p.title {
+	padding: 0 0 12px 0;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #393635
+}
+
+header div.last ul li {
+	float: left;
+	width: 80px;
+	margin: 0 20px 0 0;
+}
+
+header div.last ul li:last-child {
+	margin: 0;
+}
+
+header div.last ul li a {
+	cursor: pointer;
+	display: block;
+}
+
+header div.last ul li a div {
+	width: 78px;
+	height: 78px;
+	border: solid 1px #f2f5f8;
+	border-radius: 6px;
+}
+
+header div.last ul li a p {
+	color: #383737;
+	font-size: 14px;
+	text-align: center;
+	padding: 2px 0 0 0;
+	line-height: 18px;
+}
+
+header div.last .prev {
+	position: absolute;
+	top: 66px;
+	left: 0px;
+	width: 12px;
+	height: 20px;
+	background: url(../img/arrow.png) no-repeat 0 0;
+}
+
+header div.last .next {
+	position: absolute;
+	top: 66px;
+	right: 24px;
+	width: 12px;
+	height: 20px;
+	background: url(../img/arrow.png) no-repeat -12px 0;
+}
+
+footer {
+	height: 192px;
+	background: #383737;
+	width: 100%;
+	text-align: center;
+}
+
+footer .wrapper {
+	background: #383737;
+}
+
+footer nav {
+	width: 904px;
+	height: 30px;
+	padding: 36px 0 20px 0;
+	margin: 0 auto;
+}
+
+footer div.soc {
+	width: 204px;
+	margin: 0 auto;
+}
+
+footer div.soc:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+footer div.soc ul li {
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+footer div.soc ul li a {
+	cursor: pointer;
+}
+
+footer div.soc ul li:last-child {
+	margin: 0;
+}
+
+footer div.soc li:nth-child(1) a {
+	display: block;
+	width: 36px;
+	height: 36px;
+	background: url(../img/soc-ico.png) no-repeat 0px 0px;
+}
+
+footer div.soc li:nth-child(2) a {
+	display: block;
+	width: 36px;
+	height: 36px;
+	background: url(../img/soc-ico.png) no-repeat -36px 0px;
+}
+
+footer div.soc li:nth-child(3) a {
+	display: block;
+	width: 36px;
+	height: 36px;
+	background: url(../img/soc-ico.png) no-repeat -72px 0px;
+}
+
+footer div.soc li:nth-child(4) a {
+	display: block;
+	width: 36px;
+	height: 36px;
+	background: url(../img/soc-ico.png) no-repeat -108px 0px;
+}
+
+footer p.copy {
+	margin: 28px 0 0 0;
+	font-size: 14px;
+	font-weight: 300;
+	color: #fff;
+}
+
+div.shadow {
+	display: none;
+	position: fixed;
+	left:0;top: 0;right:0;bottom: 0;
+	background: rgba(0, 0, 0, 0.41);
+	z-index: 3000;
+}
+
+div.shadow form {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -105px 0 0 -125px;
+	width: 250px;
+	height: 205px;
+	background: #fff;
+	border-radius: 7px;
+}
+
+div.shadow form input{
+	width: 210px;
+	outline: 0;
+	margin: 5px 20px;
+	padding: 10px 0px;
+	border: 0;
+	border-bottom: 2px #EEE solid;
+}
+
+div.shadow form input[type=submit] {
+	margin-top: 20px;
+	border-radius: 5px;
+	padding: 17px;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+	background: #EEE;
+	border: 1px #E0E0E0 solid;
+	box-shadow: 0 0 3px #CCCCCC, inset 0 0 5px #FAFAFA;
+}
+
+div.shadow form input:nth-child(1) {
+	margin-top: 20px;
+}
+
+div.shadow form div.cancel {
+	position: absolute;
+	left: 228px;
+	top: 0px;
+	width: 20px;
+	height: 20px;
+	background: url(../img/cancel.png) no-repeat;
+	background-size: 115%;
+	cursor: pointer;
+}
