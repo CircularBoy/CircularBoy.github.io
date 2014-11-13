@@ -19,6 +19,13 @@ body {
 	color: #494949;
 }
 
+.unselect, .prev, .next {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .wrapper {
 	width: 1260px;
 	margin: 0 auto;
@@ -50,7 +57,7 @@ body {
 	background: #f2f5f8;
 }
 
-.star span {
+.stars span {
 	display: block;
 	height: 17px;
 	width: 17px;
@@ -60,15 +67,11 @@ body {
 	cursor: pointer;
 }
 
-.star span:hover {
+.stars span:hover, .stars span.active {
 	background: url(../img/star.png) no-repeat -17px 0;
 }
 
-.star span.active {
-	background: url(../img/star.png) no-repeat -17px 0;
-}
-
-.star span:last-child {
+.stars span:last-child {
 	margin: 0;
 }
 
@@ -115,8 +118,6 @@ header .wrapper .cover {
 	position: relative;
 }
 
-
-
 header div.logo {
 	padding: 50px 0 0 40px;
 	float: left;
@@ -136,15 +137,16 @@ header div.logo section {
 	padding: 7px 0 0 0;
 }
 
-header div.logo section h1 {
+header div.logo hgroup h1 {
 	font-size: 30px;
-	font-weight: 500;
+	font-weight: 700;
 	color: #262626;
 }
 
-header div.logo section h2 {
+header div.logo hgroup h2 {
 	font-size: 18px;
-	font-weight: 300;
+	font-weight: 500;
+  letter-spacing: -1px;
 	color: #383737;
 	line-height: 10px;
 }
@@ -161,7 +163,7 @@ header div.last {
 header div.last p.title {
 	padding: 0 0 12px 0;
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 700;
 	text-transform: uppercase;
 	color: #393635
 }
@@ -186,14 +188,16 @@ header div.last ul li a div {
 	height: 78px;
 	border: solid 1px #f2f5f8;
 	border-radius: 6px;
+  overflow: hidden;
 }
 
 header div.last ul li a p {
 	color: #383737;
-	font-size: 14px;
-	text-align: center;
-	padding: 2px 0 0 0;
-	line-height: 18px;
+	font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  padding: 2px 0 0 0;
+  line-height: 18px;
 }
 
 header div.last .prev {
@@ -234,10 +238,11 @@ header div.last .next {
 }
 
 .wrapper .content aside {
-	background: #f2f5f8;
-	border-radius: 6px;
-	float: left;
-	padding: 16px 14px 0 22px;
+  background: #f2f5f8;
+  border-radius: 6px;
+  float: left;
+  padding: 15px 15px 15px 20px;
+  width: 245px;
 }
 
 .wrapper .content aside p.title {
@@ -259,52 +264,64 @@ header div.last .next {
 	font-weight: 600;
 }
 
-.wrapper .content > section {
+.wrapper .content section.items {
 	float: left;
 	padding: 0 0 0 20px;
+  width: 879px;
 }
 
-.wrapper .content section article {
+.wrapper .content section.items article.item {
 	padding: 20px 0 20px 0;
 	border-bottom: solid 1px #f2f5f8;
 }
 
-.wrapper .content section article:after {
+.wrapper .content section.items article.item:after {
 	display: block;
 	content: '';
 	clear: both;
 }
 
-.wrapper .content section article div.img {
-	width: 140px;
-	height: 140px;
-	border-radius: 5px;
-	border: solid 1px #f2f5f8;
-	float: left;
+.wrapper .content section.items article.item div.img {
+  width: 140px;
+  height: 140px;
+  border-radius: 5px;
+  border: solid 1px #f2f5f8;
+  float: left;
+  overflow: hidden;
 }
 
-.wrapper .content section article section {
+.wrapper .content section.items article.item div.img img {
+  max-height: 140px;
+  display: block;
+}
+
+.wrapper .content section.items article.item div.info {
 	padding: 0 0 0 160px;
 }
 
-.wrapper .content section article section p:nth-child(1) {
+.wrapper .content section.items article.item div.info a.title {
 	font-size: 24px;
 	color: #383737;
 	line-height: 18px;
 }
 
-.wrapper .content section article section p:nth-child(2) {
+.wrapper .content section.items article.item div.info p.price {
 	font-size: 25px;
 	color: #262626;
 	font-weight: 600;
-	margin: 17px 0 0 0;
+	margin: 17px 0 13px 0;
 }
 
-.wrapper .content section article section div
-
-
-.wrapper .content section .search input {
-
+.wrapper .content section.items article.item div.info p.price:after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  left: -15px;
+  width: 9px;
+  height: 2px;
+  background: #262626;
+  right: 0;
 }
 
 footer {
