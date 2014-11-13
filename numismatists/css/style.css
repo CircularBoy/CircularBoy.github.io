@@ -515,17 +515,6 @@ div.shadow form input.reg {
 	background: #65abd0;
 }
 
-div.shadow form input:nth-child(1) {
+div.shadow form > input:nth-child(1) {
 	margin-top: 20px;
-}
-
-div.shadow form div.cancel {
-  position: absolute;
-  left: 228px;
-  top: 0px;
-  width: 20px;
-  height: 20px;
-  background: url(../img/cancel.png) no-repeat;
-  background-size: 115%;
-  cursor: pointer;
 }
