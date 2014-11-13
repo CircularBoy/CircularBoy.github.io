@@ -21,17 +21,17 @@ body {
 }
 
 label.checkbox {
-  padding: 0 0 0 30px;
-  background: url(../img/checkbox.png) no-repeat;
+  padding: 0 0 0 29px;
+  background: url(../img/checkbox.png) no-repeat 0 2px;
   cursor: pointer;
 }
 
 label.checkbox:hover {
-	background: url(../img/checkbox.png) no-repeat 0 -33px;
+	background: url(../img/checkbox.png) no-repeat 0 -31px;
 }
 
 label.checkbox.active {
-	background: url(../img/checkbox.png) no-repeat 0 -65px;
+	background: url(../img/checkbox.png) no-repeat 0 -64px;
 }
 
 label.checkbox input[type=checkbox] {
@@ -272,7 +272,7 @@ header div.last .next {
 }
 
 .wrapper .content aside menu {
-	padding: 8px 0 0 34px;
+	padding: 8px 0 0 5px;
 }
 
 .wrapper .content aside menu ul li {
