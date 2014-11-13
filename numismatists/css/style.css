@@ -21,21 +21,21 @@ body {
 }
 
 label.checkbox {
-  padding: 0 0 0 29px;
-  background: url(../img/checkbox.png) no-repeat 0 2px;
-  cursor: pointer;
+	padding: 0 0 0 29px;
+	background: url(../img/checkbox.png) no-repeat 0 3px;
+	cursor: pointer;
 }
 
 label.checkbox:hover {
-	background: url(../img/checkbox.png) no-repeat 0 -31px;
+	background: url(../img/checkbox.png) no-repeat 0 -30px;
 }
 
 label.checkbox.active {
-	background: url(../img/checkbox.png) no-repeat 0 -64px;
+	background: url(../img/checkbox.png) no-repeat 0 -63px;
 }
 
 label.checkbox input[type=checkbox] {
-  display: none;
+	display: none;
 }
 
 .unselect, .prev, .next, label {
@@ -123,7 +123,7 @@ nav li:after {
 nav li a {
 	color: #fff;
 	cursor: pointer;
-  font-size: 15px;
+	font-size: 15px;
 }
 
 header .wrapper button {
@@ -415,10 +415,10 @@ footer div.soc li:nth-child(4) a {
 }
 
 footer p.copy {
-  margin: 28px 0 0 0;
-  font-size: 13px;
-  font-weight: 100;
-  color: #E5E5E5;
+	margin: 28px 0 0 0;
+	font-size: 13px;
+	font-weight: 100;
+	color: #E5E5E5;
 }
 
 div.shadow {
@@ -433,15 +433,15 @@ div.shadow {
 }
 
 div.shadow .modal {
-  display: none;
-  position: absolute;
-  left: 50%;
-  top: 116px;
-  margin: 0px 0 0 -150px;
-  width: 256px;
-  background: #f2f5f8;
-  padding: 27px 22px;
-  border-radius: 6px;
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 116px;
+	margin: 0px 0 0 -150px;
+	width: 256px;
+	background: #f2f5f8;
+	padding: 27px 22px;
+	border-radius: 6px;
 }
 
 div.shadow .modal .title {
@@ -536,7 +536,8 @@ div.shadow form > input:nth-child(1) {
 }
 
 div.shadow form label {
-	padding: 0px 0 17px 0px;
+	padding: 0px 0 14px 25px;
+	margin: 0px 0 3px 2px;
 	display: block;
 }
 
