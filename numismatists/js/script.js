@@ -6,8 +6,11 @@ $(document).ready(function() {
     $(this).nextAll().removeClass('active')
   })
 
-  $('label.checkbox').click(function() {
+  $('label.checkbox').click(function(e) {
     $(this).toggleClass('active')
+    console.log(1)
+    e.stopPropagation()
+    e.preventDefault();
   })
 
   $('label.checkbox span').click(function(e) {

@@ -105,13 +105,13 @@ header nav {
 }
 
 nav ul {
-	padding: 13px 0 0 40px;
+	padding: 0 0 0 57px;
 	float: left;
 }
 
 nav li {
 	float: left;
-	margin: 0 35px 0 0;
+	margin: 13px 35px 0 0;
 }
 
 nav li:after {
@@ -123,6 +123,7 @@ nav li:after {
 nav li a {
 	color: #fff;
 	cursor: pointer;
+  font-size: 15px;
 }
 
 header .wrapper button {
@@ -357,7 +358,7 @@ footer .wrapper {
 footer nav {
 	width: 904px;
 	height: 30px;
-	padding: 36px 0 20px 0;
+	padding: 23px 0 33px 0;
 	margin: 0 auto;
 }
 
@@ -414,10 +415,10 @@ footer div.soc li:nth-child(4) a {
 }
 
 footer p.copy {
-	margin: 28px 0 0 0;
-	font-size: 14px;
-	font-weight: 300;
-	color: #fff;
+  margin: 28px 0 0 0;
+  font-size: 13px;
+  font-weight: 100;
+  color: #E5E5E5;
 }
 
 div.shadow {
