@@ -3,7 +3,6 @@
 	margin: 0;
 	border: none;
 	outline: none;
-	cursor: default;
 }
 
 a { text-decoration: none;}
@@ -25,6 +24,12 @@ body {
 	position: relative;
 }
 
+.wrapper:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
 .button {
 	padding: 10px 47px 8px 47px;
 	color: #fff;
@@ -34,12 +39,40 @@ body {
 	cursor: pointer;
 }
 
-header {
-	
+.cover:after {
+	position: absolute;
+	bottom: 1px;
+	left: 40px;
+	width: 1180px;
+	height: 1px;
+	content: '';
+	background: #f2f5f8;
 }
 
-header .wrapper {
-	
+.star span {
+	display: block;
+	height: 17px;
+	width: 17px;
+	margin: 0 7px 0 0;
+	background: url(../img/star.png) no-repeat 0 0;
+	float: left;
+	cursor: pointer;
+}
+
+.star span:hover {
+	background: url(../img/star.png) no-repeat -17px 0;
+}
+
+.star span.active {
+	background: url(../img/star.png) no-repeat -17px 0;
+}
+
+.star span:last-child {
+	margin: 0;
+}
+
+header {
+	position: relative;
 }
 
 header nav {
@@ -78,10 +111,13 @@ header .wrapper button {
 header .wrapper .cover {
 	height: 182px;
 	background: #fff;
+	position: relative;
 }
 
+
+
 header div.logo {
-	padding: 50px 0 65px 40px;
+	padding: 50px 0 0 40px;
 	float: left;
 	width: 300px;
 }
@@ -166,6 +202,12 @@ header div.last .prev {
 	width: 12px;
 	height: 20px;
 	background: url(../img/arrow.png) no-repeat 0 0;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+header div.last .prev:hover, header div.last .next:hover {
+	opacity: 1;
 }
 
 header div.last .next {
@@ -175,6 +217,93 @@ header div.last .next {
 	width: 12px;
 	height: 20px;
 	background: url(../img/arrow.png) no-repeat -12px 0;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.wrapper .content {
+	background: #fff;
+	padding: 40px;
+}
+
+.wrapper .content:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.wrapper .content aside {
+	background: #f2f5f8;
+	border-radius: 6px;
+	float: left;
+	padding: 16px 14px 0 22px;
+}
+
+.wrapper .content aside p.title {
+	font-weight: 700;
+	color: #393635;
+	text-transform: uppercase;
+}
+
+.wrapper .content aside menu {
+	padding: 8px 0 0 34px;
+}
+
+.wrapper .content aside menu ul li {
+	margin: 14px 0 0 0;
+}
+
+.wrapper .content aside menu ul li span {
+	color: #383737;
+	font-weight: 600;
+}
+
+.wrapper .content > section {
+	float: left;
+	padding: 0 0 0 20px;
+}
+
+.wrapper .content section article {
+	padding: 20px 0 20px 0;
+	border-bottom: solid 1px #f2f5f8;
+}
+
+.wrapper .content section article:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.wrapper .content section article div.img {
+	width: 140px;
+	height: 140px;
+	border-radius: 5px;
+	border: solid 1px #f2f5f8;
+	float: left;
+}
+
+.wrapper .content section article section {
+	padding: 0 0 0 160px;
+}
+
+.wrapper .content section article section p:nth-child(1) {
+	font-size: 24px;
+	color: #383737;
+	line-height: 18px;
+}
+
+.wrapper .content section article section p:nth-child(2) {
+	font-size: 25px;
+	color: #262626;
+	font-weight: 600;
+	margin: 17px 0 0 0;
+}
+
+.wrapper .content section article section div
+
+
+.wrapper .content section .search input {
+
 }
 
 footer {
