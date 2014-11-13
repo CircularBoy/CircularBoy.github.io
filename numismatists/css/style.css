@@ -434,10 +434,6 @@ header div.last .next {
 	right: 0;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 .wrapper .content section.items div.navigation {
 	width: 100%;
 	height: 36px;
@@ -485,11 +481,8 @@ header div.last .next {
 	border-radius: 50%;
 	background: #24aa98;
 	color: #fff;
-=======
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
+}
+
 .content.page h1 {
   margin: 0px 0 22px 0;
 }
@@ -513,17 +506,8 @@ header div.last .next {
   font-size: 16px;
   line-height: 24px;
   margin: 0 0 26px 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 }
 
-=======
->>>>>>> ff3ce738430517e888abe45edde7dcfd9aebd4c5
 footer {
 	height: 192px;
 	background: #383737;
