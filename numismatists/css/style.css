@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+
 * {
 	padding: 0;
 	margin: 0;
@@ -366,7 +368,11 @@ header div.last .next {
 	color: #383737;
 	font-size: 14px;
 	font-weight: 500;
-	margin: 0 0 0 20px
+	margin: 0 0 0 20px;
+	-webkit-appearance: none;
+ 	-moz-appearance: none;
+	-ms-appearance: none;
+	background: url(../url/select.png) no-repeat right middle;
 }
 
 .wrapper .content section.items .search input[type=submit] {
@@ -378,6 +384,24 @@ header div.last .next {
 	float: right;
 	cursor: pointer;
 	background: #24aa98;
+}
+
+.wrapper .content section.items .sort {
+	height: 80px;
+}
+
+.wrapper .content section.items .sort select {
+	border: 2px #c6ccd2 solid;
+	border: 6px;
+}
+
+.wrapper .content section.items .sort select {
+	width: 240px;
+	height: 40px;
+}
+
+.wrapper .content section.items .sort select {
+	
 }
 
 .wrapper .content section.items article.item {
@@ -420,18 +444,7 @@ header div.last .next {
 	color: #262626;
 	font-weight: 600;
 	margin: 17px 0 13px 0;
-}
-
-.wrapper .content section.items article.item div.info p.price:after {
-	content: '';
-	display: inline-block;
-	position: relative;
-	top: -3px;
-	left: -15px;
-	width: 9px;
-	height: 2px;
-	background: #262626;
-	right: 0;
+  font-family: 'PT Sans', serif;
 }
 
 .wrapper .content section.items div.navigation {
