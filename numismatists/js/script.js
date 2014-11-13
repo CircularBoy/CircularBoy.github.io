@@ -8,13 +8,8 @@ $(document).ready(function() {
 
   $('label.checkbox').click(function(e) {
     $(this).toggleClass('active')
-    console.log(1)
-    e.stopPropagation()
-    e.preventDefault();
-  })
-
-  $('label.checkbox span').click(function(e) {
-    e.stopPropagation()
+    $(this).children('input').prop('checked', !$(this).children('input').prop('checked'))
+    return false
   })
 
   $('header button').click(function() {
