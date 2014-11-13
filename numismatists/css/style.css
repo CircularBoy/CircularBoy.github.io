@@ -206,7 +206,7 @@ header div.logo hgroup h2 {
 	line-height: 0px;  
 }
 
-header div.last {
+div.last {
 	float: right;
 	width: 706px;
 	height: 152px;
@@ -215,7 +215,7 @@ header div.last {
 	margin: 14px 82px 0 0;
 }
 
-header div.last p.title {
+div.last p.title {
 	padding: 0 0 12px 0;
 	font-size: 16px;
 	font-weight: 700;
@@ -223,22 +223,22 @@ header div.last p.title {
 	color: #393635;
 }
 
-header div.last ul li {
+div.last ul li {
 	float: left;
 	width: 80px;
 	margin: 0 20px 0 0;
 }
 
-header div.last ul li:last-child {
+div.last ul li:last-child {
 	margin: 0;
 }
 
-header div.last ul li a {
+div.last ul li a {
 	cursor: pointer;
 	display: block;
 }
 
-header div.last ul li a div {
+div.last ul li a div {
 	width: 78px;
 	height: 78px;
 	border: solid 1px #f2f5f8;
@@ -246,7 +246,7 @@ header div.last ul li a div {
 	overflow: hidden;
 }
 
-header div.last ul li a p {
+div.last ul li a p {
 	color: #383737;
 	font-size: 13px;
 	font-weight: 600;
@@ -255,7 +255,7 @@ header div.last ul li a p {
 	line-height: 18px;
 }
 
-header div.last .prev {
+div.last .prev {
 	position: absolute;
 	top: 66px;
 	left: 0px;
@@ -266,11 +266,11 @@ header div.last .prev {
 	opacity: 0.5;
 }
 
-header div.last .prev:hover, header div.last .next:hover {
+div.last .prev:hover, div.last .next:hover {
 	opacity: 1;
 }
 
-header div.last .next {
+div.last .next {
 	position: absolute;
 	top: 66px;
 	right: 24px;
