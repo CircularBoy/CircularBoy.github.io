@@ -528,3 +528,14 @@ div.shadow form input.reg {
 div.shadow form > input:nth-child(1) {
 	margin-top: 20px;
 }
+
+div.shadow form label {
+	padding: 0px 0 17px 0px;
+	display: block;
+}
+
+ label span {
+	color: #b4bbc2;
+	font-size: 14px;
+	font-weight: 500;
+}
