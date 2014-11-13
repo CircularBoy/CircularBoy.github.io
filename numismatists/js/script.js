@@ -6,6 +6,10 @@ $(document).ready(function() {
     $(this).nextAll().removeClass('active')
   })
 
+  $('label.checkbox').click(function() {
+    $(this).toggleClass('active')
+  })
+
   $('header button').click(function() {
     $('div.shadow').fadeIn(300)
   })
