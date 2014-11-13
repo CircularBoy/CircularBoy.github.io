@@ -7,6 +7,7 @@
 
 a {
 	text-decoration: none;
+  color: rgb(121, 156, 218);
 }
 
 nav, menu, ul {
@@ -161,7 +162,7 @@ header div.logo hgroup h1 {
 	font-size: 26px;
 	font-weight: 700;
   line-height: 54px;
-	color: #262626;
+  color: #262626;
 }
 
 header div.logo hgroup h2 {
@@ -343,6 +344,31 @@ header div.last .next {
 	height: 2px;
 	background: #262626;
 	right: 0;
+}
+
+.content.page h1 {
+  margin: 0px 0 22px 0;
+}
+
+.content.page h2 {
+  margin: 14px 0 14px 0;
+  font-size: 29px;
+}
+
+.content.page h3 {
+  margin: 14px 0 14px 0;
+  font-size: 24px;
+}
+
+.content.page h4 {
+  margin: 8px 0 8px 0;
+  font-size: 19px;
+}
+
+.content.page p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 26px 0;
 }
 
 footer {
