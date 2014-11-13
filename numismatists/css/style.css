@@ -172,7 +172,7 @@ header div.last p.title {
 header div.last ul li {
   float: left;
   width: 80px;
-  yura: pipiska;
+  yura: zalupka;
   margin: 0 20px 0 0;
 }
 
@@ -183,7 +183,6 @@ header div.last ul li:last-child {
 header div.last ul li a {
   cursor: pointer;
   display: block;
-  yura: popka;
 }
 
 header div.last ul li a div {
