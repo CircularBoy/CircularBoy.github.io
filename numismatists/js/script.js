@@ -10,6 +10,10 @@ $(document).ready(function() {
     $(this).toggleClass('active')
   })
 
+  $('label.checkbox span').click(function(e) {
+    e.stopPropagation()
+  })
+
   $('header button').click(function() {
     $('div.shadow').fadeIn(300)
   })
