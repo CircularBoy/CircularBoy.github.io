@@ -459,11 +459,11 @@ div.shadow form > input {
 }
 
 div.shadow form > input:nth-child(1) {
-  background: #fff, url(../img/input-bg.png) no-repeat 13px 15px;
+  background: #fff, url(../img/modal-input-bg.png) no-repeat 13px 15px;
 }
 
 div.shadow form > input:nth-child(2) {
-  background: #fff, url(../img/input-bg.png) no-repeat 13px 15px;
+  background: #fff, url(../img/modal-input-bg.png) no-repeat 13px 15px;
 }
 
 div.shadow form > input::-webkit-input-placeholder {
@@ -511,4 +511,5 @@ div.shadow form div.cancel {
   background: url(../img/cancel.png) no-repeat;
   background-size: 115%;
   cursor: pointer;
+  margin: 100px;
 }
