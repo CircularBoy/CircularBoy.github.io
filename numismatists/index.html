@@ -111,10 +111,10 @@
                 <label class="checkbox"><input type="checkbox" name=""><span>Древние города России</span></label>
               </li>
               <li>
-                <label class="checkbox"><input type="checkbox" name=""><span>Жетоны, копии и прочее</span></label>
+                <label class="checkbox active"><input type="checkbox" name=""><span>Жетоны, копии и прочее</span></label>
               </li>
               <li>
-                <label class="checkbox"><input type="checkbox" name=""><span>Олимпиада в Сочи 2014 г.</span></label>
+                <label class="checkbox active"><input type="checkbox" name=""><span>Олимпиада в Сочи 2014 г.</span></label>
               </li>
               <li>
                 <label class="checkbox"><input type="checkbox" name=""><span>Первая мировая война</span></label>
@@ -146,10 +146,14 @@
         </aside>
         <section class="items">
           <div class="panel">
-            <div class="search">
-              <input type="text"> <input type="text"> <input type="text">
-            </div>
-            <div class="filter">
+            <form class="search">
+              <input type="text" placeholder="Поиск"> 
+              <select name="" id="">
+              	<option disabled>Любая категория</option>
+              </select> 
+              <input type="submit" value="Найти">
+            </form>
+            <div class="sort">
               <input type="text"> <span>Товаров на странице</span> <input type=
               "text">
             </div>
@@ -164,6 +168,49 @@
               </div>
             </div>
           </article>
+          <article class="item">
+            <div class="img"><img alt="" src="img-6.jpg"></div>
+            <div class="info">
+              <a href="item.html" class="title">1 рубль 1705 года («Польский талер»)</a>
+              <p class="price">137 932 <span>Р</span></p>
+              <div class="stars">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </article>
+          <article class="item">
+            <div class="img"><img alt="" src="img-6.jpg"></div>
+            <div class="info">
+              <a href="item.html" class="title">1 рубль 1705 года («Польский талер»)</a>
+              <p class="price">137 932 <span>Р</span></p>
+              <div class="stars">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </article>
+          <article class="item">
+            <div class="img"><img alt="" src="img-6.jpg"></div>
+            <div class="info">
+              <a href="item.html" class="title">1 рубль 1705 года («Польский талер»)</a>
+              <p class="price">137 932 <span>Р</span></p>
+              <div class="stars">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </article>
+          <div class="navigation">
+          	<a href="#" class="prev">Назад</a>
+          	<div class="pages">
+          		<a href="#">1</a>
+          		<a class="active" href="#">2</a>
+          		<a href="#">3</a>
+          		<span>...</span>
+          		<a href="#">12</a>
+          		<a href="#">13</a>
+          		<a href="#">14</a>
+          	</div>
+          	<a href="#" class="next">Вперед</a>
+          </div>
         </section>
       </div>
       <footer>

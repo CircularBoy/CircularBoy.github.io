@@ -12,15 +12,22 @@ $(document).ready(function() {
     return false
   })
 
-  $('header button').click(function() {
+  $('.modal-enter').click(function() {
     $('div.shadow').fadeIn(300)
+    $('div.shadow .enter').fadeIn(300)
   })
 
-  $('div.shadow, div.shadow div.cancel').click(function() {
+  $('.modal-reg').click(function() {
+    $('div.shadow').fadeIn(300)
+    $('div.shadow .reg').fadeIn(300)
+  })
+
+  $('div.shadow').click(function() {
     $('div.shadow').fadeOut(300)
+    $('div.shadow > div').fadeOut(300)
   })
 
-  $('div.shadow form').click(function(e) {
+  $('div.shadow div').click(function(e) {
     e.stopPropagation()
   })
 
