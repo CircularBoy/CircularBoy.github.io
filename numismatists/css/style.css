@@ -20,7 +20,20 @@ body {
 	color: #494949;
 }
 
-.unselect, .prev, .next {
+label {
+  cursor: pointer;
+}
+
+label input[type=checkbox] {
+  display: none;
+}
+
+label input[type=checkbox] {
+  padding: 0 0 0 30px;
+  background: url(../img/checkbox.png) no-repeat;
+}
+
+.unselect, .prev, .next, label {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -403,7 +416,7 @@ footer p.copy {
 }
 
 div.shadow {
-	display: block;
+	display: none;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -414,18 +427,15 @@ div.shadow {
 }
 
 div.shadow .modal {
-	position: absolute;
-	left: 50%;
-	top: 116px;
-	margin: 0px 0 0 -150px;
-	width: 256px;
-	background: #f2f5f8;
-	padding: 27px 22px;
-	border-radius: 6px;
-}
-
-div.shadow .modal:nth-child(2) {
-	display: none;
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 116px;
+  margin: 0px 0 0 -150px;
+  width: 256px;
+  background: #f2f5f8;
+  padding: 27px 22px;
+  border-radius: 6px;
 }
 
 div.shadow .modal .title {
