@@ -9,32 +9,38 @@
 
 a {
 	text-decoration: none;
-  color: rgb(121, 156, 218);
+	color: rgb(121, 156, 218);
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
 }
 
 .content.page h1 {
-  margin: 0px 0 22px 0;
+	margin: 0px 0 22px 0;
 }
 
 .content.page h2 {
-  margin: 14px 0 14px 0;
-  font-size: 29px;
+	margin: 14px 0 14px 0;
+	font-size: 29px;
 }
 
 .content.page h3 {
-  margin: 14px 0 14px 0;
-  font-size: 24px;
+	margin: 14px 0 14px 0;
+	font-size: 24px;
 }
 
 .content.page h4 {
-  margin: 8px 0 8px 0;
-  font-size: 19px;
+	margin: 8px 0 8px 0;
+	font-size: 19px;
 }
 
 .content.page p {
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0 0 26px 0;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0 0 26px 0;
 }
 
 nav, menu, ul {
@@ -188,8 +194,8 @@ header div.logo section {
 header div.logo hgroup h1 {
 	font-size: 26px;
 	font-weight: 700;
-  line-height: 54px;
-  color: #262626;
+	line-height: 54px;
+	color: #262626;
 }
 
 header div.logo hgroup h2 {
@@ -340,43 +346,40 @@ header div.last .next {
 
 .wrapper .content section.items .search input[type=text]::-webkit-input-placeholder {
 	color: #b4bbc2;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 14px;
 }
 
 .wrapper .content section.items .search input[type=text]::-moz-placeholder {
 	color: #b4bbc2;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 14px;
 }
 
 .wrapper .content section.items .search input[type=text]:-moz-placeholder {
 	color: #b4bbc2;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 14px;
 }
 
 .wrapper .content section.items .search input[type=text]:-ms-input-placeholder {
 	color: #b4bbc2;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 14px;
 }
 
 .wrapper .content section.items .search select {
 	width: 260px;
-	padding: 7px 0 7px 32px;
+	padding: 7px 0 7px 7px;
 	color: #383737;
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 600;
 	margin: 0 0 0 20px;
-	-webkit-appearance: none;
- 	-moz-appearance: none;
-	-ms-appearance: none;
-	background: url(../url/select.png) no-repeat right middle;
+	background: url(../img/select.png) no-repeat 235px center;
 }
 
 .wrapper .content section.items .search input[type=submit] {
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 16px;
 	color: #fff;
 	border-radius: 6px;
@@ -392,16 +395,41 @@ header div.last .next {
 
 .wrapper .content section.items .sort select {
 	border: 2px #c6ccd2 solid;
-	border: 6px;
+	border-radius: 6px;
 }
 
-.wrapper .content section.items .sort select {
+.wrapper .content section.items .sort > select {
 	width: 240px;
 	height: 40px;
+	margin: 20px 0 0 0;
+	background: url(../img/select.png) no-repeat 215px center;
+	font-size: 16px;
+	padding: 0 0 0 4px;
+	font-weight: 600;
+	color: #383737;
 }
 
 .wrapper .content section.items .sort select {
-	
+	border: 2px #c6ccd2 solid;
+	border-radius: 6px;
+}
+
+.wrapper .content section.items .sort .count {
+	float: right;
+	margin: 20px 0 0 0;
+}
+
+.wrapper .content section.items .sort .count span {
+	color: #383737;
+	font-weight: 600;
+}
+
+.wrapper .content section.items .sort .count select {
+	background: url(../img/select.png) no-repeat 37px center;
+	padding: 8px 0 8px 6px;
+	width: 61px;
+	font-size: 16px;
+	font-weight: 600;
 }
 
 .wrapper .content section.items article.item {
@@ -444,7 +472,7 @@ header div.last .next {
 	color: #262626;
 	font-weight: 600;
 	margin: 17px 0 13px 0;
-  font-family: 'PT Sans', serif;
+	font-family: 'PT Sans', serif;
 }
 
 .wrapper .content section.items div.navigation {
@@ -497,28 +525,28 @@ header div.last .next {
 }
 
 .content.page h1 {
-  margin: 0px 0 22px 0;
+	margin: 0px 0 22px 0;
 }
 
 .content.page h2 {
-  margin: 14px 0 14px 0;
-  font-size: 29px;
+	margin: 14px 0 14px 0;
+	font-size: 29px;
 }
 
 .content.page h3 {
-  margin: 14px 0 14px 0;
-  font-size: 24px;
+	margin: 14px 0 14px 0;
+	font-size: 24px;
 }
 
 .content.page h4 {
-  margin: 8px 0 8px 0;
-  font-size: 19px;
+	margin: 8px 0 8px 0;
+	font-size: 19px;
 }
 
 .content.page p {
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0 0 26px 0;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0 0 26px 0;
 }
 
 footer {
