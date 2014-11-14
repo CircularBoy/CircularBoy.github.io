@@ -784,7 +784,7 @@ footer {
 
 
 .wrapper .content.new section form {
-	padding: 14px 0 0 0;
+	padding: 9px 0 0 0;
 }
 
 .wrapper .content.new section form div.row {
@@ -844,17 +844,17 @@ footer {
 
 .wrapper .content.new section div.row input[type=textarea] {
 	width: 463px;
-	height: 78px;
+	height: 59px;
 }
 
 .wrapper .content.new section div.row span span {
-	display: block;
-	height: 30px;
-	width: 200px;
-	color: #b5bcc3;
-	font-size: 14px;
-	font-weight: 400;
-	margin: 10px 0 0 0;
+  display: block;
+  line-height: 17px;
+  width: 147px;
+  color: #b5bcc3;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 10px 0 0 0;
 }
 
 .wrapper .content.new section div.row div.photo {
@@ -868,14 +868,14 @@ footer {
 }
 
 .wrapper .content.new section div.row input[type=submit] {
-	background: #1a9385;
-	padding: 8px 20px 8px 20px;
-	border-radius: 6px;
-	color: #fff;
-	font-size: 16px;
-	cursor: pointer;
-	border: 0;
-	margin: 20px 0 0 0;
+  background: #1a9385;
+  padding: 8px 39px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  border: 0;
+  margin: 20px 0 0 0;
 }
 
 .wrapper .content.new section {
