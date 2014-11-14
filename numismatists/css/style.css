@@ -801,7 +801,7 @@ footer {
 	font-size: 15px;
 }
 
-.wrapper .content.new section div.row input, .wrapper .content.new section div.row select {
+.wrapper .content.new section div.row input, .wrapper .content.new section div.row select, .wrapper .content.new section div.row textarea {
 	padding: 8px 4px 8px 9px;
 	color: #383737;
 	font-size: 16px;
@@ -842,7 +842,7 @@ footer {
 	width: 83px;
 }
 
-.wrapper .content.new section div.row input[type=textarea] {
+.wrapper .content.new section div.row textarea {
 	width: 463px;
 	height: 59px;
 }
@@ -1041,7 +1041,7 @@ footer p.copy {
 }
 
 div.shadow {
-	display: none;
+	display: block;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -1166,3 +1166,40 @@ div.shadow form label span {
 	font-weight: 500;
 }
 
+div.shadow div.comm {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 140px;
+	margin: 0px 0 0 -310px;
+	width: 580px;
+	background: #f2f5f8;
+	padding: 27px 20px;
+	border-radius: 6px;
+}
+
+div.shadow div.comm form {
+	padding: 0;
+}
+
+div.shadow div.comm p.title {
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #393635;
+	padding: 0px 0px
+}
+
+div.shadow div.comm input {
+	padding-left: 10px;
+	background: 0;
+	width: 554px;
+}
+
+div.shadow div.comm input:hover, div.shadow div.comm input.active {
+	background: 0;
+}
+
+div.shadow div.comm input[type=textarea] {
+	height: 76px;
+	padding-top: 5px;
+}
