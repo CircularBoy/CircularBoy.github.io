@@ -831,11 +831,11 @@ footer {
 	display: block;
 	position: absolute;
 	content: '';
-	background: url(../img/symbol.png) no-repeat;
+	background: url(../img/symbol.png) no-repeat 490px 0;
 	height: 15px;
 	width: 12px;
-	top: 0;
-	right: 4px;
+	top: 11px;
+	right: 460px;
 }
 
 .wrapper .content.new section div.row:nth-child(5) input {
@@ -1165,3 +1165,4 @@ div.shadow form label span {
 	font-size: 14px;
 	font-weight: 500;
 }
+
