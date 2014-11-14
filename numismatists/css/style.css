@@ -14,8 +14,12 @@ a {
 
 select {
 	-webkit-appearance: none;
-	-moz-appearance: none;
-	-ms-appearance: none;
+	-moz-appearance: none !important;
+  -moz-appearance: none !important;
+  text-indent: 0.01px !important; 
+  text-overflow: '' !important;
+	-ms-appearance: none !important;
+  appearance: none !important;
 }
 
 nav, menu, ul {
@@ -140,6 +144,8 @@ header .wrapper button {
 	float: right;
 	background: #77bfe5;
 	margin: 7px 40px 0 0;
+  height: 36px;
+  line-height: 0px;
 }
 
 header .wrapper .cover {
@@ -454,7 +460,6 @@ div.last .next {
 	color: #262626;
 	font-weight: 600;
 	margin: 17px 0 13px 0;
-	font-family: 'PT Sans', serif;
 }
 
 .wrapper .content section.items div.navigation {
@@ -940,7 +945,6 @@ footer {
 	color: #b4bbc2;
 	font-weight: 600;
 	margin: 6px 0 7px 0;
-	font-family: 'PT Sans', serif;
 }
 
 .wrapper .content.new aside article.item div.info .stars span:hover, .wrapper .content.new aside article.item div.info .stars span.active {
@@ -1099,10 +1103,12 @@ div.shadow form > input {
 
 div.shadow form > input:nth-child(1) {
 	background: #fff url(../img/modal-input-bg.png) no-repeat 13px 15px;
+  height: 18px;
 }
 
 div.shadow form > input:nth-child(2) {
 	background: #fff url(../img/modal-input-bg.png) no-repeat 13px -17px;
+  height: 18px;
 }
 
 div.shadow form > input:nth-child(1):hover, div.shadow form > input.active:nth-child(1) {
@@ -1155,7 +1161,6 @@ div.shadow form > input:nth-child(1) {
 }
 
 div.shadow form label {
-	padding: 0px 0 14px 25px;
 	margin: 0px 0 3px 2px;
 	display: block;
 }
