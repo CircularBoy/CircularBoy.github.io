@@ -12,6 +12,11 @@ $(document).ready(function() {
     return false
   })
 
+  $('.toggle-switcher').click(function(e) {
+    $(this).toggleClass('active')
+    return false
+  })
+
   $('.modal-enter').click(function() {
     $('div.shadow').fadeIn(300)
     $('div.shadow .enter').fadeIn(300)

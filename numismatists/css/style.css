@@ -47,7 +47,7 @@ label.checkbox input[type=checkbox] {
 	display: none;
 }
 
-.unselect, .prev, .next, label {
+.unselect, .prev, .next, label, .toggle-switcher {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -629,6 +629,40 @@ footer {
 
 .wrapper section.item .popular ul li:last-child {
 	margin: 0 0 0 -1px;
+}
+
+/********profile********/
+/********settings********/
+
+.wrapper .profile section .toggle-switcher {
+  width: 72px;
+  height: 36px;
+  background: #c6ccd2;
+  overflow: auto;
+  border-radius: 44px;
+  cursor: pointer;
+  transition: all .3s ease;
+  position: relative;
+}
+
+.wrapper .profile section .toggle-switcher span {
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border-radius: 50%;
+  display: block;
+  top: 4px;
+  left: 4px;
+  position: absolute;
+  transition: all .3s ease;
+}
+
+.wrapper .profile section .toggle-switcher.active {
+  background: #24aa98;
+}
+
+.wrapper .profile section .toggle-switcher.active span {
+  left: 40px;
 }
 
 footer .wrapper {
