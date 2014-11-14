@@ -699,6 +699,39 @@ footer {
 
 /********settings********/
 
+
+.wrapper .profile section form div.row {
+	margin: 10px 0 10px 0;
+}
+
+.wrapper .profile form div.row select, .wrapper .profile form div.row > input[type=text] {
+	padding: 8px 4px 8px 0;
+	color: #383737;
+	font-size: 16px;
+	border: 2px #c6ccd2 solid;
+	border-radius: 6px;
+}
+
+.wrapper .profile section form div.row > span {
+	width: 198px;
+	display: block;
+	padding: 5px 0 5px 2px;
+	float: left;
+}
+
+.wrapper .profile section div.row:nth-child(1) input, .wrapper .profile section div.row:nth-child(2) input {
+	width: 300px;
+}
+
+.wrapper .profile section div.row:nth-child(4) input {
+	width: 226px;
+}
+
+.wrapper .profile form div.row select {
+	width: 300px;
+
+}
+
 .wrapper .profile section .toggle-switcher {
 	width: 72px;
 	height: 36px;
