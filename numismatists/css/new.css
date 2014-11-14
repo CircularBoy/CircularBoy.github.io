@@ -11,7 +11,7 @@
   background: #dbdfe2;
   display: inline-block;
   color: #393635;
-  padding: 10px 16px;
+  padding: 8px 24px;
   font-weight: 600;
   font-size: 18px;
   margin: 0 7px 0 0;
@@ -34,7 +34,7 @@
 }
 
 .wrapper .content.ad section .options button {
-  padding: 6px 9px;
+  padding: 5px 14px;
   border: 2px #c6ccd2 solid;
   border-radius: 7px;
   color: #c6ccd2;
@@ -51,7 +51,7 @@
 }
 
 .wrapper .content.ad section article.item div.info {
-  padding: 0 0 0 130px;
+  padding: 0 0 0 157px;
 }
 
 .wrapper .content.ad section article.item div.info p.title {
@@ -65,18 +65,18 @@
   font-size: 21px;
   color: #383737;
   font-weight: 900;
-  margin: 6px 0 7px 0;
+  margin: 9px 0 5px 0;
   font-family: 'PT Sans', serif;
 }
 
 .wrapper .content.ad section article.item .checkbox img {
-  margin: -28px 0 0px 0;
+  width: 100%;
 }
 
 .wrapper .content.ad section article.item .checkbox {
   float: left;
-  height: 22px;
-  margin: 28px 0 0 0;
+  height: 23px;
+  margin: 38px 0 0 0;
 }
 
 .wrapper .content.ad section article.item {
@@ -101,4 +101,14 @@
   padding: 4px 21px 4px 6px;
   background: url(../img/select-green.png) no-repeat 47px center;
   cursor: pointer;
+}
+
+.wrapper .content.ad section article.item label span {
+  display: block;
+width: 91px;
+height: 91px;
+margin: -40px 0 0 3px;
+border: 1px #E8E8E8 solid;
+padding: 7px;
+border-radius: 7px;
 }
