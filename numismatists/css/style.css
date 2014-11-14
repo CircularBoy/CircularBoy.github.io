@@ -556,6 +556,99 @@ footer {
 	text-align: center;
 }
 
+
+
+/********item********/
+
+.wrapper section.items .breadcrumbs a, .wrapper section.items .breadcrumbs {
+	margin: -5px 0 0 0;
+}
+
+.wrapper section.items .breadcrumbs a, .wrapper section.items .breadcrumbs span {
+	font-weight: 600;
+	color: #383737;
+	padding: 0 19px 0 0;
+	background: url(../img/arrow.png) no-repeat right -83px;
+	font-size: 15px;
+}
+
+.wrapper section.items .breadcrumbs span {
+	background: none;
+}
+
+.wrapper section.item article.item .info p.title {
+	color: #383737;
+	font-size: 30px;
+}
+
+.wrapper section.item article.item .info p.desc {
+	color: #b4bbc2;
+	padding: 14px 0 0px 0;
+}
+
+.wrapper section.item article.item .info form.buy {
+	padding: 32px 0 0 0;
+}
+
+.wrapper section.item article.item .info form.buy p {
+	padding: 10px 0 0 0;
+	color: #383737;
+	font-size: 24px;
+}
+
+.wrapper section.item article.item .info form.buy input[type=text] {
+	padding: 13px 0 13px 8px;
+	width: 138px;
+	border: 2px #c6ccd2 solid;
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #383737;
+	margin: 12px 0 0 0;
+}
+
+.wrapper section.item article.item .info form.buy input[type=text]::-webkit-input-placeholder {
+	color: #b5bcc3;
+	font-style: italic;
+}
+
+.wrapper section.item article.item .info form.buy input[type=text]::-moz-placeholder {
+	color: #b5bcc3;
+	font-style: italic;
+}
+
+.wrapper section.item article.item .info form.buy input[type=text]:-moz-placeholder {
+	color: #b5bcc3;
+	font-style: italic;
+}
+
+.wrapper section.item article.item .info form.buy input[type=text]:-ms-input-placeholder {
+	color: #b5bcc3;
+	font-style: italic;
+}
+
+.wrapper section.item article.item .info form.buy input[type=submit] {
+	border-radius: 6px;
+	padding: 14px 31px 14px 27px;
+	background: #77bfe5;
+	margin: 12px 0 0 18px;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 500;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.wrapper section.item .popular {
+	width: auto;
+	margin: 0;
+	padding: 40px 0 14px 0;
+}
+
+.wrapper section.item .popular ul li:last-child {
+	margin: 0 0 0 -1px;
+}
+
 footer .wrapper {
 	background: #383737;
 }
