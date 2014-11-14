@@ -386,7 +386,7 @@ div.last .next {
   margin: 20px 0 0 0;
   background: url(../img/select.png) no-repeat 215px center;
   font-size: 16px;
-  padding: 0 0 0 4px;
+  padding: 0 0 0 9px;
   font-weight: 600;
   color: #383737;
 }
@@ -408,7 +408,7 @@ div.last .next {
 
 .wrapper .content section.items .sort .count select {
   background: url(../img/select.png) no-repeat 37px center;
-  padding: 8px 0 8px 6px;
+  padding: 8px 0 8px 9px;
   width: 61px;
   font-size: 16px;
   font-weight: 600;
