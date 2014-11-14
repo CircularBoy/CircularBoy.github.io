@@ -831,7 +831,7 @@ footer {
 	display: block;
 	position: absolute;
 	content: '';
-	background: url(../img/symbol.png) no-repeat 490px 0;
+	background: url(../img/symbol.png) no-repeat;
 	height: 15px;
 	width: 12px;
 	top: 11px;
