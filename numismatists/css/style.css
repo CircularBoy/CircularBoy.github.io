@@ -18,31 +18,6 @@ select {
 	-ms-appearance: none;
 }
 
-.content.page h1 {
-	margin: 0px 0 22px 0;
-}
-
-.content.page h2 {
-	margin: 14px 0 14px 0;
-	font-size: 29px;
-}
-
-.content.page h3 {
-	margin: 14px 0 14px 0;
-	font-size: 24px;
-}
-
-.content.page h4 {
-	margin: 8px 0 8px 0;
-	font-size: 19px;
-}
-
-.content.page p {
-	font-size: 16px;
-	line-height: 24px;
-	margin: 0 0 26px 0;
-}
-
 nav, menu, ul {
 	list-style: none;
 }
@@ -319,6 +294,12 @@ div.last .next {
 	font-weight: 600;
 }
 
+.wrapper .content section {
+  float: left;
+  padding: 0 0 0 20px;
+  width: 879px;
+}
+
 .wrapper .content section.items {
 	float: left;
 	padding: 0 0 0 20px;
@@ -526,6 +507,7 @@ div.last .next {
 
 .content.page h1 {
 	margin: 0px 0 22px 0;
+  font-size: 32px;
 }
 
 .content.page h2 {
