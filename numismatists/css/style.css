@@ -830,12 +830,52 @@ footer {
 .wrapper .content.new section div.row:nth-child(4) div:after {
 	display: block;
 	position: absolute;
-	content: '&#8399;';
-	height: 10px;
-	width: 10px;
+	content: '';
+	background: url(../img/symbol.png) no-repeat;
+	height: 15px;
+	width: 12px;
 	top: 0;
 	right: 4px;
-	font-family: 'PT Sans', serif;
+}
+
+.wrapper .content.new section div.row:nth-child(5) input {
+	width: 83px;
+}
+
+.wrapper .content.new section div.row input[type=textarea] {
+	width: 463px;
+	height: 78px;
+}
+
+.wrapper .content.new section div.row span span {
+	display: block;
+	height: 30px;
+	width: 200px;
+	color: #b5bcc3;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 10px 0 0 0;
+}
+
+.wrapper .content.new section div.row div.photo {
+	width: 76px;
+	height: 76px;
+	border: 2px #c6ccd2 solid;
+	border-radius: 6px;
+	margin: 0 0 0 200px;
+	background: url(../img/photo.png) no-repeat center center;
+	cursor: pointer;
+}
+
+.wrapper .content.new section div.row input[type=submit] {
+	background: #1a9385;
+	padding: 8px 20px 8px 20px;
+	border-radius: 6px;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	border: 0;
+	margin: 20px 0 0 0;
 }
 
 .wrapper .content.new section {
