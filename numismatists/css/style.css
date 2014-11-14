@@ -15,11 +15,11 @@ a {
 select {
 	-webkit-appearance: none;
 	-moz-appearance: none !important;
-  -moz-appearance: none !important;
-  text-indent: 0.01px !important; 
-  text-overflow: '' !important;
+	-moz-appearance: none !important;
+	text-indent: 0.01px !important; 
+	text-overflow: '' !important;
 	-ms-appearance: none !important;
-  appearance: none !important;
+	appearance: none !important;
 }
 
 nav, menu, ul {
@@ -144,8 +144,8 @@ header .wrapper button {
 	float: right;
 	background: #77bfe5;
 	margin: 7px 40px 0 0;
-  height: 36px;
-  line-height: 0px;
+	height: 36px;
+	line-height: 0px;
 }
 
 header .wrapper .cover {
@@ -1103,12 +1103,12 @@ div.shadow form > input {
 
 div.shadow form > input:nth-child(1) {
 	background: #fff url(../img/modal-input-bg.png) no-repeat 13px 15px;
-  height: 18px;
+	height: 18px;
 }
 
 div.shadow form > input:nth-child(2) {
 	background: #fff url(../img/modal-input-bg.png) no-repeat 13px -17px;
-  height: 18px;
+	height: 18px;
 }
 
 div.shadow form > input:nth-child(1):hover, div.shadow form > input.active:nth-child(1) {
@@ -1179,16 +1179,17 @@ div.shadow div.comm {
 	margin: 0px 0 0 -310px;
 	width: 580px;
 	background: #f2f5f8;
-	padding: 27px 20px;
+	padding: 27px 20px 11px 20px;
 	border-radius: 6px;
 }
 
 div.shadow div.comm form {
 	padding: 0;
-	border-bottom: 1px #c6ccd2 solid
+	border-bottom: 1px #c6ccd2 solid;
+	height: 262px;
 }
 
-div.shadow div.comm p.title {
+div.shadow div.comm p.title, div.shadow .last-comm p.title {
 	text-transform: uppercase;
 	font-weight: 600;
 	color: #393635;
@@ -1251,7 +1252,12 @@ div.shadow div.comm input[type=submit] {
 	background: #65abd0;
 	padding: 15px 56px;
 	width: auto;
-	margin: 14px 0 0 269px;
+	float: right;
+	margin: -14px 0 3px 0px;
+}
+
+div.shadow div.comm form > .stars {
+	margin: 28px 0 0 0;
 }
 
 div.shadow div.comm form > .stars span {
@@ -1268,6 +1274,30 @@ div.shadow div.comm form > .stars span:hover, div.shadow div.comm form > .stars 
 	background-position: 0 -22px;
 }
 
+div.shadow .last-comm {
+	padding: 20px 0 11px 0;
+}
+
+div.shadow .last-comm article {
+	width: 290px;
+	padding: 11px 0 0 0;
+	float: left;
+}
+
+div.shadow .last-comm article span.name {
+	color: #393635;
+	font-weight: 600;
+	padding: 0 4px 0 0;
+}
+
+div.shadow .last-comm article span.date {
+	color: #c6ccd2;
+}
+
+div.shadow div.comm article .stars {
+	padding: 5px 0 0 0;
+}
+
 div.shadow div.comm article .stars span {
 	display: block;
 	height: 12px;
@@ -1280,5 +1310,21 @@ div.shadow div.comm article .stars span {
 }
 
 div.shadow div.comm article .stars span:hover, div.shadow div.comm article .stars span.active {
-	
+	background-position: -12px 0;
+}
+
+div.shadow .last-comm article p.comm {
+	font-size: 14px;
+	color: #494949;
+	padding: 23px 0 0 0;
+}
+
+div.shadow .last-comm a {
+	color: #24aa98;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 600;
+	text-align: center;
+	display: block;
+	margin: 117px auto 0;
 }
