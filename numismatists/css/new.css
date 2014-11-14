@@ -1,0 +1,104 @@
+.wrapper .profile section {
+  width: 986px;
+}
+
+.wrapper .content.ad section .tabs {
+  border-bottom: 1px #dbdfe2 solid;
+}
+
+.wrapper .content.ad section .tabs .tab {
+  border-radius: 7px 7px 0 0;
+  background: #dbdfe2;
+  display: inline-block;
+  color: #393635;
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 7px 0 0;
+  cursor: pointer;
+}
+
+.wrapper .content.ad section .tabs .tab.active, .wrapper .content.ad section .tabs .tab:hover {
+  background: #24aa98;
+  color: #fff;
+}
+
+.wrapper .content.ad section .options {
+  margin: 20px 0 30px 0;
+}
+
+.wrapper .content.ad section .options label span {
+  margin: 0 30px 0 -4px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.wrapper .content.ad section .options button {
+  padding: 6px 9px;
+  border: 2px #c6ccd2 solid;
+  border-radius: 7px;
+  color: #c6ccd2;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 30px 0 0;
+}
+
+.wrapper .content.ad section .options button.active, .wrapper .content.ad section .options button:hover {
+  border: 2px #3590c0 solid;
+  color: #4597C2;
+}
+
+.wrapper .content.ad section article.item div.info {
+  padding: 0 0 0 130px;
+}
+
+.wrapper .content.ad section article.item div.info p.title {
+  font-size: 19px;
+  font-weight: 600;
+  color: #383737;
+  line-height: 29px;
+}
+
+.wrapper .content.ad section article.item div.info p.price {
+  font-size: 21px;
+  color: #383737;
+  font-weight: 900;
+  margin: 6px 0 7px 0;
+  font-family: 'PT Sans', serif;
+}
+
+.wrapper .content.ad section article.item .checkbox img {
+  margin: -28px 0 0px 0;
+}
+
+.wrapper .content.ad section article.item .checkbox {
+  float: left;
+  height: 22px;
+  margin: 28px 0 0 0;
+}
+
+.wrapper .content.ad section article.item {
+  border-bottom: 1px #f2f5f8 solid;
+  padding: 0 0 25px 0;
+  margin: 0 0 25px 0;
+}
+
+.wrapper .content.ad section article.item a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #24aa98;
+  margin: 0 30px 0 0;
+}
+
+.wrapper .content.ad section article.item select {
+  font-size: 15px;
+  font-weight: 600;
+  color: #24aa98;
+  border: 2px #c6ccd2 solid;
+  border-radius: 7px;
+  padding: 4px 21px 4px 6px;
+  background: url(../img/select-green.png) no-repeat 47px center;
+  cursor: pointer;
+}
