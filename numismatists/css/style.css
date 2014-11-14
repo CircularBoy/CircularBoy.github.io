@@ -109,7 +109,7 @@ header {
 
 header nav {
 	width: 100%;
-  min-width: 1260px;
+	min-width: 1260px;
 	height: 50px;
 	background: #383737;
 }
@@ -581,7 +581,7 @@ footer {
 
 .wrapper section.item article.item div.img div.preview ul li img {
 	margin: 2px;
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .wrapper section.item article.item div.img div.preview ul li.active img, .wrapper section.item article.item div.img div.preview ul li:hover img {
@@ -701,7 +701,7 @@ footer {
 
 
 .wrapper .profile section form div.row {
-	margin: 10px 0 10px 0;
+	margin: 22px 0 20px 0;
 }
 
 .wrapper .profile form div.row select, .wrapper .profile form div.row > input[type=text] {
@@ -717,19 +717,34 @@ footer {
 	display: block;
 	padding: 5px 0 5px 2px;
 	float: left;
+	color: #494949;
+	font-weight: 600;
+
 }
 
 .wrapper .profile section div.row:nth-child(1) input, .wrapper .profile section div.row:nth-child(2) input {
-	width: 300px;
+	width: 292px;
 }
 
 .wrapper .profile section div.row:nth-child(4) input {
-	width: 226px;
+	width: 222px;
 }
 
 .wrapper .profile form div.row select {
-	width: 300px;
+	width: 230px;
+	background: url(../img/select.png) no-repeat 206px center;
+	cursor: pointer;
+}
 
+.wrapper .profile form div.row input[type=submit] {
+	color: #fff;
+	font-weight: 600;
+	padding: 11px 58px 11px 58px;
+	cursor: pointer;
+	background: #77bfe5;
+	border-radius: 6px;
+	font-size: 16px;
+	margin: 20px 0 0 0;
 }
 
 .wrapper .profile section .toggle-switcher {
