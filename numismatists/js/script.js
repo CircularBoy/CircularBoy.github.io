@@ -27,6 +27,11 @@ $(document).ready(function() {
     $('div.shadow .reg').fadeIn(300)
   })
 
+  $('.modal-comm').click(function() {
+    $('div.shadow').fadeIn(300)
+    $('div.shadow .comm').fadeIn(300)
+  })
+
   $('div.shadow').click(function() {
     $('div.shadow').fadeOut(300)
     $('div.shadow > div').fadeOut(300)
