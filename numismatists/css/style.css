@@ -54,6 +54,30 @@ label.checkbox input[type=checkbox] {
 	position: relative;
 }
 
+.wrapper-nav {
+  width: 1260px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper-header {
+  width: 1260px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper-nav:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.wrapper-header:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
 .wrapper:after {
 	display: block;
 	content: '';
@@ -130,15 +154,15 @@ nav li a {
 	font-size: 15px;
 }
 
-header .wrapper button {
+header button {
 	float: right;
 	background: #77bfe5;
 	margin: 7px 40px 0 0;
 	height: 36px;
-	line-height: 0px;
+	line-height: 0;
 }
 
-header .wrapper .cover {
+header .cover {
 	height: 182px;
 	background: #fff;
 	position: relative;
@@ -175,7 +199,7 @@ header div.logo hgroup h2 {
 	font-weight: 500;
 	letter-spacing: -1px;
 	color: #383737;
-	line-height: 0px;  
+	line-height: 0;  
 }
 
 div.last {
@@ -230,7 +254,7 @@ div.last ul li a p {
 div.last .prev {
 	position: absolute;
 	top: 66px;
-	left: 0px;
+	left: 0;
 	width: 12px;
 	height: 20px;
 	background: url(../img/arrow.png) no-repeat 0 0;
@@ -566,7 +590,7 @@ footer {
 }
 
 .wrapper section.item article.item div.img div.preview {
-	margin: 13px 0 0 0px;
+	margin: 13px 0 0 0;
 }
 
 .wrapper section.item article.item div.img div.preview ul li {
@@ -592,7 +616,7 @@ footer {
 
 .wrapper section.item article.item .info p.desc {
 	color: #b4bbc2;
-	padding: 14px 0 0px 0;
+	padding: 14px 0 0 0;
 }
 
 .wrapper section.item article.item .info form.buy {
@@ -783,7 +807,7 @@ footer {
 }
 
 .wrapper .content.new section form div.row {
-	margin: 0px 0 21px 0;
+	margin: 0 0 21px 0;
 }
 
 .wrapper .content.new section form div.row > span {
@@ -887,7 +911,7 @@ footer {
 	border-bottom: 2px #e7eaed solid;
 	width: 280px;
 	position: relative;
-	margin: 0px 0 0 -20px;
+	margin: 0 0 0 -20px;
 	top: 20px;
 }
 
@@ -1114,32 +1138,43 @@ footer div.soc ul li:last-child {
 	margin: 0;
 }
 
+footer div.soc li a {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url(../img/soc-ico.png) no-repeat;
+}
+
 footer div.soc li:nth-child(1) a {
-	display: block;
-	width: 36px;
-	height: 36px;
-	background: url(../img/soc-ico.png) no-repeat 0px 0px;
+	background-position: 0 0;
 }
 
 footer div.soc li:nth-child(2) a {
-	display: block;
-	width: 36px;
-	height: 36px;
-	background: url(../img/soc-ico.png) no-repeat -36px 0px;
+	background-position: -36px 0;
 }
 
 footer div.soc li:nth-child(3) a {
-	display: block;
-	width: 36px;
-	height: 36px;
-	background: url(../img/soc-ico.png) no-repeat -72px 0px;
+	background-position: -72px 0;
 }
 
 footer div.soc li:nth-child(4) a {
-	display: block;
-	width: 36px;
-	height: 36px;
-	background: url(../img/soc-ico.png) no-repeat -108px 0px;
+	background-position: -108px 0;
+}
+
+footer div.soc li:nth-child(1) a:hover {
+  background-position: 0 -36px;
+}
+
+footer div.soc li:nth-child(2) a:hover {
+  background-position: -36px -36px;
+}
+
+footer div.soc li:nth-child(3) a:hover {
+  background-position: -72px -36px;
+}
+
+footer div.soc li:nth-child(4) a:hover {
+  background-position: -108px -36px;
 }
 
 footer p.copy {
@@ -1165,7 +1200,7 @@ div.shadow .modal {
 	position: absolute;
 	left: 50%;
 	top: 116px;
-	margin: 0px 0 0 -150px;
+	margin: 0 0 0 -150px;
 	width: 256px;
 	background: #f2f5f8;
 	padding: 27px 22px;
@@ -1187,7 +1222,7 @@ div.shadow .modal .title a {
 	color: #65abd0;
 	font-weight: 600;
 	position: absolute;
-	right: 0px;
+	right: 0;
 	top: 1px;
 	font-size: 14px;
 }
@@ -1198,7 +1233,7 @@ div.shadow form {
 
 div.shadow form > input {
 	width: 180px;
-	margin: 12px 0px;
+	margin: 12px 0;
 	border: 2px #c6ccd2 solid;
 	border-radius: 6px;
 	color: #383737;
@@ -1266,7 +1301,7 @@ div.shadow form > input:nth-child(1) {
 }
 
 div.shadow form label {
-	margin: 0px 0 3px 2px;
+	margin: 0 0 3px 2px;
 	display: block;
 }
 
@@ -1280,8 +1315,8 @@ div.shadow div.comm {
 	display: none;
 	position: absolute;
 	left: 50%;
-	top: 140px;
-	margin: 0px 0 0 -310px;
+	top: 90px;
+	margin: 0 0 0 -310px;
 	width: 580px;
 	background: #f2f5f8;
 	padding: 27px 20px 11px 20px;
@@ -1298,7 +1333,7 @@ div.shadow div.comm p.title, div.shadow .last-comm p.title {
 	text-transform: uppercase;
 	font-weight: 600;
 	color: #393635;
-	padding: 0px 0px;
+	padding: 0 0;
 	text-align: center;
 }
 
@@ -1307,7 +1342,7 @@ div.shadow div.comm input {
 	background: 0;
 	width: 554px;
 	background: #fff;
-	margin: 21px 0px 24px 0px;
+	margin: 21px 0 24px 0;
 }
 
 div.shadow div.comm input:hover, div.shadow div.comm input.active {
@@ -1316,7 +1351,7 @@ div.shadow div.comm input:hover, div.shadow div.comm input.active {
 }
 
 div.shadow div.comm textarea {
-	height: 76px;
+	height: 69px;
 	width: 569px;
 	border: 2px #c6ccd2 solid;
 	border-radius: 6px;
@@ -1358,7 +1393,7 @@ div.shadow div.comm input[type=submit] {
 	padding: 15px 56px;
 	width: auto;
 	float: right;
-	margin: -14px 0 3px 0px;
+	margin: -14px 0 3px 0;
 }
 
 div.shadow div.comm form > .stars {
@@ -1367,7 +1402,7 @@ div.shadow div.comm form > .stars {
 
 div.shadow div.comm form > .stars span {
 	display: block;
-	height: 22px;
+	height: 21px;
 	width: 21px;
 	margin: 0 8px 0 0;
 	background: url(../img/star-b.png) no-repeat 0 0;
@@ -1450,7 +1485,7 @@ div.shadow .last-comm a {
 }
 
 .select:after {
-  background: url(http://stifurak.com/coin/img/select.png) no-repeat center center;
+  background: url(../img/select.png) no-repeat center center;
   content: '';
   display: block;
   height: 10px;
