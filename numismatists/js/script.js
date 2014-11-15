@@ -36,5 +36,21 @@ $(document).ready(function() {
     e.stopPropagation()
   })
 
+  $('.select').each(function() {
+    $(this).width($(this).width())
+    $('.options', this).hide().css({opacity: 1, width: $(this).width()+13, position: 'absolute', top: 32})
+  })
+
+  $('.select').click(function(e) {
+    $('.options', this).toggle()
+    $('.options span', this).click(function() {
+      $(this).parents('.select').children('span').text($(this).text())
+    })
+    e.stopPropagation()
+  })
+
+  $(document).click(function() {
+    $('.select .options').hide()
+  })
 
 })
