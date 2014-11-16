@@ -5,10 +5,16 @@
 	outline: none;
 }
 
-a { text-decoration: none;}
+a { 
+  text-decoration: none;
+}
 
 ul {
 	list-style: none;
+}
+
+p, span, h1, h2, h3 {
+  cursor: default;
 }
 
 body {
@@ -60,13 +66,13 @@ h1, h2, h3, h4, h5 {
 
 nav.top {
 	height: 32px;
-	background: #6ab0c7;
+	background: #95bdc9;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 999;
-	box-shadow: 0 2px 0 #63a5bb;
+	box-shadow: 0 2px 0 #7797a1;
 }
 
 nav.top ul {
@@ -91,7 +97,7 @@ nav.top ul li a {
 }
 
 nav.top ul li:hover, nav.top ul li.active {
-	background-color: #6ebad1;
+	background: #8EB2BD;
 }
 
 header {
@@ -594,7 +600,12 @@ header button {
 	float: left;
 	margin: 24px 0 0 0;
 	border-radius: 50%;
-	border: 3px rgba(70, 104, 111, 0.21) solid;
+	box-shadow: 0 0 0px 3px rgba(70, 104, 111, 0.21);
+  transition: all .2s ease;
+}
+
+.block-8 article:hover img {
+  box-shadow: 0 0 0px 7px rgba(70, 104, 111, 0.05);
 }
 
 .block-8 article p:nth-child(2) {
@@ -642,8 +653,8 @@ header button {
 }
 
 .block-9 article p:nth-child(2) {
-	padding: 0 0 15px 10px;
-  display: none;
+  padding: 2px 0 20px 10px;
+  font-size: 15px;
 }
 
 .block-9 article p span {
