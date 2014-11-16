@@ -350,10 +350,18 @@ header button {
 }
 
 .block-3 h2 span {
-  background: #cfeef7;
+  background: #F9F9F9;
   padding: 2px 6px 5px 6px;
   border-radius: 5px;
   color: rgba(0, 0, 0, 0.48);
+}
+
+.block-3 div h2 span {
+  background: #FFF2B6;
+}
+
+.block-3 div:nth-child(4) h2 span {
+  background: #BAEAAF;
 }
 
 .block-3 .wrapper div {
