@@ -3,7 +3,6 @@
 	margin: 0;
 	border: none;
 	outline: none;
-	cursor: default;
 }
 
 a { text-decoration: none;}
@@ -26,10 +25,10 @@ h1, h2, h3, h4, h5 {
 
 .button {
 	border-radius: 5px;
-	padding: 20px 25px 18px 25px;
+	padding: 18px 25px 16px 25px;
 	min-width: 212px;
 	text-transform: uppercase;
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 	color: #fff;
 	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
 	font-size: 18px;
@@ -60,7 +59,7 @@ h1, h2, h3, h4, h5 {
 }
 
 nav.top {
-	height: 40px;
+	height: 32px;
 	background: #6ab0c7;
 	position: fixed;
 	top: 0;
@@ -78,13 +77,13 @@ nav.top ul {
 nav.top ul li {
 	display: table-cell;
 	text-align: center;
-	height: 40px;
+	height: 32px;
 	vertical-align: middle;
 }
 
 nav.top ul li a {
 	display: block;
-	padding: 11px 10px 11px 10px;
+	padding: 8px 10px 8px 10px;
 	cursor: pointer;
 	font-family: "Arial";
 	color: #fff;
@@ -114,7 +113,7 @@ header div.logo img {
 }
 
 header div.logo section {
-	padding: 8px 0 0 0;
+	padding: 10px 0 0 0;
 }
 
 header div.logo section h1 {
@@ -134,13 +133,12 @@ header div.logo section h2 {
 header address {
 	position: absolute;
 	left: 425px;
-	top: 43px;
-
+	top: 37px;
 }
 
 header address ul li {
-	padding: 0 0 1px 42px;
-	margin: 0 0 13px 0;
+	padding: 4px 0 4px 37px;
+	margin: 0px 0 1px 0;
 	color: #63a5bb;
 	font-style: normal;
 	letter-spacing: 1px;
@@ -149,20 +147,20 @@ header address ul li {
 }
 
 header address ul li:nth-child(1) {
-	background: url(../img/mts.png) no-repeat 0 1px;
+	background: url(../img/mts.png) no-repeat 0 7px;
 }
 
 header address ul li:nth-child(2) {
-	background: url(../img/kstar.png) no-repeat 0 1px;
+	background: url(../img/kstar.png) no-repeat 0 6px;
 }
 
 header address ul li span {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 header button {
 	position: absolute;
-	top: 40px;
+	top: 42px;
 	right: 4px;
 }
 
