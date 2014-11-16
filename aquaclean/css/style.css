@@ -61,12 +61,13 @@ h1, h2, h3, h4, h5 {
 
 nav.top {
 	height: 40px;
-	background: #cfeef7;
+	background: #6ab0c7;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 999;
+	box-shadow: 0 2px 0 #63a5bb;
 }
 
 nav.top ul {
@@ -86,12 +87,12 @@ nav.top ul li a {
 	padding: 11px 10px 11px 10px;
 	cursor: pointer;
 	font-family: "Arial";
-	color: #2a5966;
-
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(000, 000, 000, 0.2);
 }
 
 nav.top ul li:hover, nav.top ul li.active {
-	background-color: #b5e0ed;
+	background-color: #6ebad1;
 }
 
 header {
@@ -134,14 +135,17 @@ header address {
 	position: absolute;
 	left: 425px;
 	top: 43px;
-	color: #63a5bb;
-	font-style: normal;
-	letter-spacing: 1px;
+
 }
 
 header address ul li {
 	padding: 0 0 1px 42px;
-	margin: 0 0 13px 0; 
+	margin: 0 0 13px 0;
+	color: #63a5bb;
+	font-style: normal;
+	letter-spacing: 1px;
+	font-weight: 400;
+	font-size: 18px;
 }
 
 header address ul li:nth-child(1) {
@@ -153,7 +157,7 @@ header address ul li:nth-child(2) {
 }
 
 header address ul li span {
-	font-size: 16px;
+	font-weight: 700;
 }
 
 header button {

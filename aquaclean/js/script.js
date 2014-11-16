@@ -5,14 +5,14 @@ $(document).ready(function() {
 		$(this).parent().addClass("active");
 	});
 
-$('.block1 div.sofa').mousemove(function(e) {
-		relX = e.pageX  $(this).offset().left
+$('.block-1 div.sofa').mousemove(function(e) {
+		relX = e.pageX - $(this).offset().left
 		onePer = $(this).width()/100
 		elemWidth = (relX/onePer)
 
 		if (elemWidth >=0 && elemWidth <=100) {
-			$('div:nthchild(2)', this).width(elemWidth+'%')
-			$('div:nthchild(3)', this).css('left', elemWidth+'%')
+			$('div:nth-child(2)', this).width(elemWidth+'%')
+			$('div:nth-child(3)', this).css('left', elemWidth+'%')
 		};
 		
 	});
