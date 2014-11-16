@@ -95,7 +95,7 @@ nav.top ul li:hover, nav.top ul li.active {
 }
 
 header {
-	height: 180px;
+	height: 153px;
 	padding: 40px 0 0 0;
 }
 
@@ -174,13 +174,13 @@ header button {
 }
 
 .block-1 section h1, .block-1 section h2 {
-	font-size: 36px;
-	color: #63a5bb;
-	text-shadow: 0px 2px 0px #e6f9ff;
-	border-radius: 5px;
-	background-color: #cfeef7;
-	padding: 14px 0px 14px 0px;
-	text-align: center;
+  font-size: 36px;
+  color: #63a5bb;
+  text-shadow: 0px 2px 0px #e6f9ff;
+  border-radius: 5px;
+  background-color: #cfeef7;
+  padding: 8px 0px 14px 0px;
+  text-align: center;
 }
 
 .block-1 section h1 {
@@ -189,7 +189,7 @@ header button {
 
 .block-1 section h2 {
 	width: 272px;
-	margin: -36px auto 0;
+	margin: -23px auto 0;
 }
 
 .block-1 div ul li {
