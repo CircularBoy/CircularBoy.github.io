@@ -728,7 +728,7 @@ header button {
 	background: #effbff;
 }
 
-.block-10 .table .title {
+.block-10 .table div .title {
 	font-size: 22px;
 	text-align: center;
 	line-height: 80px;
@@ -736,30 +736,34 @@ header button {
 	background: #336699;
 }
 
-.block-10 .table .ico {
+.block-10 .table div .ico {
 	height: 100px;
 	background: #336777;
 }
 
-.block-10 .table .desc {
+.block-10 .table div .desc {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 12px;
 	height: 40px;
 	background: #337799;
 }
 
-.block-10 .table .price {
+.block-10 .table div .price {
 	font-size: 24px;
 	height: 80px;
 	background: #446699;
 }
 
-.block-10 .table .price span {
+.block-10 .table div .price span {
 	
 }
 
-.block-10 .table .price span:first-child:after {
+.block-10 .table div .price span:first-child:after {
 	
+}
+
+.block-10 .table div .ico {
+	background: url(../img/bloack-10-ico.png);
 }
 
 div.shadow {
@@ -771,6 +775,7 @@ div.shadow {
 }
 
 div.shadow form {
+	display: none;
 	position: absolute;
 	top: 50%;
 	left: 50%;
