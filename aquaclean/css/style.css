@@ -95,7 +95,11 @@ nav.top ul li:hover, nav.top ul li.active {
 }
 
 header {
+<<<<<<< HEAD
 	height: 146px;
+=======
+	height: 153px;
+>>>>>>> origin/master
 	padding: 40px 0 0 0;
 }
 
@@ -174,13 +178,13 @@ header button {
 }
 
 .block-1 section h1, .block-1 section h2 {
-	font-size: 36px;
-	color: #63a5bb;
-	text-shadow: 0px 2px 0px #e6f9ff;
-	border-radius: 5px;
-	background-color: #cfeef7;
-	padding: 14px 0px 14px 0px;
-	text-align: center;
+  font-size: 36px;
+  color: #63a5bb;
+  text-shadow: 0px 2px 0px #e6f9ff;
+  border-radius: 5px;
+  background-color: #cfeef7;
+  padding: 8px 0px 14px 0px;
+  text-align: center;
 }
 
 .block-1 section h1 {
@@ -189,7 +193,7 @@ header button {
 
 .block-1 section h2 {
 	width: 272px;
-	margin: -36px auto 0;
+	margin: -23px auto 0;
 }
 
 .block-1 div ul li {
@@ -274,7 +278,8 @@ header button {
 
 .block-2 {
 	background: #f6f6f6;
-	margin: 0 0 60px 0;
+	margin: 0px 0 40px 0;
+  padding: 0 0 15px 0;
 }
 
 .block-2 h1 {
@@ -348,6 +353,13 @@ header button {
 	padding: 0 0 15px 20px
 }
 
+.block-3 h2 span {
+  background: #cfeef7;
+  padding: 2px 6px 5px 6px;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.48);
+}
+
 .block-3 .wrapper div {
 	float: left;
 	margin: 0 20px 0 0;
@@ -383,8 +395,8 @@ header button {
 }
 
 .block-3 ul.minus {
-	color: #81774A;
-	background: #FFEE9E url(../img/block-3-minus.png) no-repeat right bottom;
+	color: #595232;
+	background: #FFF2B6 url(../img/block-3-minus.png) no-repeat right bottom;
 	border-radius: 0 0 6px 6px;
 	background-size: 36%;
 }
@@ -529,7 +541,7 @@ header button {
 
 .block-7 .list-col2 div.row {
 	display: table;
-	padding: 0 25px 20px 0;
+	padding: 0 25px 20px 25px;
 }
 
 .block-7 .list-col2 div.row div.img {
@@ -552,9 +564,9 @@ header button {
 }
 
 .block-8 {
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 	background: #f6f6f6;
-	padding: 20px 0 20px 0;
+	padding: 15px 0 5px 0;
 }
 
 .block-8 h1 {
@@ -604,7 +616,7 @@ header button {
 
 .block-9 article {
 	padding: 0 10px 0 10px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .block-9 article:after {
@@ -622,10 +634,12 @@ header button {
 	background: #cfeef7;
 	text-shadow: 0 1px 0 #FCFCFC;
 	display: inline-block;
+  cursor: pointer;
 }
 
 .block-9 article p:nth-child(2) {
-	padding: 0 0 0 10px;
+	padding: 0 0 15px 10px;
+  display: none;
 }
 
 .block-9 article p span {
@@ -652,16 +666,16 @@ header button {
 
 .block-call .wrapper div p {
 	text-align: center;
-	padding: 100px 0px 0 0px;
+	padding: 76px 0px 0 0px;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 24px;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .block-call .wrapper .phones {
-	margin: 16px 0 0 160px;
-	padding: 16px 0 0 115px;
-	background: url(../img/block-call-ico.png) no-repeat left top;
+  margin: 12px 0 0 163px;
+  padding: 5px 0 9px 110px;
+  background: url(../img/block-call-ico.png) no-repeat left top;
 }
 
 .block-call .wrapper div div > span {
@@ -671,12 +685,11 @@ header button {
 
 .block-call div span span {
 	font-size: 28px;
-
 }
 
 .block-call div button {
 	position: absolute;
-	top: 160px;
+	top: 135px;
 	right: 60px;
 }
 
