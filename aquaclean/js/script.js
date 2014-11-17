@@ -60,7 +60,7 @@ $(document).ready(function() {
     $('div.shadow').fadeIn(300);
   });
 
-  $('div.shadow, div.shadow div.cancel').click(function() {
+  $('div.shadow, div.shadow form:after').click(function() {
     $('div.shadow').fadeOut(300);
   });
 
