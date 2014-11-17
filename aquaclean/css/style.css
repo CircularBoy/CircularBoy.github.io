@@ -89,11 +89,11 @@ nav.top ul li {
 
 nav.top ul li a {
 	display: block;
-	padding: 8px 10px 8px 10px;
+	padding: 8px 13px;
 	cursor: pointer;
 	font-family: "Arial";
 	color: #fff;
-	text-shadow: 0 1px 0 rgba(000, 000, 000, 0.2);
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 nav.top ul li:hover, nav.top ul li.active {
