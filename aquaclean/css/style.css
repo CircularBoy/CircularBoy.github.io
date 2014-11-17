@@ -719,12 +719,11 @@ header button {
 }
 
 .block-10 .table {
-	width: 880px;
+	width: 900px;
+	height: 300px;
 	margin: 0 auto;
-	background: red;
-	padding: 24px 120px;
+	padding: 24px 50px;
 	font-family: 'Roboto Condensed', sans-serif;
-	color: #587f8b;
 }
 
 .block-10 .table > div {
@@ -737,7 +736,6 @@ header button {
 	text-align: center;
 	line-height: 80px;
 	height: 80px;
-	background: #336699;
 }
 
 .block-10 .table div .ico {
@@ -745,48 +743,81 @@ header button {
 }
 
 .block-10 .table div .desc {
+	text-align: center;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 12px;
-	height: 40px;
-	background: #337799;
+	padding-top: 10px;
+	height: 25px;
 }
 
 .block-10 .table div .price {
 	font-size: 24px;
+	padding: 12px 0 0 0;
 	height: 80px;
-	background: #446699;
+	background: #f9feff;
+	text-align: center;
+}
+
+.block-10 .table div .price span:first-child {
+	position: relative;
+}
+
+.block-10 .table div .price span:first-child div {
+	position: absolute;
+	top: -6px;
+	right: -31px;
+	background: #9ce28c;
+	color: #fff;
+	font-size: 10px;
+	font-family: 'Open sans', sans-serif;
+	text-align: center;
+	width: 32px;
+	height: 0px;
+	padding: 0 0 14px 0;
+	border-radius: 3px;
+}
+
+.block-10 .table div .price span:last-child {
+	display: block;
+	font-size: 18px;
+	margin: -3px 0 0 0;
+}
+
+.block-10 .table div:nth-child(5) .price span:last-child {
+	margin: -7px 0 0 0;
 }
 
 .block-10 .table > div:nth-child(1) {
-	width: 62px;
+	width: 108px;
 }
 
 .block-10 .table > div:nth-child(2) {
-	width: 89px;
+	width: 118px;
 }
 
 .block-10 .table > div:nth-child(3) {
-	width: 120px;
+	width: 160px;
 }
 
 .block-10 .table > div:nth-child(4) {
-	width: 151px;
+	width: 174px;
 }
 
 .block-10 .table > div:nth-child(5) {
-	width: 81px;
+	width: 130px;
 }
 
 .block-10 .table > div:nth-child(6) {
-	width: 92px;
+	width: 118px;
 }
 
 .block-10 .table > div:nth-child(7) {
-	width: 28px;
+	width: 92px;
 }
 
 .block-10 .table div .ico {
 	background: url(../img/block-10-ico.png);
+	background-repeat: no-repeat;
 }
 
 .block-10 .table div:nth-child(1) .ico {
