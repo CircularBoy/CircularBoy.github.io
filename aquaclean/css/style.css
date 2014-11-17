@@ -765,8 +765,39 @@ header button {
 	
 }
 
-.block-10 .table div .ico {
-	background: url(../img/bloack-10-ico.png);
+.block-10 .table div:nth-child(1) .ico {
+	background: url(../img/bloack-10-ico.png) no-repeat 0px 0px;
+	width: 62px;
+}
+
+.block-10 .table div:nth-child(2) .ico {
+	background: url(../img/bloack-10-ico.png) no-repeat 0px -45px;
+	width: 89px;
+}
+
+.block-10 .table div:nth-child(3) .ico {
+	background: url(../img/bloack-10-ico.png) no-repeat 0px -90px;
+	width: 120px;
+}
+
+.block-10 .table div:nth-child(4) .ico {
+	background: url(../img/bloack-10-ico.png) no-repeat 0px -135px;
+	width: 151px;
+}
+
+.block-10 .table div:nth-child(5) .ico {
+	background: url(../img/bloack-10-ico.png) no-repeat 0px -180px;
+	width: 81px;
+}
+
+.block-10 .table div:nth-child(6) .ico {
+	background: url(../img/bloack-10-ico.png) no-repeat 0px -225px;
+	width: 92px;
+}
+
+.block-10 .table div:nth-child(7) .ico {
+	background: url(../img/bloack-10-ico.png) no-repeat 0px -270px;
+	width: 28px;
 }
 
 div.shadow {
