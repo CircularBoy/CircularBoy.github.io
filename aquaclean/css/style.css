@@ -771,9 +771,8 @@ header button {
 	font-size: 10px;
 	font-family: 'Open sans', sans-serif;
 	text-align: center;
-	width: 32px;
 	height: 0px;
-	padding: 0 0 14px 0;
+	padding: 0px 5px 14px 5px;
 	border-radius: 3px;
 }
 
