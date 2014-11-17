@@ -719,11 +719,12 @@ header button {
 }
 
 .block-10 .table {
-	width: 900px;
-	height: 300px;
-	margin: 0 auto;
-	padding: 24px 50px;
-	font-family: 'Roboto Condensed', sans-serif;
+  width: 900px;
+  margin: 0px 50px;
+  font-family: 'Roboto Condensed', sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 0 10px #DFF6FF;
 }
 
 .block-10 .table > div {
@@ -787,31 +788,31 @@ header button {
 }
 
 .block-10 .table > div:nth-child(1) {
-	width: 108px;
+	width: 12%;
 }
 
 .block-10 .table > div:nth-child(2) {
-	width: 118px;
+	width: 13%;
 }
 
 .block-10 .table > div:nth-child(3) {
-	width: 160px;
+	width: 17%;
 }
 
 .block-10 .table > div:nth-child(4) {
-	width: 174px;
+	width: 19%;
 }
 
 .block-10 .table > div:nth-child(5) {
-	width: 130px;
+	width: 15%;
 }
 
 .block-10 .table > div:nth-child(6) {
-	width: 118px;
+	width: 13%;
 }
 
 .block-10 .table > div:nth-child(7) {
-	width: 92px;
+	width: 11%;
 }
 
 .block-10 .table div .ico {
