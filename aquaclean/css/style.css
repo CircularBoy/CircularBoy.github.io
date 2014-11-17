@@ -915,7 +915,7 @@ div.shadow form input:nth-child(1) {
 	margin-top: 40px;
 }
 
-div.shadow form:after {
+div.shadow form div.cancel {
 	content: '';
 	position: absolute;
 	left: 302px;
