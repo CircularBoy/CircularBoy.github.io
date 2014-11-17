@@ -56,7 +56,7 @@ $(document).ready(function() {
     return false;
   });
 
-  $('header button').click(function() {
+  $('header button', 'block-call .wrapper div button.button').click(function() {
     $('div.shadow').fadeIn(300);
   });
 
