@@ -857,7 +857,7 @@ div.shadow {
 	display: none;
 	position: fixed;
 	left:0;top: 0;right:0;bottom: 0;
-	background: rgba(0, 0, 0, 0.41);
+	background: rgba(207, 238, 248, 0.64);
 	z-index: 3000;
 }
 
