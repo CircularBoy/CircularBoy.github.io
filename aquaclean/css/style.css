@@ -250,7 +250,7 @@ header button {
 }
 
 .block-1 div span:nth-child(1) {
-	margin: 0px 155px 0 20px;
+	margin: 0px 135px 0 36px;
 }
 
 .block-1 div.sofa {
@@ -260,11 +260,11 @@ header button {
 
 .block-1 div.sofa {
 	margin: 0 auto;
-	width: 804px;
+	width: 900px;
 }
 
 .block-1 div.sofa div:nth-child(2) {
-	margin: -368px 0 0 0;
+	margin: -338px 0 0 0;
 	width: 50%;
 	overflow: hidden;
 }
@@ -275,9 +275,14 @@ header button {
 	left: 50%;
 	width: 93px;
 	margin: -32px 0 0 -47px;
-	cursor: pointer;
+	cursor: default;
+  opacity: .4;
+  transition: opacity .2s ease;
 }
 
+.block-1 div.sofa:hover div:nth-child(3) {
+  opacity: 0;
+}
 
 .block-2 {
 	background: #f6f6f6;
