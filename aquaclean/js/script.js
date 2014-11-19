@@ -16,6 +16,11 @@ $(document).ready(function() {
     };
   });
 
+  $('.block-1 div.sofa').mouseleave(function () {
+  	$('div:nth-child(2)', this).width(50+'%')
+     $('div:nth-child(3)', this).css('left', 50+'%')
+  })
+
   $('.block-9 article p:nth-child(1)').click(function() {
     $(this).next().fadeToggle();
   });
@@ -56,7 +61,7 @@ $(document).ready(function() {
     return false;
   });
 
-  $('header button, .block-call button').click(function() {
+  $('header button, .block-call button, .block-7 button').click(function() {
     $('div.shadow').fadeIn(300);
   });
 
@@ -78,5 +83,14 @@ $(document).ready(function() {
     }, 900, function () {
         window.location.hash = target;
     });
-});
+   });
+
+  totalWidth = 0
+
+  $('.gallery ul li img').each(function() {
+   	totalWidth += $(this).width()
+   })
+
+  $('.gallery ul').css('width', totalWidth)
+
 });

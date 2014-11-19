@@ -581,6 +581,10 @@ header button {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.block-7 .wrapper > div {
+	text-align: center;
+}
+
 .block-8 {
 	margin-bottom: 40px;
 	background: #f6f6f6;
@@ -651,19 +655,24 @@ header button {
 .block-9 article p:nth-child(1) {
 	font-size: 20px;
 	font-family: 'Roboto Condensed', sans-serif;
-	padding: 5px 10px;
+	padding: 5px 10px 5px 24px;
+	background: #cfeef7 url(../img/block-9-mark.png) no-repeat  11px 15px;
 	margin: 0 0 5px 0;
 	border-radius: 5px;
-	background: #cfeef7;
 	text-shadow: 0 1px 0 #FCFCFC;
 	display: inline-block;
 	cursor: pointer;
 }
 
+
 .block-9 article p:nth-child(2) {
 	display: none;
 	padding: 2px 0 20px 10px;
 	font-size: 15px;
+}
+
+.block-9 article:first-of-type p:nth-child(2) {
+	display: block;
 }
 
 .block-9 article p span {
@@ -858,14 +867,21 @@ header button {
 	background-position: center -270px;
 }
 
+.gallery {
+	width: 100%;
+	overflow: hidden;
+}
+
 .gallery h1 {
 	font-size: 32px;
 	text-align: center;
 	padding: 0px 0 30px 0;
 }
 
-.gallery ul li {
+.gallery ul li a img {
 	float: left;
+	height: 208px;
+	cursor: pointer;
 }
 
 div.shadow {
@@ -878,7 +894,7 @@ div.shadow {
 
 div.shadow form {
 	position: absolute;
-	top: 50%;
+	top: 34%;
 	left: 50%;
 	margin: -105px 0 0 -160px;
 	padding: 30px 20px 30px 20px;
