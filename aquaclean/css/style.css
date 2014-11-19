@@ -52,6 +52,13 @@ h1, h2, h3, h4, h5 {
 	box-shadow: 0px 3px 0px #7797a1;
 }
 
+.uselectable {
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	-ms-user-select: none;
+	user-select: none;
+}
+
 .wrapper {
 	width: 1000px;
 	margin: 0 auto;
@@ -276,12 +283,12 @@ header button {
 	width: 93px;
 	margin: -32px 0 0 -47px;
 	cursor: default;
-  opacity: .4;
-  transition: opacity .2s ease;
+	opacity: .4;
+	transition: opacity .2s ease;
 }
 
 .block-1 div.sofa:hover div:nth-child(3) {
-  opacity: 0;
+	opacity: 0;
 }
 
 .block-2 {
@@ -583,6 +590,11 @@ header button {
 
 .block-7 .wrapper > div {
 	text-align: center;
+	text-align: center;
+	clear: both;
+	position: relative;
+	top: 30px;
+	margin: 0 0 80px 0;
 }
 
 .block-8 {
@@ -664,6 +676,9 @@ header button {
 	cursor: pointer;
 }
 
+.block-9 article p.open:nth-child(1) {
+	background: #cfeef7 url(../img/block-9-mark-open.png) no-repeat 8px 16px;
+}
 
 .block-9 article p:nth-child(2) {
 	display: none;

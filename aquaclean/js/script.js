@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
 	$('nav.top ul li a').click(function() {
-		$('nav.top ul li').removeClass("active");
-		$(this).parent().addClass("active");
+		$('nav.top ul li').removeClass('active');
+		$(this).parent().addClass('active');
 	});
 
   $('.block-1 div.sofa').mousemove(function(e) {
@@ -17,12 +17,13 @@ $(document).ready(function() {
   });
 
   $('.block-1 div.sofa').mouseleave(function () {
-  	$('div:nth-child(2)', this).width(50+'%')
-     $('div:nth-child(3)', this).css('left', 50+'%')
+  	$('div:nth-child(2)', this).animate({'width': 50+'%'}, 300)
+    $('div:nth-child(3)', this).animate({'left': 50+'%'}, 300)
   })
 
   $('.block-9 article p:nth-child(1)').click(function() {
     $(this).next().fadeToggle();
+    $(this).toggleClass('open');
   });
 
   $('form input[type=submit]').click(function() {
