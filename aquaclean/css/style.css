@@ -893,9 +893,13 @@ header button {
 	padding: 0px 0 30px 0;
 }
 
+.gallery ul li {
+	margin-left: 0;
+}
+
 .gallery ul li a img {
 	float: left;
-	height: 208px;
+	height: 225px;
 	cursor: pointer;
 }
 

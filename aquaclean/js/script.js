@@ -26,6 +26,8 @@ $(document).ready(function() {
     $(this).toggleClass('open');
   });
 
+  
+
   $('form input[type=submit]').click(function() {
     i=0;
 
@@ -86,12 +88,26 @@ $(document).ready(function() {
     });
    });
 
-  totalWidth = 0
+  
+});
 
+$(window).load(function(){
+	totalWidth = 0
   $('.gallery ul li img').each(function() {
    	totalWidth += $(this).width()
-   })
-
+  })
   $('.gallery ul').css('width', totalWidth)
+
+  intervalID = setInterval( function() {
+  	imgWidth = $('.gallery ul li:first-child img').width()
+  	$('.gallery ul li:first-child').animate({marginLeft: -imgWidth}, 10000)
+
+  	elem = $('.gallery ul li:first-child')
+  	$('.gallery ul li:first-child').remove()
+  	$('.gallery ul').append(elem)
+  }, 5000)
+ 	$('.gallery ul').mouseenter(function () {
+ 		clearInterval(intervalID)
+ 	})
 
 });
