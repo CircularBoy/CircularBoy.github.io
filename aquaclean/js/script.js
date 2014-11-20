@@ -82,11 +82,11 @@ $(document).ready(function() {
     var target = this.hash,
     $target = $(target);
     $('html, body').stop().animate({
-        'scrollTop':$target.offset().top-32
+      'scrollTop':$target.offset().top-32
     }, 900, function () {
-        window.location.hash = target;
+      window.location.hash = target;
     });
-   });
+  });
 
   
 });
@@ -94,20 +94,26 @@ $(document).ready(function() {
 $(window).load(function(){
 	totalWidth = 0
   $('.gallery ul li img').each(function() {
-   	totalWidth += $(this).width()
+    totalWidth += $(this).width()
   })
   $('.gallery ul').css('width', totalWidth)
 
-  intervalID = setInterval( function() {
-  	imgWidth = $('.gallery ul li:first-child img').width()
-  	$('.gallery ul li:first-child').animate({marginLeft: -imgWidth}, 10000)
+  function startSlider() {
+    imgWidth = $('.gallery ul li:first-child img').width()
+    $('.gallery ul li:first-child').animate({marginLeft: -imgWidth}, 10000)
 
-  	elem = $('.gallery ul li:first-child')
-  	$('.gallery ul li:first-child').remove()
-  	$('.gallery ul').append(elem)
-  }, 5000)
- 	$('.gallery ul').mouseenter(function () {
- 		clearInterval(intervalID)
- 	})
+    elem = $('.gallery ul li:first-child')
+    $('.gallery ul li:first-child').remove()
+    $('.gallery ul').append(elem)
+  }
+
+  intervalID = setInterval(startSlider(), 4000)
+
+  $('.gallery ul').mouseenter(function () {
+    clearInterval(intervalID)
+  })
+  $('.gallery ul').mouseleave(function () {
+    intervalID = setInterval(startSlider(), 4000)
+  })
 
 });
