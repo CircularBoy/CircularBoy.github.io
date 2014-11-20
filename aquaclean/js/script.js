@@ -100,20 +100,23 @@ $(window).load(function(){
 
   function startSlider() {
     imgWidth = $('.gallery ul li:first-child img').width()
-    $('.gallery ul li:first-child').animate({marginLeft: -imgWidth}, 10000)
-
-    elem = $('.gallery ul li:first-child')
-    $('.gallery ul li:first-child').remove()
-    $('.gallery ul').append(elem)
+    $('.gallery ul li:first-child').animate({marginLeft: -imgWidth}, 2000, function() {
+      elem = $('.gallery ul li:first-child')
+      $('.gallery ul li:first-child').remove()
+      $('.gallery ul').append(elem)
+      $('.gallery ul li:last-child').css('marginLeft', 0)
+    })
   }
 
-  intervalID = setInterval(startSlider(), 4000)
+  startSlider()
+  intervalID = setInterval(startSlider, 3000)
 
   $('.gallery ul').mouseenter(function () {
     clearInterval(intervalID)
   })
   $('.gallery ul').mouseleave(function () {
-    intervalID = setInterval(startSlider(), 4000)
+    startSlider()
+    intervalID = setInterval(startSlider, 3000)
   })
 
 });
