@@ -100,12 +100,13 @@ $(window).load(function(){
 
   intervalID = setInterval( function() {
   	imgWidth = $('.gallery ul li:first-child img').width()
-  	$('.gallery ul li:first-child').animate({marginLeft: -imgWidth}, 10000)
+  	$('.gallery ul li:first-child').animate({marginLeft: -imgWidth}, 2000, function() {
+  		elem = $('.gallery ul li:first-child')
+  		$('.gallery ul li:first-child').remove()
+  		$('.gallery ul').append(elem)
+  	});
+	}, 4000)
 
-  	elem = $('.gallery ul li:first-child')
-  	$('.gallery ul li:first-child').remove()
-  	$('.gallery ul').append(elem)
-  }, 5000)
  	$('.gallery ul').mouseenter(function () {
  		clearInterval(intervalID)
  	})
