@@ -98,17 +98,21 @@ $(window).load(function(){
   })
   $('.gallery ul').css('width', totalWidth)
 
-  intervalID = setInterval( function() {
+  function startSlider() {
   	imgWidth = $('.gallery ul li:first-child img').width()
   	$('.gallery ul li:first-child').animate({marginLeft: -imgWidth}, 2000, function() {
   		elem = $('.gallery ul li:first-child')
   		$('.gallery ul li:first-child').remove()
   		$('.gallery ul').append(elem)
   	});
-	}, 4000)
+  	};
+  intervalID = setInterval(startSlider(), 4000)
 
  	$('.gallery ul').mouseenter(function () {
  		clearInterval(intervalID)
+ 	})
+ 	$('.gallery ul').mouseleave(function () {
+ 		intervalID = setInterval(startSlider(), 4000)
  	})
 
 });
