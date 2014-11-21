@@ -208,3 +208,28 @@ body:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+
+.lb-details {
+  display: none;
+}
+
+.lb-outerContainer {
+  background-color: #effbff;
+  padding: 10px;
+}
+
+.lightboxOverlay {
+  background: rgba(21, 42, 48, 0.47);
+  opacity: 1;
+}
+
+.lb-data .lb-close {
+  position: relative;
+  top: -468px;
+  right: -29px;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: #f9feff url(../img/cancel.png) no-repeat center center;
+  opacity: 1;
+}

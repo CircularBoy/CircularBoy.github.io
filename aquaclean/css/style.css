@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5 {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	color: #fff;
-	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 	font-size: 18px;
 	font-weight: 500;
 	cursor: pointer;
@@ -79,7 +79,7 @@ nav.top {
 	left: 0;
 	right: 0;
 	z-index: 999;
-	box-shadow: 0 2px 0 #7797a1;
+  box-shadow: 0 2px 0 0 2px 0 rgba(119, 151, 161, 0.74);
 }
 
 nav.top ul {
@@ -769,8 +769,8 @@ header button {
 .block-10 .table div .title {
 	font-size: 22px;
 	text-align: center;
-	line-height: 80px;
-	height: 80px;
+  line-height: 70px;
+  height: 75px;
 }
 
 .block-10 .table div .ico {
@@ -787,10 +787,10 @@ header button {
 
 .block-10 .table div .price {
 	font-size: 24px;
-	padding: 12px 0 0 0;
-	height: 80px;
-	background: #f9feff;
-	text-align: center;
+  padding: 20px 0 0 0;
+  height: 70px;
+  background: #f9feff;
+  text-align: center;
 }
 
 .block-10 .table div .price span:first-child {
@@ -907,7 +907,7 @@ div.shadow {
 	display: none;
 	position: fixed;
 	left:0;top: 0;right:0;bottom: 0;
-	background: rgba(207, 238, 248, 0.64);
+	background: rgba(21, 42, 48, 0.47);
 	z-index: 3000;
 }
 
@@ -943,7 +943,7 @@ div.shadow form input[type=text] {
 	padding: 10px 20px;
 	font-size: 18px;
 	color: #49836d;
-	background: #f9feff;
+	background: rgba(255, 255, 255, 0.8);
 }
 
 div.shadow form input[type=submit] {
