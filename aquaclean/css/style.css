@@ -887,6 +887,11 @@ header button {
 	overflow: hidden;
 }
 
+.gallery ul {
+	border: 16px #cfeef7 solid;
+	margin: 0 0 0 -16px;
+}
+
 .gallery h1 {
 	font-size: 32px;
 	text-align: center;
