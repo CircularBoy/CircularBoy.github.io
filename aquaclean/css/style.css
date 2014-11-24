@@ -908,6 +908,11 @@ header button {
 	cursor: pointer;
 }
 
+.footer #map_canvas {
+	height: 400px;
+	width: 100%;
+}
+
 div.shadow {
 	display: none;
 	position: fixed;
