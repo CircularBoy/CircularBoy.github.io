@@ -5,20 +5,25 @@ $(document).ready(function() {
 		$(this).parent().addClass('active');
 	});
 
+  i = 0;
   $('.block-1 div.sofa').mousemove(function(e) {
     relX = e.pageX - $(this).offset().left
     onePer = $(this).width()/100
     elemWidth = (relX/onePer)
 
+    if ($('div:nth-child(2)', this).width() == 450 && i == 0) {
+      i = 1;
+      $('div:nth-child(2)', this).stop().animate({'width': elemWidth+'%'}, 300)
+    }
+
     if (elemWidth >=0 && elemWidth <=100) {
       $('div:nth-child(2)', this).width(elemWidth+'%')
-      $('div:nth-child(3)', this).css('left', elemWidth+'%')
     };
   });
 
   $('.block-1 div.sofa').mouseleave(function () {
-  	$('div:nth-child(2)', this).css({'width': 50+'%'}, 300)
-    $('div:nth-child(3)', this).css({'left': 50+'%'}, 300)
+  	$('div:nth-child(2)', this).stop().animate({'width': 50+'%'}, 300)
+    i = 0;
   })
 
   $('.block-9 article p:nth-child(1)').click(function() {
@@ -89,10 +94,10 @@ $(document).ready(function() {
   function initialize() {
     var mapCanvas = document.getElementById('map_canvas');
     var mapOptions = {
-        center: new google.maps.LatLng(48.500925, 35.916737),
-        zoom: 9, 
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
+      center: new google.maps.LatLng(48.500925, 35.916737),
+      zoom: 9, 
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
     var map = new google.maps.Map(mapCanvas, mapOptions);
 
     var markers = [],
@@ -101,32 +106,32 @@ $(document).ready(function() {
 
     for (var i = 0, n = myPlaces.length; i < n; i++) {
     	var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(myPlaces[i].latitude, myPlaces[i].longitude),
-            map: map,
-            title: myPlaces[i].name
-          });
-        var infowindow = new google.maps.InfoWindow({
-        	content: '<h1>' + myPlaces[i].name + '</h1><br/>' + myPlaces[i].description
-        });
-        makeInfoWindowEvent(map, infowindow, marker);
-        markers.push(marker);
-      }
+        position: new google.maps.LatLng(myPlaces[i].latitude, myPlaces[i].longitude),
+        map: map,
+        title: myPlaces[i].name
+      });
+      var infowindow = new google.maps.InfoWindow({
+       content: '<h1>' + myPlaces[i].name + '</h1><br/>' + myPlaces[i].description
+     });
+      makeInfoWindowEvent(map, infowindow, marker);
+      markers.push(marker);
     }
+  }
 
-    function makeInfoWindowEvent(map, infowindow, marker) {
-		    google.maps.event.addListener(marker, 'click', function() {
-		    	infowindow.open(map, marker);
-		    });
-		  }
-		function Place(name, latitude, longitude, description){
+  function makeInfoWindowEvent(map, infowindow, marker) {
+    google.maps.event.addListener(marker, 'click', function() {
+     infowindow.open(map, marker);
+   });
+  }
+  function Place(name, latitude, longitude, description){
 		    this.name = name;  // название
 		    this.latitude = latitude;  // широта
 		    this.longitude = longitude;  // долгота
 		    this.description = description;  // описание места
-		}
-		google.maps.event.addDomListener(window, 'load', initialize);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
 
-});
+    });
 
 
 $(window).load(function(){

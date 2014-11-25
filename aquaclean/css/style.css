@@ -268,14 +268,12 @@ header button {
 .block-1 div.sofa {
 	margin: 0 auto;
 	width: 900px;
-	transition: width .3s ease;
 }
 
 .block-1 div.sofa div:nth-child(2) {
 	margin: -338px 0 0 0;
 	width: 50%;
 	overflow: hidden;
-	transition: width .3s;
 }
 
 .block-1 div.sofa div:nth-child(3) {
@@ -286,7 +284,7 @@ header button {
 	margin: -32px 0 0 -47px;
 	cursor: default;
 	opacity: .4;
-	transition: opacity .3s ease, left .3s;
+	transition: opacity .3s ease;
 }
 
 .block-1 div.sofa:hover div:nth-child(3) {
