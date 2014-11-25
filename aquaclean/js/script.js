@@ -143,11 +143,15 @@ $(window).load(function(){
 
   function startSlider() {
     imgWidth = $('.gallery ul li:first-child img').width()
-    $('.gallery ul li').animate({marginLeft: -imgWidth}, 2000, function() {
+    $('.gallery ul li:first-child').animate({marginLeft: -imgWidth}, 2000, function() {
       elem = $('.gallery ul li:first-child')
       elem.remove()
       $('.gallery ul').append(elem)
-      $('.gallery ul li').css('marginLeft', 0)
+      $('.gallery ul li:last-child').css('marginLeft', 0)
+    })
+
+    $('.gallery ul li').animate({marginLeft: -imgWidth}, 2000, function() {
+      $(this).css('marginLeft', 0)
     })
   }
 
