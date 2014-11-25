@@ -274,6 +274,7 @@ header button {
 	margin: -338px 0 0 0;
 	width: 50%;
 	overflow: hidden;
+	transition: opacity .2s ease;
 }
 
 .block-1 div.sofa div:nth-child(3) {
