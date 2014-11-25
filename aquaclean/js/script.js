@@ -5,16 +5,10 @@ $(document).ready(function() {
 		$(this).parent().addClass('active');
 	});
 
-  i = 0;
   $('.block-1 div.sofa').mousemove(function(e) {
     relX = e.pageX - $(this).offset().left
     onePer = $(this).width()/100
     elemWidth = (relX/onePer)
-
-    if ($('div:nth-child(2)', this).width() == 450 && i == 0) {
-      i = 1;
-      $('div:nth-child(2)', this).stop().animate({'width': elemWidth+'%'}, 300)
-    }
 
     if (elemWidth >=0 && elemWidth <=100) {
       $('div:nth-child(2)', this).width(elemWidth+'%')
@@ -23,7 +17,6 @@ $(document).ready(function() {
 
   $('.block-1 div.sofa').mouseleave(function () {
   	$('div:nth-child(2)', this).stop().animate({'width': 50+'%'}, 300)
-    i = 0;
   })
 
   $('.block-9 article p:nth-child(1)').click(function() {
