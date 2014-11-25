@@ -17,8 +17,8 @@ $(document).ready(function() {
   });
 
   $('.block-1 div.sofa').mouseleave(function () {
-  	$('div:nth-child(2)', this).css({'width': 50+'%'}, 300)
-    $('div:nth-child(3)', this).css({'left': 50+'%'}, 300)
+  	$('div:nth-child(2)', this).animate({'width': 50+'%'}, 300)
+    $('div:nth-child(3)', this).animate({'left': 50+'%'}, 300)
   })
 
   $('.block-9 article p:nth-child(1)').click(function() {
@@ -138,11 +138,11 @@ $(window).load(function(){
 
   function startSlider() {
     imgWidth = $('.gallery ul li:first-child img').width()
-    $('.gallery ul li:first-child').animate({marginLeft: -imgWidth}, 2000, function() {
+    $('.gallery ul li').animate({marginLeft: -imgWidth}, 2000, function() {
       elem = $('.gallery ul li:first-child')
-      $('.gallery ul li:first-child').remove()
+      elem.remove()
       $('.gallery ul').append(elem)
-      $('.gallery ul li:last-child').css('marginLeft', 0)
+      $('.gallery ul li').css('marginLeft', 0)
     })
   }
 

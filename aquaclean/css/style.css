@@ -79,7 +79,7 @@ nav.top {
 	left: 0;
 	right: 0;
 	z-index: 999;
-  box-shadow: 0 2px 0 0 2px 0 rgba(119, 151, 161, 0.74);
+  box-shadow: 0 2px 0 rgba(119, 151, 161, 0.74);
 }
 
 nav.top ul {
@@ -260,6 +260,10 @@ header button {
 	margin: 0px 135px 0 36px;
 }
 
+.block-1 div.sofa img {
+	display: block;
+}
+
 .block-1 div.sofa {
 	position: relative;
 	height: 364px;
@@ -272,10 +276,10 @@ header button {
 }
 
 .block-1 div.sofa div:nth-child(2) {
-	margin: -338px 0 0 0;
+	margin: -334px 0 0 0;
 	width: 50%;
 	overflow: hidden;
-	transition: width .3s;
+	transition: width .3s ease;
 }
 
 .block-1 div.sofa div:nth-child(3) {
@@ -286,7 +290,7 @@ header button {
 	margin: -32px 0 0 -47px;
 	cursor: default;
 	opacity: .4;
-	transition: opacity .3s ease, left .3s;
+	transition: opacity .3s ease, left .3s ease;
 }
 
 .block-1 div.sofa:hover div:nth-child(3) {
