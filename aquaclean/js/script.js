@@ -89,6 +89,7 @@ $(document).ready(function() {
     var mapOptions = {
       center: new google.maps.LatLng(48.500925, 35.916737),
       zoom: 9, 
+      scrollwheel: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     var map = new google.maps.Map(mapCanvas, mapOptions);
@@ -109,6 +110,34 @@ $(document).ready(function() {
       makeInfoWindowEvent(map, infowindow, marker);
       markers.push(marker);
     }
+
+    for (var city in markers) {
+    	var circleOptions = {
+    		strokeColor: '#95bdc9',
+    		strokeOpacity: 0.9,
+    		strokeWeight: 2,
+    		fillColor: '#cfeef7',
+    		fillOpacity: 0.5,
+    		map: map,
+    		center: new google.maps.LatLng(48.519925, 35.872737),
+    		radius: 7080
+    	};
+    	cityCircle = new google.maps.Circle(circleOptions);
+    }
+
+    for (var city in markers) {
+    	var circleOptions = {
+    		strokeColor: '#9ce28c',
+    		strokeOpacity: 0.8,
+    		strokeWeight: 0,
+    		fillColor: '#9ce28c',
+    		fillOpacity: 0.35,
+    		map: map,
+    		center: new google.maps.LatLng(48.500843, 35.998923),
+    		radius: 40080
+    	};
+    	cityCircle = new google.maps.Circle(circleOptions);
+    }
   }
 
   function makeInfoWindowEvent(map, infowindow, marker) {
@@ -116,15 +145,18 @@ $(document).ready(function() {
      infowindow.open(map, marker);
    });
   }
-  function Place(name, latitude, longitude, description){
-		    this.name = name;  // название
-		    this.latitude = latitude;  // широта
-		    this.longitude = longitude;  // долгота
-		    this.description = description;  // описание места
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
+  function Place(name, latitude, longitude, description) {
+  	this.name = name;  
+  	this.latitude = latitude; 
+  	this.longitude = longitude;  
+  	this.description = description; 
+  }
 
-    });
+
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+});
 
 
 $(window).load(function(){
