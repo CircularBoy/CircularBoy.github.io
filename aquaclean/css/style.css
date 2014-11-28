@@ -912,9 +912,79 @@ header button {
 	cursor: pointer;
 }
 
-.footer #map_canvas {
+.footer #contacts #map_canvas {
 	height: 400px;
 	width: 100%;
+}
+
+.footer #contacts {
+	padding: 40px 0 0 0;
+}
+
+.footer div.logo {
+	padding: 25px 0 0 0;
+}
+
+.footer div.logo a {
+	text-decoration: none;
+}
+
+.footer div.logo img {
+	float: left;
+	padding: 0 20px 0 0;
+}
+
+.footer div.logo section {
+	padding: 10px 0 0 0;
+}
+
+.footer div.logo section h1 {
+	font-size: 31px;
+	font-weight: 300;
+	color: #63a5bb;
+	letter-spacing: 3px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.footer div.logo section h2 {
+	font-size: 13px;
+	font-family: Arial;
+	color: #63a5bb;
+}
+
+.footer address {
+	position: absolute;
+	left: 425px;
+	top: 37px;
+}
+
+.footer address ul li {
+	padding: 4px 0 4px 37px;
+	margin: 0px 0 1px 0;
+	color: #63a5bb;
+	font-style: normal;
+	letter-spacing: 1px;
+	font-weight: 400;
+	font-size: 17px;
+}
+
+.footer address ul li:nth-child(1) {
+	background: url(../img/mts.png) no-repeat 0 7px;
+}
+
+.footer address ul li:nth-child(2) {
+	background: url(../img/kstar.png) no-repeat 0 6px;
+}
+
+.footer address ul li span {
+	font-weight: 600;
+	font-size: 19px;
+}
+
+.footer button {
+	position: absolute;
+	top: 42px;
+	right: 4px;
 }
 
 div.shadow {
