@@ -912,7 +912,7 @@ header button {
 	cursor: pointer;
 }
 
-.footer #contacts #map_canvas {
+.footer #map_canvas {
 	height: 400px;
 	width: 100%;
 }
