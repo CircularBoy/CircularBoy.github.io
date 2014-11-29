@@ -802,17 +802,18 @@ header button {
 }
 
 .block-10 .table div .price span:first-child div {
-	position: absolute;
-	top: -6px;
-	right: -31px;
-	background: #9ce28c;
-	color: #fff;
-	font-size: 10px;
-	font-family: 'Open sans', sans-serif;
-	text-align: center;
-	height: 0px;
-	padding: 0px 5px 14px 5px;
-	border-radius: 3px;
+  display: none;
+  position: absolute;
+  top: -6px;
+  right: -31px;
+  background: #9ce28c;
+  color: #fff;
+  font-size: 10px;
+  font-family: 'Open sans', sans-serif;
+  text-align: center;
+  height: 0px;
+  padding: 0px 5px 14px 5px;
+  border-radius: 3px;
 }
 
 .block-10 .table div .price span:last-child {
@@ -892,7 +893,7 @@ header button {
 }
 
 .gallery ul {
-	border: 16px #DFF6FF solid;
+	border: 10px #DFF6FF solid;
 	margin: 0 0 0 -16px;
 }
 
@@ -912,9 +913,26 @@ header button {
 	cursor: pointer;
 }
 
+.footer > h1 {
+  text-align: center;
+  margin: 55px 0 35px 0;
+}
+
+.footer > p {
+  margin: 14px 0 0 0;
+  text-align: center;
+  font-size: 17px;
+  color: rgb(99, 165, 187);
+}
+
 .footer #map_canvas {
 	height: 400px;
 	width: 100%;
+  box-shadow: 0 0 0 10px #DFF6FF;
+}
+
+.footer .wrapper {
+  margin: 35px auto 50px auto;
 }
 
 .footer div.logo {
@@ -1013,7 +1031,7 @@ div.shadow form span {
 div.shadow form p {
 	font-size: 14px;
 	color: #588b77;
-	padding: 0 0 10px 20px;
+	padding: 0 0 20px 20px;
 }
 
 div.shadow form input[type=text] {
@@ -1023,7 +1041,7 @@ div.shadow form input[type=text] {
 	padding: 10px 20px;
 	font-size: 18px;
 	color: #49836d;
-	background: rgba(255, 255, 255, 0.8);
+	background: #fff;
 }
 
 div.shadow form input[type=submit] {
