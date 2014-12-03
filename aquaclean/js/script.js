@@ -54,7 +54,7 @@ $(document).ready(function() {
       data: "name="+name+"&phone="+phone,
       success: function(html) {
         $('div.shadow').fadeOut(300);
-        alert('Ваш заказ успешно принят, мы перезвоним Вам в ближайшее время.')
+        alert(1)
       }
     });
     return false;
@@ -78,7 +78,7 @@ $(document).ready(function() {
     var target = this.hash,
     $target = $(target);
     $('html, body').stop().animate({
-      'scrollTop':$target.offset().top-50
+      'scrollTop':$target.offset().top-32
     }, 900, function () {
       window.location.hash = target;
     });
@@ -112,29 +112,29 @@ $(document).ready(function() {
     }
 
     for (var city in markers) {
-      var circleOptions = {
-        strokeColor: 'rgb(106, 199, 163)',
-        strokeOpacity: 0.3,
-        strokeWeight: 2,
-        fillColor: 'rgb(106, 199, 163)',
-        fillOpacity: 0.1,
-        map: map,
-        center: new google.maps.LatLng(48.500843, 35.998923),
-        radius: 40080
-      };
-      cityCircle = new google.maps.Circle(circleOptions);
+    	var circleOptions = {
+    		strokeColor: '#95bdc9',
+    		strokeOpacity: 0.9,
+    		strokeWeight: 2,
+    		fillColor: '#cfeef7',
+    		fillOpacity: 0.5,
+    		map: map,
+    		center: new google.maps.LatLng(48.519925, 35.872737),
+    		radius: 7080
+    	};
+    	cityCircle = new google.maps.Circle(circleOptions);
     }
 
     for (var city in markers) {
     	var circleOptions = {
-    		strokeColor: '#8EB2BD',
-    		strokeOpacity: 0.5,
-    		strokeWeight: 2,
-    		fillColor: '#8EB2BD',
-    		fillOpacity: 0.3,
+    		strokeColor: '#9ce28c',
+    		strokeOpacity: 0.8,
+    		strokeWeight: 0,
+    		fillColor: '#9ce28c',
+    		fillOpacity: 0.35,
     		map: map,
-    		center: new google.maps.LatLng(48.519925, 35.872737),
-    		radius: 7080
+    		center: new google.maps.LatLng(48.500843, 35.998923),
+    		radius: 40080
     	};
     	cityCircle = new google.maps.Circle(circleOptions);
     }
@@ -152,7 +152,9 @@ $(document).ready(function() {
   	this.description = description; 
   }
 
-  google.maps.event.addDomListener(window, 'load', initialize);
+
+
+	google.maps.event.addDomListener(window, 'load', initialize);
 
 });
 
