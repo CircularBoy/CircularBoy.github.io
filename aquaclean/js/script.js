@@ -154,6 +154,20 @@ $(document).ready(function() {
 
   google.maps.event.addDomListener(window, 'load', initialize);
 
+
+  $(function() {
+  	$(window).scroll(function() {
+  		if($(this).scrollTop() != 0) {
+  			$('#main button').fadeIn();
+  		} else {
+  			$('#main button').fadeOut();
+  		}
+  	});
+  	$('#main button').click(function() {
+  		$('body,html').animate({scrollTop:0},800);
+  	});
+
+  });
 });
 
 

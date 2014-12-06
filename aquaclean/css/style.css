@@ -79,7 +79,7 @@ nav.top {
 	left: 0;
 	right: 0;
 	z-index: 999;
-  box-shadow: 0 2px 0 rgba(119, 151, 161, 0.74);
+	box-shadow: 0 2px 0 rgba(119, 151, 161, 0.74);
 }
 
 nav.top ul {
@@ -773,8 +773,8 @@ header button {
 .block-10 .table div .title {
 	font-size: 22px;
 	text-align: center;
-  line-height: 70px;
-  height: 75px;
+	line-height: 70px;
+	height: 75px;
 }
 
 .block-10 .table div .ico {
@@ -791,10 +791,10 @@ header button {
 
 .block-10 .table div .price {
 	font-size: 24px;
-  padding: 20px 0 0 0;
-  height: 70px;
-  background: #f9feff;
-  text-align: center;
+	padding: 20px 0 0 0;
+	height: 70px;
+	background: #f9feff;
+	text-align: center;
 }
 
 .block-10 .table div .price span:first-child {
@@ -802,18 +802,18 @@ header button {
 }
 
 .block-10 .table div .price span:first-child div {
-  display: none;
-  position: absolute;
-  top: -6px;
-  right: -31px;
-  background: #9ce28c;
-  color: #fff;
-  font-size: 10px;
-  font-family: 'Open sans', sans-serif;
-  text-align: center;
-  height: 0px;
-  padding: 0px 5px 14px 5px;
-  border-radius: 3px;
+	display: none;
+	position: absolute;
+	top: -6px;
+	right: -31px;
+	background: #9ce28c;
+	color: #fff;
+	font-size: 10px;
+	font-family: 'Open sans', sans-serif;
+	text-align: center;
+	height: 0px;
+	padding: 0px 5px 14px 5px;
+	border-radius: 3px;
 }
 
 .block-10 .table div .price span:last-child {
@@ -914,25 +914,25 @@ header button {
 }
 
 .footer > h1 {
-  text-align: center;
-  margin: 55px 0 35px 0;
+	text-align: center;
+	margin: 55px 0 35px 0;
 }
 
 .footer > p {
-  margin: 14px 0 0 0;
-  text-align: center;
-  font-size: 17px;
-  color: rgb(99, 165, 187);
+	margin: 14px 0 0 0;
+	text-align: center;
+	font-size: 17px;
+	color: rgb(99, 165, 187);
 }
 
 .footer #map_canvas {
 	height: 400px;
 	width: 100%;
-  box-shadow: 0 0 0 10px #DFF6FF;
+	box-shadow: 0 0 0 10px #DFF6FF;
 }
 
 .footer .wrapper {
-  margin: 35px auto 50px auto;
+	margin: 35px auto 50px auto;
 }
 
 .footer div.logo {
@@ -968,37 +968,89 @@ header button {
 
 .footer address {
 	position: absolute;
-	left: 425px;
+	left: 324px;
 	top: 37px;
 }
 
+.footer address ul {
+	float: left;
+}
+
 .footer address ul li {
-	padding: 4px 0 4px 37px;
-	margin: 0px 0 1px 0;
+	padding: 0px 0 0px 30px;
+	margin: 5px 0 10px 0;
 	color: #63a5bb;
 	font-style: normal;
 	letter-spacing: 1px;
 	font-weight: 400;
-	font-size: 17px;
+	font-size: 16px;
 }
 
-.footer address ul li:nth-child(1) {
-	background: url(../img/mts.png) no-repeat 0 7px;
+.footer address ul:nth-child(2) li ul li {
+	float: left;
+	padding: 0;
+	margin: 0 10px 0 0;
 }
 
-.footer address ul li:nth-child(2) {
-	background: url(../img/kstar.png) no-repeat 0 6px;
+.footer address ul:nth-child(2) > li:nth-child(1) a {
+	color: #63a5bb;
+	font-style: normal;
+	letter-spacing: 1px;
+	font-weight: 400;
+	font-size: 16px;
+	padding-left: 30px;
+	background: url(../img/mail-ico.png) no-repeat;
+} 
+
+
+.footer address ul:nth-child(2) li ul li a {
+	height: 20px;
+	width: 20px;
+	display: block;
+	background: url(../img/soc-ico.png) no-repeat;
+}
+
+.footer address ul:nth-child(2) li ul li:nth-child(1) a {
+	background-position: 0 0;
+}
+
+.footer address ul:nth-child(2) li ul li:nth-child(2) a {
+	background-position: 0 -20px;
+}
+
+.footer address ul:nth-child(2) li ul li:nth-child(3) a {
+	background-position: 0 -40px;
+}
+
+
+.footer address > ul:nth-child(1) li:nth-child(1) {
+	background: url(../img/mts.png) no-repeat 0 0px;
+}
+
+.footer address > ul:nth-child(1) li:nth-child(2) {
+	background: url(../img/kstar.png) no-repeat 0 0px;
 }
 
 .footer address ul li span {
 	font-weight: 600;
-	font-size: 19px;
 }
 
 .footer button {
 	position: absolute;
 	top: 42px;
 	right: 4px;
+}
+
+#main button {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: none;
+	min-width: 80px;
+	text-transform: none;
+	letter-spacing: normal;
+	padding: 12px 20px 10px 20px;
 }
 
 div.shadow {
