@@ -72,14 +72,14 @@ h1, h2, h3, h4, h5 {
 }
 
 nav.top {
-	height: 32px;
-	background: #95bdc9;
+	height: 40px;
+	background: #6EBAD1;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 999;
-	box-shadow: 0 2px 0 rgba(119, 151, 161, 0.74);
+	box-shadow: 0 2px 0 rgba(99, 165, 187, 1);
 }
 
 nav.top ul {
@@ -90,21 +90,22 @@ nav.top ul {
 nav.top ul li {
 	display: table-cell;
 	text-align: center;
-	height: 32px;
+	height: 40px;
 	vertical-align: middle;
 }
 
 nav.top ul li a {
 	display: block;
-	padding: 8px 13px;
+	padding: 12px 25px;
 	cursor: pointer;
 	font-family: "Arial";
+	font-size: 16px;
 	color: #fff;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+	/* text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); */
 }
 
 nav.top ul li:hover, nav.top ul li.active {
-	background: #8EB2BD;
+	background: #63A5BB;
 }
 
 header {
@@ -150,6 +151,7 @@ header address {
 }
 
 header address ul li {
+	display: block;
 	padding: 4px 0 4px 37px;
 	margin: 0px 0 1px 0;
 	color: #63a5bb;
@@ -308,7 +310,7 @@ header button {
 .block-2 {
 	background: #f6f6f6;
 	margin: 0px 0 40px 0;
-	padding: 0 0 15px 0;
+	padding: 40px 0 15px 0;
 }
 
 .block-2 h1 {
@@ -324,7 +326,7 @@ header button {
 }
 
 .block-2 .list-col2 h1 {
-	font-size: 22px;
+	font-size: 26px;
 	line-height: 19px;
 	padding: 0 0 0 99px;
 	padding: 0 0 15px 0;
@@ -377,24 +379,26 @@ header button {
 }
 
 .block-3 h2 {
+	background: rgba(232, 122, 114, 1);
+	border-radius: 6px;
 	font-size: 22px;
-	color: #7a7a7a;
-	padding: 0 0 15px 20px
+	color: #fff;
+	padding: 10px 0 10px 20px
 }
 
 .block-3 h2 span {
-	background: #F9F9F9;
+	/*background: #FFF2B6;;*/
 	padding: 2px 6px 5px 6px;
 	border-radius: 5px;
 	color: rgba(0, 0, 0, 0.48);
 }
 
-.block-3 div h2 span {
-	background: #FFF2B6;
+.block-3 .wrapper div:nth-child(4) h2 {
+	background: #60B871;
 }
 
 .block-3 div:nth-child(4) h2 span {
-	background: #BAEAAF;
+	/*background: #BAEAAF;*/
 }
 
 .block-3 .wrapper div {
@@ -419,7 +423,7 @@ header button {
 
 .block-3 .wrapper div ul.plus {
 	color: #496942;
-	background: #BAEAAF url(../img/block-3-plus.png) no-repeat right bottom;
+	background: #9ce28c url(../img/block-3-plus.png) no-repeat right bottom;
 	border-radius: 6px 6px 0 0;
 }
 
@@ -433,18 +437,18 @@ header button {
 
 .block-3 ul.minus {
 	color: #595232;
-	background: #FFF2B6 url(../img/block-3-minus.png) no-repeat right bottom;
+	background: rgba(247, 88, 76, 0.63) url(../img/block-3-minus.png) no-repeat right bottom;
 	border-radius: 0 0 6px 6px;
 	background-size: 36%;
 }
 
 .block-3 .wrapper div ul li {
 	margin: 0 0 20px 0;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
 .block-4 {
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 }
 
 .block-4 h1 {
@@ -476,6 +480,24 @@ header button {
 	font-family: 'Roboto Condensed', sans-serif;
 	padding: 0 0 0 225px;
 	line-height: 26px;
+}
+
+.block-4 div.fix:nth-child(3) section:nth-child(2) p {
+	font-size: 	18px;
+}
+
+.block-4 div.fix:nth-child(3) section:nth-child(2) p:nth-of-type(2) {
+	font-size: 	19px;
+	padding-top: 10px;
+}
+
+.block-4 div.fix:nth-child(3) section:nth-child(2) p:nth-of-type(2) span {
+	font-size: 	22px;
+}
+
+
+.block-4 div.fix:nth-child(4) section:nth-child(1) h1 {
+	padding-top: 35px;
 }
 
 .block-4 div.fix:nth-child(4) section:nth-child(2) :nth-child(2) {
@@ -516,14 +538,15 @@ header button {
 
 .block-4 div.fix:nth-child(3) section:nth-child(2) div.img img {
 	position: relative;
-	left: -1px;
-	bottom: 0px;
+	left: 7px;
+	bottom: -5px;
 }
 
 .block-4 div.fix:nth-child(4) section:nth-child(1) div.img img {
+
 	position: relative;
-	left: 7px;
-	bottom: -5px;
+	left: -1px;
+	bottom: 0px;
 }
 
 .block-4 div.fix:nth-child(4) section:nth-child(2) div.img img {
@@ -536,6 +559,11 @@ header button {
 	display: block;
 	content: '';
 	clear: both;
+}
+
+.block-4 .wrapper button {
+	display: block;
+	margin: 0 auto;
 }
 
 .block-6 {
@@ -614,7 +642,7 @@ header button {
 .block-8 {
 	margin-bottom: 40px;
 	background: #f6f6f6;
-	padding: 15px 0 5px 0;
+	padding: 15px 0 40px 0;
 }
 
 .block-8 h1 {
@@ -655,6 +683,15 @@ header button {
 
 .block-8 article p:nth-child(3) {
 	padding: 0 0 0 124px;
+}
+
+.block-8 a {
+	color: #587F8B;
+	font-size: 18px;
+	display: block;
+	margin: 0 auto;
+	width: 395px;
+	border-bottom: solid 1px #587F8B;
 }
 
 .block-9 {
@@ -939,6 +976,11 @@ header button {
 	height: 400px;
 	width: 100%;
 	box-shadow: 0 0 0 10px #DFF6FF;
+}
+
+.footer .contacts {
+	background: #f6f6f6;
+	padding: 0 0 20px 0;
 }
 
 .footer .wrapper {

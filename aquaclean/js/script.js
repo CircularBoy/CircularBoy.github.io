@@ -60,7 +60,7 @@ $(document).ready(function() {
     return false;
   });
 
-  $('header button, .block-call button, .block-7 button, .footer button').click(function() {
+  $('header button, .block-call button, .block-4 .wrapper button, .block-7 button, .footer button').click(function() {
     $('div.shadow').fadeIn(300);
   });
 
