@@ -35,7 +35,6 @@ $(document).ready(function() {
       i++;
     }
 
-
     if ($('form input[name=phone]').val()) {
       phone = $('form input[name=phone]').val();
       $('form input[name=phone]').css({ borderColor: '#EEE'});
@@ -84,6 +83,25 @@ $(document).ready(function() {
     });
   });
 
+  //rangeslider
+
+  $('input[type="range"]').rangeslider({
+
+    polyfill: true,
+
+    rangeClass: 'rangeslider',
+    fillClass: 'rangeslider__fill',
+    handleClass: 'rangeslider__handle',
+
+    onInit: function() {},
+
+    onSlide: function(position, value) {},
+
+    onSlideEnd: function(position, value) {}
+	});
+
+  //googlemaps APi
+  
   function initialize() {
     var mapCanvas = document.getElementById('map_canvas');
     var mapOptions = {
@@ -145,6 +163,7 @@ $(document).ready(function() {
      infowindow.open(map, marker);
    });
   }
+
   function Place(name, latitude, longitude, description) {
   	this.name = name;  
   	this.latitude = latitude; 
@@ -168,6 +187,8 @@ $(document).ready(function() {
   	});
 
   });
+
+  
 });
 
 

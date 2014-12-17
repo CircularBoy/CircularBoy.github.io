@@ -73,13 +73,13 @@ h1, h2, h3, h4, h5 {
 
 nav.top {
 	height: 40px;
-	background: #6EBAD1;
+	background: #6AA0AB;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 999;
-	box-shadow: 0 2px 0 rgba(99, 165, 187, 1);
+	box-shadow: 0 2px 0 #538893;
 }
 
 nav.top ul {
@@ -105,7 +105,7 @@ nav.top ul li a {
 }
 
 nav.top ul li:hover, nav.top ul li.active {
-	background: #63A5BB;
+	background: #538893;
 }
 
 header {
@@ -566,6 +566,81 @@ header button {
 	margin: 0 auto;
 }
 
+.block-5 {
+	padding: 0px 0 40px 0;
+}
+
+.block-5 h1 {
+	text-align: center;
+	padding: 20px 0px;
+}
+
+.block-5 .howdo-list{
+	margin: 0px 0 0 90px;
+}
+
+.block-5 .howdo-list li{
+	list-style: none;
+	position: relative;
+	display: block;
+	height: 40px;
+	margin-bottom: 15px;
+}
+
+.block-5 .howdo-list li:last-child{
+	margin-bottom: 0;
+}
+
+.block-5 .howdo-list li span{
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: -46px;
+	font-size: 24px;
+	text-align: center;
+	color:#2085aa;
+	font-weight: 700;
+	font-family: 'PT Sans', sans-serif;
+	background: #a6d3e3;
+	border:1px solid #2085aa;
+	border-radius:50%;
+	width: 32px;
+	line-height: 1;
+	padding: 4px 0;
+}
+
+.block-5 .howdo-list li span:before{
+	content: "";
+	display: block;
+	width: 11px;
+	height: 14px;
+	background: url(../img/howdo-arrow.png) no-repeat 0 0;
+	position: absolute;
+	top: 32px;
+	left: 11px;
+}
+
+.block-5 .howdo-list li.item6 span:before{
+	display: none;
+}
+
+.block-5 .howdo-list li p{
+	position: absolute;
+	left:0;
+	top:50%;
+	transform: translate(0px, -50%);
+	-webkit-transform: translate(0px, -50%);
+	-moz-transform: translate(0px, -50%);
+	-o-transform: translate(0px, -50%);
+	-ms-transform: translate(0px, -50%);
+	height: auto;
+	width: 100%;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 17px;
+	line-height: 20px;
+	color:#222222;
+}
+
 .block-6 {
 	margin-bottom: 45px;
 	background: #f6f6f6;
@@ -934,6 +1009,177 @@ header button {
 	background-position: center -270px;
 }
 
+.block-11 h1 {
+	font-size: 32px;
+	text-align: center;
+	padding: 0px 0 40px 0;
+}
+
+.block-11 p {
+	font-size: 18px;
+}
+
+.program {
+	padding-bottom: 40px;
+}
+
+.program h1 {
+	font-size: 32px;
+	text-align: center;
+	padding: 0px 0 40px 0;
+}
+
+.program .wrapper div section {
+	float: left;
+	width: 33.33333%;
+	text-align: center;
+	padding: 0 0 40px 0;
+}
+
+.program .table {
+	width: 900px;
+	margin: 0px 50px;
+	font-family: 'Roboto Condensed', sans-serif;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 0 0 10px #DFF6FF;
+}
+
+.program .table > div {
+	background: #effbff;
+	float: left;
+}
+
+.program .table div .title {
+	font-size: 22px;
+	text-align: center;
+	line-height: 70px;
+	height: 75px;
+}
+
+.program .table div .ico {
+	height: 45px;
+}
+
+.program .table div .desc {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	padding-top: 10px;
+	height: 25px;
+}
+
+.program .table div .price {
+	font-size: 24px;
+	padding: 20px 0 0 0;
+	height: 90px;
+	background: #f9feff;
+	text-align: center;
+}
+
+.program .table div .price span:first-child {
+	position: relative;
+	display: block;
+}
+
+.program .table div .price span:first-child div {
+	display: none;
+	position: absolute;
+	top: -6px;
+	right: -31px;
+	background: #9ce28c;
+	color: #fff;
+	font-size: 10px;
+	font-family: 'Open sans', sans-serif;
+	text-align: center;
+	height: 0px;
+	padding: 0px 5px 14px 5px;
+	border-radius: 3px;
+}
+
+.program .table div .price span:last-child {
+	display: inline-block;
+	font-size: 18px;
+	margin: -3px 0 0 0;
+	background: #9ce28c;
+	padding: 4px 10px;
+	border-radius: 4px;
+	color: #fff;
+}
+
+.program .table div:nth-child(5) .price span:last-child {
+	margin: -7px 0 0 0;
+	padding: 0 10px 4px 10px;
+}
+
+.program .table > div:nth-child(1) {
+	width: 12%;
+}
+
+.program .table > div:nth-child(2) {
+	width: 13%;
+}
+
+.program .table > div:nth-child(3) {
+	width: 17%;
+}
+
+.program .table > div:nth-child(4) {
+	width: 19%;
+}
+
+.program .table > div:nth-child(5) {
+	width: 15%;
+}
+
+.program .table > div:nth-child(6) {
+	width: 13%;
+}
+
+.program .table > div:nth-child(7) {
+	width: 11%;
+}
+
+.program .table div .ico {
+	background: url(../img/block-10-ico.png);
+	background-repeat: no-repeat;
+}
+
+.program .table div:nth-child(1) .ico {
+	background-position: center 0px;
+}
+
+.program .table div:nth-child(2) .ico {
+	background-position: center -45px;
+}
+
+.program .table div:nth-child(3) .ico {
+	background-position: center -90px;
+}
+
+.program .table div:nth-child(4) .ico {
+	background-position: center -135px;
+}
+
+.program .table div:nth-child(5) .ico {
+	background-position: center -180px;
+}
+
+.program .table div:nth-child(6) .ico {
+	background-position: center -225px;
+}
+
+.program .table div:nth-child(7) .ico {
+	background-position: center -270px;
+}
+
+.program .wrapper div section p {
+	font-size: 22px;
+	padding-top: 20px;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+}
+
 .gallery {
 	width: 100%;
 	overflow: hidden;
@@ -1054,7 +1300,6 @@ header button {
 	background: url(../img/mail-ico.png) no-repeat;
 } 
 
-
 .footer address ul:nth-child(2) li ul li a {
 	height: 20px;
 	width: 20px;
@@ -1073,7 +1318,6 @@ header button {
 .footer address ul:nth-child(2) li ul li:nth-child(3) a {
 	background-position: 0 -40px;
 }
-
 
 .footer address > ul:nth-child(1) li:nth-child(1) {
 	background: url(../img/mts.png) no-repeat 0 0px;
