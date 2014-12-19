@@ -84,21 +84,47 @@ $(document).ready(function() {
   });
 
   //rangeslider
+  var $document   = $(document),
+  selector    = '[data-rangeslider]',
+  $element    = $(selector);
 
-  $('input[type="range"]').rangeslider({
+  function valueOutput(element) {
+  	var value = element.value,
+  	output = element.parentNode.getElementsByTagName('output')[0];
+  	output.innerHTML = value;
+  }
+  for (var i = $element.length - 1; i >= 0; i--) {
+  	valueOutput($element[i]);
+  };
+  $document.on('change', 'input[type="range"]', function(e) {
+  	valueOutput(e.target);
+  });
 
-    polyfill: true,
+  //count price carpet
+  function countCarpet() {
+  	var valueWidht = $('output#width').text()
+  	var valueLong = $('output#long').text()
 
-    rangeClass: 'rangeslider',
-    fillClass: 'rangeslider__fill',
-    handleClass: 'rangeslider__handle',
+  	var valueSumm = valueWidht * valueLong * 25
 
-    onInit: function() {},
+  	$('.block-11 span.price').text(Math.round(valueSumm))
 
-    onSlide: function(position, value) {},
+  	console.log(valueWidht)
+  }
 
-    onSlideEnd: function(position, value) {}
-	});
+  $('input[type=range]').rangeslider({
+  	
+  	polyfill: false,
+  	
+  	onSlide: function(position, value) {
+  		//count price carpet
+  		countCarpet()
+  	},
+  });
+
+  
+
+  
 
   //googlemaps APi
   

@@ -29,6 +29,15 @@ h1, h2, h3, h4, h5 {
 	font-weight: 400;
 }
 
+output {
+	display: block;
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+	margin: 30px 0;
+	width: 100%;
+}
+
 .button {
 	border-radius: 5px;
 	padding: 18px 25px 16px 25px;
@@ -1009,6 +1018,16 @@ header button {
 	background-position: center -270px;
 }
 
+.block-11 {
+	padding: 10px 0 40px 0 
+}
+
+.block-11 .rangeCount {
+	width: 33%;
+	float: left;
+	padding: 10px 0 0px 75px;
+}
+
 .block-11 h1 {
 	font-size: 32px;
 	text-align: center;
@@ -1017,6 +1036,17 @@ header button {
 
 .block-11 p {
 	font-size: 18px;
+	padding: 0 0 10px 0;
+}
+
+.block-11 p span.price {
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.block-11 .call {
+	float: right;
+	padding: 0 75px 0 0;
 }
 
 .program {
@@ -1362,13 +1392,17 @@ div.shadow form {
 	top: 34%;
 	left: 50%;
 	margin: -105px 0 0 -160px;
+	
+}
+
+form {
 	padding: 30px 20px 30px 20px;
 	width: 280px;
 	background: #effbff;
 	border-radius: 10px;
 }
 
-div.shadow form span {
+form span {
 	font-size: 22px;
 	font-family: 'Roboto Condensed', sans-serif;
 	color: #588b77;
@@ -1376,13 +1410,13 @@ div.shadow form span {
 	padding: 0px 0 5px 20px;
 }
 
-div.shadow form p {
+form p {
 	font-size: 14px;
 	color: #588b77;
 	padding: 0 0 20px 20px;
 }
 
-div.shadow form input[type=text] {
+form input[type=text] {
 	border-radius: 5px;
 	width: 240px;
 	margin: 0 0 12px 0px;
@@ -1392,7 +1426,7 @@ div.shadow form input[type=text] {
 	background: #fff;
 }
 
-div.shadow form input[type=submit] {
+form input[type=submit] {
 	border-radius: 5px;
 	padding: 18px 25px 16px 25px;
 	width: 280px;
@@ -1407,7 +1441,7 @@ div.shadow form input[type=submit] {
 	background: #6ac7a3;
 }
 
-div.shadow form input:nth-child(1) {
+form input:nth-child(1) {
 	margin-top: 40px;
 }
 
