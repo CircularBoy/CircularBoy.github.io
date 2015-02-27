@@ -179,6 +179,8 @@ $(document).ready(function() {
       $('body,html').animate({scrollTop:0},800);
     });
   });
+  //animate after scroll down init
+  new WOW().init();
   
 });
 $(window).load(function(){
