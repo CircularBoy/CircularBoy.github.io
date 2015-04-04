@@ -23,6 +23,7 @@ $(document).ready(function() {
     if ($('form input[name=name]').val()) {
       name = $('form input[name=name]').val();
       $('form input[name=name]').css({ borderColor: '#EEE'});
+      console.log(name);
     } else {
       $('form input[name=name]').css({ borderColor: '#FC8787'});
       i++;
