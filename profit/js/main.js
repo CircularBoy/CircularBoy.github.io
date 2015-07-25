@@ -75,9 +75,46 @@ $(document).ready(function() {
     return false;
   })
 
-  //Directions animation
+  //Directions modal
   $('.directions .direction').click(function() {
-    $(this).addClass('detailed');
+    $('.shadow').fadeIn(300);
+    $('.modal', this).fadeIn(300);
+    return false;
   })
+  $('.shadow, .close').click(function() {
+    $('.shadow').fadeOut(300);
+    $('.modal').fadeOut(300);
+    return false;
+  })
+
+  //animate after scroll down init
+  var wow = new WOW(
+  {
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    }
+  }
+  );
+  wow.init();
+
+  //button to top
+  $(function() {
+    $(window).scroll(function() {
+      if($(this).scrollTop() != 0) {
+        $('#main').fadeIn();
+      } else {
+        $('#main').fadeOut();
+      }
+    });
+    $('#main').click(function() {
+      $('body,html').animate({scrollTop:0},800);
+    });
+  });
 });
 

@@ -223,7 +223,9 @@ nav ul li a:hover {
   right: 0%;
 }
 .directions .row .direction .title {
-  margin: -50px 0 0 20px;
+  position: absolute;
+  top: 150px;
+  left: 20px;
   font-weight: 400;
   font-size: 24px;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
@@ -234,59 +236,132 @@ nav ul li a:hover {
 .directions .row .direction img {
   width: 100%;
 }
-.directions .row .direction .desc {
-  display: none;
-}
 .directions .row .direction .detail {
   color: #fffbf7;
   display: block;
   float: right;
-  margin: 20px 20px 10px 0;
+  margin: -2px 20px 10px 0;
   font-family: 'Open sans', sans-serif;
   font-size: 18px;
+  line-height: 20px;
 }
-/*animation of block direction*/
+.directions .row .direction .modal {
+  text-align: center;
+  display: none;
+  position: fixed;
+  top: 50%;
+  margin: -200px 0 0 -470px;
+  left: 50%;
+  z-index: 9999;
+  width: 940px;
+  height: 400px;
+  background: #4c4d4f;
+  visibility: visible;
+  cursor: default;
+}
+.directions .row .direction .modal .detail {
+  display: none;
+}
+.directions .row .direction .modal .img {
+  height: 260px;
+  display: none;
+}
+.directions .row .direction .modal .title {
+  /* top: -10px; */
+  position: initial;
+  font-size: 48px;
+  /* left: 66%; */
+  padding: 5px 20px;
+  background: #fd8123;
+  display: inline-block;
+  margin: 30px 0 0;
+}
+.directions .row .direction .modal img {
+  height: 100%;
+  width: 37%;
+}
+.directions .row .direction .modal .desc {
+  /* position: absolute; */
+  color: #fffbf7;
+  font-size: 18px;
+  font-family: 'Open sans', 'Roboto', sans-serif;
+  /* width: 56%; */
+  /* top: 40px; */
+  /* right: 20px; */
+  text-align: center;
+  padding: 0 40px 20px;
+}
+.directions .row .direction .modal .close {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 40px;
+  right: 40px;
+  background: url(../img/close.png) 0 0 no-repeat;
+  cursor: pointer;
+}
+
+
+/*animation of block direction
 .directions .direction.detailed {
   z-index: 999;
-  -webkit-animation-name: mymove;
-  -webkit-animation-duration: 3s;
-  animation-name: mymove;
-  animation-duration: 3s;
-/*  animation-timing-function: easy-out;*/
+  animation-name: itemCanvas;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.directions .row .direction.detailed .title {
+  animation-name: itemTitle;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 .directions .direction.detailed .img {
   display: inline-block;
   height: 100%;
   margin: 0;
+  position: absolute;
 }
 .directions .direction.detailed img {
-  width: initial;
+  width: inherit;
+  animation-name: itemImg;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
-@-webkit-keyframes mymove {
-    0% {
-      width: 0%;
-      left: 0%;
-    }
-    50% {
-      width: 50%;
-    }
-    100% {
-      width: 100%;
-      left: 0%;
-    }
+.directions .direction.detailed .detail {
+  display: none;
 }
-@keyframes mymove {
-    0% {
-      width: 0%;
-      left: 0%;
-    }
-    
-    100% {
-      width: 100%;
-      left: 0%;
-    }
+.directions .direction.detailed .desc {
+  display: block;
+  animation-name: itemDesc;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
 }
+@keyframes itemImg {
+  100% {
+    height: 100%;
+  }
+}
+@keyframes itemDesc {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes itemTitle {
+  100% {
+    position: absolute;
+    top: -10px;
+    left: 60%;
+  }
+}
+@keyframes itemCanvas {
+  0% {
+    width: 0%;
+
+  }
+  100% {
+    width: 100%;
+  }
+}*/
 .schedule {
   background: #4b4c4e url(../img/block-4-bg.jpg) no-repeat center bottom;
 }
@@ -395,13 +470,29 @@ footer .copy p {
   margin: 0;
 }
 .shadow {
-  position: absolute;
   display: none;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
   background: rgba(75, 76, 78, 0.81);
+}
+#main {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+}
+#main .arrow {
+  background: url(../img/arrow-top.png) no-repeat;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+
+}
+#main .arrow:hover {
+  opacity: 0.8;
 }

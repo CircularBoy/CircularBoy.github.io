@@ -1,8 +1,10 @@
 $(document).ready(function() {
+
   $('nav.top ul li a').click(function() {
     $('nav.top ul li').removeClass('active');
     $(this).parent().addClass('active');
   });
+
   $('.block-1 div.sofa').mousemove(function(e) {
     relX = e.pageX - $(this).offset().left
     onePer = $(this).width()/100
@@ -11,30 +13,38 @@ $(document).ready(function() {
       $('div:nth-child(2)', this).width(elemWidth+'%')
     };
   });
+
   $('.block-1 div.sofa').mouseleave(function () {
     $('div:nth-child(2)', this).stop().animate({'width': 50+'%'}, 300)
   })
+
   $('.block-9 article p:nth-child(1)').click(function() {
     $(this).next().fadeToggle();
     $(this).toggleClass('open');
   });
+
+  //call back
   $('form input[type=submit]').click(function() {
     i=0;
-    if ($('form input[name=name]').val()) {
-      name = $('form input[name=name]').val();
-      $('form input[name=name]').css({ borderColor: '#EEE'});
-      console.log(name);
+    console.log($(this).parent().find('input[name=name]').val())
+    if ($(this).parent().find('input[name=name]').val()) {
+      //if ($(this).parent().find('form input[name=name]').val()) {
+    //console.log(this);
+      name = $(this).parent().find('input[name=name]').val()
+      
+      $(this).parent().find('input[name=name]').css({ background: '#fff'});
     } else {
-      $('form input[name=name]').css({ borderColor: '#FC8787'});
+      $(this).parent().find('input[name=name]').css({ background: 'rgb(255, 237, 237)'});
       i++;
     }
-    if ($('form input[name=phone]').val()) {
-      phone = $('form input[name=phone]').val();
-      $('form input[name=phone]').css({ borderColor: '#EEE'});
+    if ($(this).parent().find('input[name=phone]').val()) {
+      phone = $(this).parent().find('input[name=phone]').val()
+      $(this).parent().find('input[name=phone]').css({ background: '#fff'});
     } else {
-      $('form input[name=phone]').css({ borderColor: '#FC8787'});
+      $(this).parent().find('input[name=phone]').css({ background: 'rgb(255, 237, 237)'});
       i++;
     }
+    //console.log(i)
     if (i) {
       return false;
     }
@@ -49,6 +59,7 @@ $(document).ready(function() {
     });
     return false;
   });
+
   $('header button, .block-call button, .block-4 .wrapper button, .block-7 button, .footer button').click(function() {
     $('div.shadow').fadeIn(300);
   });
@@ -58,6 +69,8 @@ $(document).ready(function() {
   $('div.shadow form').click(function(e) {
     e.stopPropagation();
   });
+
+  //scroll after url click
   $('nav a[href^="#"]').bind('click.smoothscroll', function (e) {
     e.preventDefault();
     var target = this.hash,
@@ -85,14 +98,13 @@ $(document).ready(function() {
   });
   //count price carpet
   function countCarpet() {
-    var valueWidht = $('output#width').text()
+    var valueWidth = $('output#width').text()
     var valueLong = $('output#long').text()
-    var valueSumm = valueWidht * valueLong * 25
+    var valueSumm = valueWidth * valueLong * 25
     $('.block-11 span.price').text(Math.round(valueSumm))
-    console.log(valueWidht)
   }
   $('input[type=range]').rangeslider({
-    
+
     polyfill: false,
     
     onSlide: function(position, value) {
@@ -107,15 +119,15 @@ $(document).ready(function() {
   function initialize() {
     var mapCanvas = document.getElementById('map_canvas');
     var mapOptions = {
-      center: new google.maps.LatLng(48.500925, 35.916737),
-      zoom: 9, 
+      center: new google.maps.LatLng(50.4672707,30.6030966),
+      zoom: 12, 
       scrollwheel: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     var map = new google.maps.Map(mapCanvas, mapOptions);
     var markers = [],
     myPlaces = [];
-    myPlaces.push(new Place('AquaClean', 48.519925, 35.872737, 'Химчистка'));
+    myPlaces.push(new Place('AquaClean', 50.4672707,30.6030966, 'тел . (099) 324 01 61, (067) 959 21 21'));
     for (var i = 0, n = myPlaces.length; i < n; i++) {
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(myPlaces[i].latitude, myPlaces[i].longitude),
@@ -136,8 +148,7 @@ $(document).ready(function() {
         fillColor: 'rgb(106, 199, 163)',
         fillOpacity: 0.1,
         map: map,
-        center: new google.maps.LatLng(48.500843, 35.998923),
-        radius: 40080
+        center: new google.maps.LatLng(50.4672707,30.6030966),
       };
       cityCircle = new google.maps.Circle(circleOptions);
     }
@@ -149,8 +160,7 @@ $(document).ready(function() {
         fillColor: '#8EB2BD',
         fillOpacity: 0.3,
         map: map,
-        center: new google.maps.LatLng(48.519925, 35.872737),
-        radius: 7080
+        center: new google.maps.LatLng(50.4674118,30.5730889),
       };
       cityCircle = new google.maps.Circle(circleOptions);
     }
