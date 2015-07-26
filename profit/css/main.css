@@ -117,16 +117,15 @@ nav ul li a:hover {
   background: #fd8123 url(../img/block-2-bg.jpg) no-repeat center bottom;
   padding: 35px 0 0 0;
 }
-.who .tabs .titles:after {
-  clear: both;
-  display: block;
-  content: '';
+.who .tabs .titles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .who .tabs .titles a {
-  float: left;
+  display: inline-block;
   font-size: 30px;
   font-weight: 400;
-  margin: 0 8.4% 0 0;
   padding: 5px 10px;
   cursor: pointer;
   color: #fff;
