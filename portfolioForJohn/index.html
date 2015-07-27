@@ -4,30 +4,38 @@
 	<meta charset="UTF-8">
 	<title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="img/favicon.ico">
-  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script src="js/script.js"></script>
+  
 </head>
 <body>
 	<div class="wrapper">
 		<header>
+      <nav id="bt-menu" class="bt-menu">
+        <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Archive</a></li>
+          <li><a href="#">Subscribe</a></li>
+        </ul>
+      </nav>
 			<div class="about">
 				<img src="img/avatar.png" alt="" class="avatar">
-				<h1>John Doe</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium saepe, nobis, voluptas veritatis dignissimos fugiat qui fugit et. Similique!</p>
+				<h1>Alex Kobaev</h1>
+				<p>Photographer way upstream in search of beautiful landscapes!</p>
 			</div>
-			<menu></menu>
 		</header>
 		<div class="images">
       <figure class="effect-ruby">
         <img src="img/photos/img1.png" alt="img1">
         <a href="#">
           <figcaption>
-            <h2>Sweet <span>Marley</span></h2>
-            <p>Marley tried to convince her but she was not interested.</p>
+            <h2>Rocky <span>Meadows</span></h2>
+            <p>Scotland 2013</p>
           </figcaption>
         </a>
       </figure>
@@ -35,8 +43,8 @@
         <img src="img/photos/img2.png" alt="img2">
         <a href="#">
           <figcaption>
-            <h2>Sweet <span>Marley</span></h2>
-            <p>Marley tried to convince her but she was not interested.</p>
+            <h2>Sunlit <span>Way</span></h2>
+            <p>Norvegia 2014</p>
           </figcaption>
         </a>
       </figure>
@@ -44,8 +52,8 @@
         <img src="img/photos/img3.png" alt="img3">
         <a href="#">
           <figcaption>
-            <h2>Sweet <span>Marley</span></h2>
-            <p>Marley tried to convince her but she was not interested.</p>
+            <h2>Wild <span>Beach</span></h2>
+            <p>Norvegia 2014</p>
           </figcaption>
         </a>
       </figure>
@@ -53,8 +61,8 @@
         <img src="img/photos/img4.png" alt="img4">
         <a href="#">
           <figcaption>
-            <h2>Sweet <span>Marley</span></h2>
-            <p>Marley tried to convince her but she was not interested.</p>
+            <h2>Mountain <span>Cream</span></h2>
+            <p>Austria 2014</p>
           </figcaption>
         </a>
       </figure>
@@ -62,8 +70,8 @@
         <img src="img/photos/img5.png" alt="img5">
         <a href="#">
           <figcaption>
-            <h2>Sweet <span>Marley</span></h2>
-            <p>Marley tried to convince her but she was not interested.</p>
+            <h2>Endless <span>River</span></h2>
+            <p>Finland 2014</p>
           </figcaption>
         </a>
       </figure>
@@ -71,8 +79,8 @@
         <img src="img/photos/img6.png" alt="img6">
         <a href="#">
           <figcaption>
-            <h2>Sweet <span>Marley</span></h2>
-            <p>Marley tried to convince her but she was not interested.</p>
+            <h2>Red <span>Barn</span></h2>
+            <p>USA 2011</p>
           </figcaption>
         </a>
       </figure>
@@ -80,8 +88,8 @@
         <img src="img/photos/img7.png" alt="img7">
         <a href="#">
           <figcaption>
-            <h2>Sweet <span>Marley</span></h2>
-            <p>Marley tried to convince her but she was not interested.</p>
+            <h2>Evening <span>Tide</span></h2>
+            <p>Portugal 2012</p>
           </figcaption>
         </a>
       </figure>
@@ -89,8 +97,8 @@
         <img src="img/photos/img8.png" alt="img8">
         <a href="#">
           <figcaption>
-            <h2>Sweet <span>Marley</span></h2>
-            <p>Marley tried to convince her but she was not interested.</p>
+            <h2>Green <span>Trees</span></h2>
+            <p>Canada 2015</p>
           </figcaption>
         </a>
       </figure>
@@ -98,8 +106,8 @@
         <img src="img/photos/img9.png" alt="img9">
         <a href="#">
           <figcaption>
-            <h2>Sweet <span>Marley</span></h2>
-            <p>Marley tried to convince her but she was not interested.</p>
+            <h2>Old <span>Pier</span></h2>
+            <p>USA 2011</p>
           </figcaption>
         </a>
       </figure>
@@ -107,17 +115,31 @@
 
 
     <div class="info">
-     <h1>lorem ipsum</h1>
-     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam reprehenderit, quidem iusto enim natus fuga ipsum aliquam quibusdam corporis perspiciatis provident, nulla ullam distinctio odit asperiores labore placeat! Quod, consequatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum praesentium, soluta autem incidunt quia aut cumque quas magni, voluptatem beatae velit molestias laborum veniam recusandae in ipsum corporis sequi aperiam.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id suscipit, consequatur tempora iusto repudiandae voluptatem praesentium, quibusdam! Ea fugit officiis, doloribus, voluptates et ipsam id aliquid sint ad praesentium. Temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores deserunt harum sint fugiat laboriosam corporis officia sunt nostrum, illum, neque reiciendis! Ullam libero molestias praesentium delectus, beatae quis esse aperiam. </p>
+      <h1>Latest Tweets</h1>
+      <p>
+        This is the section for my latest tweets. <a href="#">#Kobaev</a> <a href="#">#AlexKobaev</a>
+      </p>
+      <p>
+        <a class="follow" href="#">Follow @AlexKobaev</a>
+      </p>
     </div>
 
     <footer>
-      <p>&copy Copyright 2014 <span>John Doe</span>. All rights reserved. Development by <a href="#"></a></p> 
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Archive</a></li>
+          <li><a href="#">Subscribe</a></li>
+        </ul>
+      </nav>
+      <p>&copy Copyright 2014 <span>Alex Kobaev</span>. All rights reserved. Development by <a href="#"></a></p> 
     </footer>
   </div>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="js/borderMenu.js"></script>
+  <script src="js/modernizr.custom.js"></script>
+  <script src="js/classie.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
