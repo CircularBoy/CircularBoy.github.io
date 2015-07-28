@@ -6,19 +6,23 @@ $(window).load( function() {
 		console.log(width)
 		$('.wrapper .images').height(height)
 	};
-
 	resizeGallery()
-
 	$(window).resize( function() {
-
 		resizeGallery()
-
 	});
+
   //Add class active
   $('.images figure.effect-ruby').toggleClass('hover', $(window).width() < 880)
 
   $(window).on('resize', function () {
     $('.images figure.effect-ruby').toggleClass('hover', $(window).width() < 880);
+  });
+
+
+  $(document).ready(function() {
+
+    //light gallery
+    $("#light-gallery").lightGallery(); 
   });
 });
 

@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .wrapper {
-  max-width: 1200px;
+  /*max-width: 1200px;*/
   margin: 0 auto;
   position: relative;
 }
@@ -54,7 +54,8 @@ h1, h2, h3, h4, h5 {
   position: relative;
   width: 100%;
   height: 600px;
-  background: #e7c4a4 url(../img/bg-header.jpg) no-repeat;  
+  background: #e7c4a4 url(../img/bg-header.jpg) no-repeat;
+  background-size: cover;  
 }
 
 .wrapper header .about {
@@ -98,6 +99,8 @@ h1, h2, h3, h4, h5 {
   display: block;
   clear: both;
 }
+.images .row {
+}
 
 .images figure.effect-ruby {
   overflow: hidden;
@@ -109,31 +112,29 @@ h1, h2, h3, h4, h5 {
   background: #98C2B0;;
 }
 
-
 figure.effect-ruby {
   background-color: #17819c;
 }
-
-.images figure.effect-ruby img {
-  display: block;
-  width: 100%;  
-}
-
-.images figure.effect-ruby img {
+.images figure.effect-ruby .img {
   position: relative;
   display: block;
-  min-height: 100%;
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  background: #eee;
+}
+.images figure.effect-ruby img {
+  height: 100%;
+  width: 100%;
   opacity: 0.8;
 }
 
 .images figure.effect-ruby figcaption {
-  width: 80%;
+  width: 70%;
   height: 100%;
   opacity: 0;
   position: absolute;
   top: 0;
-  padding: 19% 10% 0 10%;
+  padding: 0 15% 0 15%;
   text-align: center;
   background: transparent;
   color: #dddddd;
@@ -142,6 +143,11 @@ figure.effect-ruby {
   transition-duration: 0.35s;
   -webkit-transition-delay: 0.05s;
   transition-delay: 0.05s;
+}
+.images figure.effect-ruby figcaption div {
+  position: relative;
+  top: 50%;
+  margin: -53px 0 0 0;
 }
 
 .images figure.effect-ruby:hover figcaption, .images figure.effect-ruby.hover figcaption {
@@ -200,7 +206,7 @@ figure.effect-ruby img {
   transform: scale(1);
 }
 
-figure.effect-ruby:hover img, figure.effect-ruby.hover img {
+figure.effect-ruby:hover .img, figure.effect-ruby.hover .img {
   opacity: 0.7;
   -webkit-transform: scale(1.15);
   transform: scale(1.15)
@@ -281,6 +287,15 @@ figure.effect-ruby:hover img, figure.effect-ruby.hover img {
 
 }
 
+@media screen and (max-width: 1030px) and (min-width: 600px) {
+  .wrapper .images figcaption h2 {
+    font-size: 26px!important;
+  }
+  .images figcaption p {
+    font-size: 24px!important;
+  }
+}
+
 @media screen and (max-width: 880px) {
   .wrapper header {
     height: 450px;
@@ -322,29 +337,21 @@ figure.effect-ruby:hover img, figure.effect-ruby.hover img {
   }
 }
 
-@media screen and (max-width: 610px) and (min-width: 400px) {
+@media screen and (max-width: 610px) and (min-width: 470px) {
 
-  .wrapper .images figure.effect-ruby figcaption {
-    padding-top: 18%; 
+  .wrapper .images figure.effect-ruby figcaption div {
+    margin: -35px 0 0 0;
   }
   .wrapper .images figure.effect-ruby figcaption h2 {
     font-size: 20px;
   }
 
   .wrapper .images figure.effect-ruby figcaption p {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
-@media screen and (max-width: 540px) and (min-width: 400px) {
-
-
-  .wrapper .images figure.effect-ruby figcaption {
-    padding-top: 10%; 
-  }
-}
-
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 470px) {
   .wrapper header {
     height: 250px;
   }
@@ -359,11 +366,11 @@ figure.effect-ruby:hover img, figure.effect-ruby.hover img {
     margin-top: 20px;
   }
   .wrapper header .about h1 {
-    font-size: 24px;
+    font-size: 26px;
   }
   .wrapper header .about p {
     padding: 0px 5%;
-    font-size: 14px;
+    font-size: 11px;
   }
   .wrapper .images figure.effect-ruby {
     width: 100%;
