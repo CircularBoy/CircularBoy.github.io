@@ -1,0 +1,212 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff!important;
+}
+h2 {
+  color: #333636;
+  font-size: 31px;
+  padding: 40px 0;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+#nav-wrapper {
+  height: 50px;
+  z-index: 999;
+  position: relative;
+  clear: both;
+}
+header .container .row {
+  margin: 7px 0!important;
+}
+header .info p {
+  font-size: 21px;
+  margin: 10px 0;
+  color: #8A6C6B;
+}
+header nav {
+  background: #fff;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+}
+header nav {
+  height: 50px;
+  line-height: 50px;
+}
+nav ul li:hover {
+  background: 0;
+}
+nav ul li  {
+  float: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+header nav a {
+  color: #8A6C6B;
+  height: 48px;
+  line-height: 48px;
+  border-top: solid 2px transparent;
+  padding: 0;
+}
+header nav a:hover {
+  border-top: solid 2px #8A6C6B;
+}
+.wrapper {
+  width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+.logo {
+  height: 100px;
+}
+.logo a {
+  display: block;
+  height: 100%;
+}
+.logo a img {
+  display: block;
+  height: 100%;
+}
+#slider {
+  position: relative;
+  height: 500px;
+  background: url(../img/slide1.jpg) center;
+  background-size: cover;
+  transition: all 1s ease;
+}
+#slider .desc {
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.42);
+  position: relative;
+  top: 130px;
+  text-align: right;
+  padding: 50px 40px 50px 0;
+}
+#slider .desc p:nth-of-type(1) {
+  font-size: 48px;
+  line-height: 54px;
+  padding: 0 13px 0 0;
+}
+#slider .desc p:nth-of-type(2) {
+  padding: 0 157px 0 0;
+}
+#slider .desc p:nth-of-type(2), #slider .desc p:nth-of-type(3) {
+  font-size: 45px;
+  line-height: 54px;
+}
+#slider .desc p span {
+  font-size: 122px;
+  font-weight: 700;
+  line-height: 54px;
+  display: inline-block;
+  margin: -26px 0 0 56px;
+}
+#slider .desc p:nth-of-type(4) {
+  font-size: 23px;
+  font-family: 'Open sans', 'Roboto';
+  font-weight: 300;
+  line-height: 31px;
+}
+#slider .desc p:nth-of-type(5) {
+  font-size: 35px;
+  line-height: 31px;
+  padding: 12px 0 0 0;
+}
+#catalog .card {
+  position: relative;
+}
+#catalog .card .card-image {
+  cursor: pointer;
+}
+#catalog .card .preview {
+  position: absolute;
+  width: 30%;
+  top: 47px;
+  right: -30%;
+  bottom: 127px;
+  background-color: rgba(0, 0, 0, 0.36);
+  padding: 4% 3%;
+  transition: 1s ease;
+}
+#catalog .card .preview .img {
+  cursor: pointer;
+  background: url()
+}
+#catalog .card .preview img {
+  width: 100%;
+}
+#catalog .card .preview .sketch img {
+  width: 100%;
+}
+#catalog .card:hover .preview {
+  right: 0;
+}
+#catalog .card-content:nth-of-type(1) {
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+#catalog .card-content:nth-of-type(3) {
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#advantages {
+  background: #1fbba6;
+}
+#advantages .col .ico {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
+}
+#advantages .col:nth-of-type(1) .ico {
+  background: url(../../media/img/adv-ico1.png) 0 0 no-repeat;
+}
+#advantages .col:nth-of-type(2) .ico {
+  background: url(../../media/img/adv-ico2.png) 0 0 no-repeat;
+}
+#advantages .col:nth-of-type(3) .ico {
+  background: url(../../media/img/adv-ico3.png) 0 0 no-repeat;
+}
+#advantages .col:nth-of-type(4) .ico {
+  background: url(../../media/img/adv-ico4.png) 0 0 no-repeat;
+}
+#advantages .col:nth-of-type(5) .ico {
+  background: url(../../media/img/adv-ico5.png) 0 0 no-repeat;
+}
+#advantages .col:nth-of-type(6) .ico {
+  background: url(../../media/img/adv-ico6.png) 0 0 no-repeat;
+}
+#comments .col {
+  position: relative;
+}
+#comments .avatar {
+  width: 88px;
+  height: 88px;
+  position: absolute;
+  top: -30px;
+  left: -20px;
+}
+#comments .col:nth-of-type(1) .avatar {
+  background: url(../../media/img/avatar1.png);
+}
+#comments .col:nth-of-type(2) .avatar {
+  background: url(../../media/img/avatar2.png);
+}
+#comments .col:nth-of-type(3) .avatar {
+  background: url(../../media/img/avatar3.png);
+}
+#comments .col:nth-of-type(4) .avatar {
+  background: url(../../media/img/avatar4.png);
+}
+#footer {
+  background: #333636;
+}
+#footer .copy {
+  background: #f0f0f0;
+};
