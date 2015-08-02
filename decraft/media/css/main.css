@@ -49,6 +49,7 @@ header nav a {
   line-height: 48px;
   border-top: solid 2px transparent;
   padding: 0;
+  transition: ease, .2s;
 }
 header nav a:hover {
   border-top: solid 2px #8A6C6B;
@@ -116,28 +117,32 @@ header nav a:hover {
   line-height: 31px;
   padding: 12px 0 0 0;
 }
-#catalog .card {
-  position: relative;
+#catalog {
+  background: #eaedf1;
 }
 #catalog .card .card-image {
+  position: relative;
   cursor: pointer;
 }
 #catalog .card .preview {
   position: absolute;
   width: 30%;
-  top: 47px;
+  top: 0;
   right: -30%;
-  bottom: 127px;
+  bottom: 0px;
   background-color: rgba(0, 0, 0, 0.36);
-  padding: 4% 3%;
+  padding: 0 3%;
   transition: 1s ease;
 }
 #catalog .card .preview .img {
   cursor: pointer;
-  background: url()
 }
 #catalog .card .preview img {
   width: 100%;
+}
+#catalog .card .preview .sketch {
+  position: absolute;
+  bottom: 0;
 }
 #catalog .card .preview .sketch img {
   width: 100%;
@@ -157,7 +162,27 @@ header nav a:hover {
 }
 
 #advantages {
-  background: #1fbba6;
+  background: #66D9D4 url(../img/certificate-bg.png) no-repeat;
+}
+#advantages h2 {
+  color: #fff;
+  line-height: 30px;
+}
+#advantages p {
+  color: #fff;
+}
+#advantages .col {
+  margin-bottom: 30px;
+}
+#advantages .title {
+  font-size: 24px;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.1);
+  line-height: 24px;
+  margin: 10px 0;
+}
+#advantages .desc {
+  font-size: 14px;
+  font-family: 'Open sans', 'Roboto', sans-serif;
 }
 #advantages .col .ico {
   width: 110px;
@@ -182,8 +207,37 @@ header nav a:hover {
 #advantages .col:nth-of-type(6) .ico {
   background: url(../../media/img/adv-ico6.png) 0 0 no-repeat;
 }
+#certificate {
+  background: url(../img/certificate-bg.png);
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+#certificate h2 {
+  color: #fff;
+}
+#certificate .card {
+  cursor: pointer;
+  overflow: inherit;
+}
+#certificate .card {
+  cursor: pointer;
+}
+#comments {
+  background: #eaedf1;
+}
 #comments .col {
   position: relative;
+}
+#comments .card-panel p, #comments .card-panel span {
+  color: #333636;
+  font-style: italic;
+  font-size: 14px;
+  font-family: 'Open sans', 'Roboto';
+}
+#comments .card-panel p {
+  font-style: normal;
+  padding: 0 0 8% 10%;
+
 }
 #comments .avatar {
   width: 88px;
@@ -192,16 +246,16 @@ header nav a:hover {
   top: -30px;
   left: -20px;
 }
-#comments .col:nth-of-type(1) .avatar {
+#comments .row:nth-of-type(1) .col:nth-of-type(1) .avatar {
   background: url(../../media/img/avatar1.png);
 }
-#comments .col:nth-of-type(2) .avatar {
+#comments .row:nth-of-type(1) .col:nth-of-type(2) .avatar {
   background: url(../../media/img/avatar2.png);
 }
-#comments .col:nth-of-type(3) .avatar {
+#comments .row:nth-of-type(2) .col:nth-of-type(1) .avatar {
   background: url(../../media/img/avatar3.png);
 }
-#comments .col:nth-of-type(4) .avatar {
+#comments .row:nth-of-type(2) .col:nth-of-type(2) .avatar {
   background: url(../../media/img/avatar4.png);
 }
 #footer {
