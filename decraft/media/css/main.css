@@ -7,11 +7,15 @@ input:-webkit-autofill:active {
 }
 h2 {
   color: #333636;
-  font-size: 31px;
+  font-size: 40px;
   padding: 40px 0;
   margin: 0;
   text-align: center;
   text-transform: uppercase;
+}
+h4 {
+  color: #333636;
+  font-size: 32px;
 }
 #nav-wrapper {
   height: 50px;
@@ -27,6 +31,11 @@ header .info p {
   margin: 10px 0;
   color: #8A6C6B;
 }
+header .info i {
+  position: relative;
+  top: 4px;
+  right: 10px;
+}
 header nav {
   background: #fff;
   box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
@@ -34,6 +43,8 @@ header nav {
 header nav {
   height: 50px;
   line-height: 50px;
+  background-color: #F7F7F7;
+  letter-spacing: 1px;
 }
 nav ul li:hover {
   background: 0;
@@ -44,7 +55,7 @@ nav ul li  {
   margin: 0 10px;
 }
 header nav a {
-  color: #8A6C6B;
+  color: #757575;
   height: 48px;
   line-height: 48px;
   border-top: solid 2px transparent;
@@ -57,6 +68,7 @@ header nav a:hover {
 header nav a.active {
   border-top: solid 2px #8A6C6B!important;
 }
+{}
 .wrapper {
   width: 1140px;
   margin: 0 auto;
@@ -86,9 +98,9 @@ header nav a.active {
   text-transform: uppercase;
   background-color: rgba(0, 0, 0, 0.42);
   position: relative;
-  top: 130px;
-  text-align: right;
-  padding: 50px 40px 50px 0;
+  top: 114px;
+  text-align: center;
+  padding: 50px 0;
 }
 #slider .desc p:nth-of-type(1) {
   font-size: 48px;
@@ -120,8 +132,13 @@ header nav a.active {
   line-height: 31px;
   padding: 12px 0 0 0;
 }
+#about-us h2 {
+  padding: 30px 0 0 0
+}
 #catalog {
-  background: #eaedf1;
+  background: #F7F7F7;
+  margin: 0;
+  padding-bottom: 40px;
 } 
 #catalog .card .card-image {
   position: relative;
@@ -163,13 +180,17 @@ header nav a.active {
   font-size: 16px;
   text-align: center;
 }
-
+#info img {
+  width: 100%;
+  border-radius: 2px;
+}
 #advantages {
   background: #66D9D4;
+  margin: 0;
+  padding-bottom: 20px;
 }
 #advantages h2 {
   color: #fff;
-  line-height: 30px;
 }
 #advantages p {
   color: #fff;
@@ -210,6 +231,9 @@ header nav a.active {
 #advantages .col:nth-of-type(6) .ico {
   background: url(../../media/img/adv-ico6.png) 0 0 no-repeat;
 }
+#info {
+  padding-bottom: 30px;
+}
 #certificate {
   background: url(../img/certificate-bg.png);
   padding-bottom: 20px;
@@ -226,7 +250,8 @@ header nav a.active {
   cursor: pointer;
 }
 #comments {
-  background: #eaedf1;
+  background: #F7F7F7;
+  padding-bottom: 30px;
 }
 #comments .row {
   margin: 0; 
@@ -242,15 +267,14 @@ header nav a.active {
 }
 #comments .card-panel p {
   font-style: normal;
-  padding: 0 0 8% 10%;
+  padding: 20px 0 35px 110px;
 
+  font-size: 16px;
 }
 #comments .avatar {
   width: 88px;
   height: 88px;
-  position: absolute;
-  top: -30px;
-  left: -20px;
+  float: left;
 }
 #comments .row:nth-of-type(1) .col:nth-of-type(1) .avatar {
   background: url(../../media/img/avatar1.png);
@@ -264,8 +288,15 @@ header nav a.active {
 #comments .row:nth-of-type(2) .col:nth-of-type(2) .avatar {
   background: url(../../media/img/avatar4.png);
 }
+#map {
+  min-height: 450px;
+}
 #footer {
-  background: #e9e9e9;
+  background: #F7F7F7;
+  padding: 10px 0;
+  font-size: 21px;
+  color: #5A5A5A;
+  margin: 0;
 }
 #footer .logo {
   height: 100px;
@@ -279,4 +310,9 @@ header nav a.active {
 }
 #footer .copy {
   background: #f0f0f0;
-};
+}
+.copy p {
+  color: #CCCCCC;
+  font-size: 13px;
+  line-height: 25px;
+}
