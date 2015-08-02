@@ -373,6 +373,9 @@ header nav a.active {
     display: block;
     margin: 0;
   }
+  #modal1  textarea.materialize-textarea {
+    min-height: 1rem !important;
+  }
 }
 
 .button-collapse i {
@@ -386,7 +389,7 @@ header nav a.active {
 }
 
 #modal1 {
-  max-width: 500px;
+  max-width: 660px;
   max-height: 80%;
 }
 #modal1 .row {
@@ -396,5 +399,8 @@ header nav a.active {
   float: none;
   margin-bottom: 18px;
   top: 4%;
+}
+#modal1  textarea.materialize-textarea {
+  min-height: 11rem;
 }
 
