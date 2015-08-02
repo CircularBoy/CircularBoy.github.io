@@ -2,27 +2,28 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="media/css/normalize.css">
   <link rel="stylesheet" href="media/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="media/css/main.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-  <title>webbberStudio</title>
+  <title>DECRAFT - Фабрика декоративных материалов </title>
 </head>
 <body>
 
   <header>
     <div class="container">
-      <div class="row" style="margin: 35px 0">
-        <div class="logo col s12 m6"><a href="#"><img src="media/img/logo.png"></a></div>
-        <div class="info col s12 m6 right-align">
+      <div class="row scenter" style="margin: 35px 0">
+        <div class="logo col s12 m3"><a href="#"><img src="media/img/logo.png"></a></div>
+        <div class="info col s12 m9 right-align scenter">
           <p>ФАБРИКА ДЕКОРАТИВНЫХ МАТЕРИАЛОВ</p>
-          <p><i class="material-icons ">phone</i>+7 (978) 925-25-55</p>
+          <a href="tel:89789834330"><i class="material-icons">phone</i>+7 (978) 925-25-55</a>
         </div>
       </div>
     </div>
 
-    <div id="nav-wrapper">
+    <div id="nav-wrapper" class="hide-on-small-only">
       <nav class="col s12 center">
         <ul>
           <li><a href="#about-us">О нас</a></li>
@@ -35,12 +36,23 @@
         </ul>
       </nav>
     </div>
+
+    <ul id="slide-out" class="side-nav">
+      <li><a href="#about-us">О нас</a></li>
+      <li><a href="#catalog">Каталог</a></li>
+      <li><a href="#advantages">Преимущества</a></li>
+      <li><a href="#info">Полезная информация</a></li>
+      <li><a href="#certificate">Сертификаты</a></li>
+      <li><a href="#comments">Отзывы</a></li>
+      <li><a href="#footer">Контакты</a></li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse hide-on-med-and-up"><i class="material-icons">menu</i></a>
     
   </header>
 
   <section id="slider" class="row">
     <div class="container">
-      <div class="desc card col s12 m8 offset-m4 l6 offset-l6">
+      <div class="desc card col s12 m10 offset-m2 l7 offset-l5">
         <p>ДЕКОРАТИВНЫЕ</p>
         <p>ГИПСОВЫЕ</p>
         <p>ПАНЕЛИ <span>3D</span></p>
@@ -119,7 +131,7 @@
             <p>3600 руб/м²</p>
           </div>
           <div class="card-action center">
-            <a class="waves-effect waves-light btn cyan white-text"><i class="material-icons left">add_shopping_cart</i>Заказать</a>
+            <a href="#modal1" class="waves-effect waves-light btn cyan white-text modal-trigger"><i class="material-icons left">add_shopping_cart</i>Заказать</a>
           </div>
           
         </div>
@@ -561,12 +573,14 @@
 
   <div id="map"></div>
 
-  <div id="footer" class="row ">
+  <div id="footer" class="row">
     <div class="container valign-wrapper">
-      <div class="logo col s4"><a href="#"><img src="media/img/logo-footer.png"></a></div>
-      <div class="col s4 valign"><p><i style="margin: 3px 10px 0 0;" class="material-icons left">phone</i>+7 (978) 925 25 55</p></div>
-      <div class="col s4 valign">
-        <p>Республика Крым,<br> г. Севастополь</p>
+      <div class="logo col s12 m4">
+        <a href="#" class="scenter"><img src="media/img/logo-footer.png"></a>
+      </div>
+      <div class="col s12 m4 valign center scenter"><a href="tel:89789834330"><i class="material-icons">phone</i>+7 (978) 925 25 55</a></div>
+      <div class="col s12 m4 valign right-align scenter">
+        <p>Республика Крым<br> г. Севастополь</p>
       </div>
     </div> 
   </div>
@@ -576,11 +590,62 @@
       <div class="copy col s12 center">
         <div>
           <p>© Copyright 2015 Decraft. All rights reserved. Development by</p>
-          <a href="#"><img src="media/img/dev.png"</a>
+          <a href="#"><img src="media/img/dev.png"></a>
         </div>
       </div>
     </div>
   </div> 
+
+  <div id="modal1" class="modal ">
+    <div class="modal-content center">
+      <h4>Гипсовые 3D панели</h4>
+      <p>Мы свяжемся с вами в ближайшее время<br>и уточним детали заказа.</p>
+    </div>
+    <div class="modal-footer center">
+      <div class="row">
+        <div class="container">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Имя</label>
+          </div>
+          
+          <div class="input-field col s12">
+            <i class="material-icons prefix">phone_iphone</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Телефон</label>
+          </div>
+
+          <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">E-mail</label>
+          </div>
+
+          <div class="input-field col s12">
+            <i class="material-icons prefix">mode_edit</i>
+            <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+            <label for="icon_prefix2">Ваше сообщение</label>
+          </div>
+          
+          <div class="input-field col s12">
+            <p>
+              Закажите на сумму 45 000р получите 
+              скидку 5% или мы доставим ваши панели в 
+              любую точку Крыма абсолютно бесплатно!
+            </p>
+          </div>
+
+          <div class="input-field col s12">
+            <button class="btn waves-effect waves-light center" type="submit" name="action">Отправить
+              <i class="material-icons left">send</i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=D4-B1ka9Fejr88z86jCO4-C3UtNtBNSg&id=map&height=450"></script>
