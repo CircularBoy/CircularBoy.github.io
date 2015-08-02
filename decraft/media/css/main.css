@@ -188,6 +188,16 @@ header nav a.active {
   font-size: 16px;
   text-align: center;
 }
+#catalog .card .card-action {
+  padding: 0;
+}
+#catalog a {
+  width: 100%;
+  border-radius: 0;
+}
+#catalog .card .card-image img {
+  display: block;
+}
 #info img {
   width: 100%;
   border-radius: 2px;
@@ -387,3 +397,4 @@ header nav a.active {
   margin-bottom: 18px;
   top: 4%;
 }
+
