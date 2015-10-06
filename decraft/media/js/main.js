@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-  // $('.modal-trigger').leanModal();
-  // $(".button-collapse").sideNav();
+  $('.modal-trigger').leanModal();
+  $(".button-collapse").sideNav();
 
-  // $('#nav-wrapper nav').pushpin({ top: $('nav').offset().top });
+  $('#nav-wrapper nav').pushpin({ top: $('nav').offset().top });
 
   $('nav ul li a').click(function() {
     $('nav ul li a').removeClass('active');
