@@ -210,6 +210,9 @@ figure.effect-ruby:hover .img, figure.effect-ruby.hover .img {
   opacity: 0.7;
   -webkit-transform: scale(1.15);
   transform: scale(1.15)
+  -webkit-transition: ease .5s;
+  -o-transition: ease .5s;
+  transition: ease .5s;
 }
 .info h1 {
   text-align: left;
