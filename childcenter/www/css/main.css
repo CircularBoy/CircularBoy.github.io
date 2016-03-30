@@ -1,0 +1,349 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+i {
+  position: relative;
+  bottom: -1px;
+}
+ul li {
+  list-style: none;
+}
+* {
+  font-family: 'Comic Sans MS', arial;
+  font-size: 21px;
+  color: #fefefe;
+}
+a {
+  color: #fefefe;
+}
+#nav-wrapper {
+  height: 50px;
+  z-index: 999;
+  position: relative;
+  clear: both;
+}
+.container {
+  position: relative;
+}
+.row {
+  margin-bottom: 0px;
+}
+header {
+  background: url(../img/header-bg.png) no-repeat;
+  height: 285px;
+}
+header .info {
+  margin: 30px 0 0 0;
+}
+header p {
+  font-size: 26px;
+}
+header .title {
+  font-size: 41px;
+  line-height: 44px;
+}
+header .slogan {
+  margin-top: 20px;
+  font-size: 24px;
+}
+.phone {
+  display: inline-block;
+  cursor: pointer;
+}
+.call {
+  margin: 0 0 0 4px;
+  font-family: 'Open Sans', arial, sans-serif;
+  font-size: 14px;
+  border-bottom: 1px dashed;
+  will-change: border;
+  transition: .3s ease border;
+}
+.mail {
+  display: inline-block;
+  cursor: pointer;
+}
+.mail i {
+  top: 4px;
+}
+.call:hover {
+  border-color: transparent;
+}
+header .logo {
+  margin-top: 15px;
+}
+header .logo img {
+  width: 100%;
+  max-width: 415px;
+}
+nav {
+  background: none;
+  box-shadow: none;
+  position: absolute;
+  top: 238px;
+  right: 0;
+  width: 688px;
+}
+nav li a {
+  position: relative;
+  top: 0;
+  font-size: 26px;
+  line-height: 55px;
+  will-change: border-color, top;
+  border-color: transparent;
+  transition: .2s ease top;
+}
+nav li a:hover, nav li a.active {
+  top: -8px;
+  background: none;
+  border-bottom: 4px solid #f36e61;
+
+}
+nav li:nth-of-type(2) a:hover, nav li:nth-of-type(2) a.active {
+  border-bottom: 4px solid #66b8d4;
+}
+nav li:nth-of-type(3) a:hover, nav li:nth-of-type(3) a.active {
+  border-bottom: 4px solid #6cc06f;
+}
+
+
+/*about*/
+.about {
+  background: #fbfbfb;
+}
+.about h1 {
+  background: #66b8d4;
+  font-size: 34px;
+  padding: 15px 40px;
+  text-align: center;
+  display: inline-block;
+}
+.about h1 span {
+  font-size: 36px;
+  line-height: 46px;
+}
+.about img {
+  width: 100%;
+  max-width: 900px;
+}
+.about p {
+  color: #636161;
+}
+.program {
+  background: #f36e67;
+  margin-top: 30px;
+  padding: 5px 0 40px;
+}
+.program h4 {
+  font-size: 26px;
+  background: #ff9800;
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 30px;
+  color: #faf1f1;
+}
+.program ul {
+  margin: 20px 0 5px;
+}
+.program p {
+  font-size: 22px;
+  color: #fefefe;
+}
+
+
+/*servises*/
+.servises h1, .servises h2, .servises p {
+  color: #636161;
+}
+.servises {
+  background: #f5f2f2;
+}
+.servises h1 {
+  margin: 20px 0;
+  padding: 10px 12px;
+  background: #fff;
+  display: inline-block;
+  font-size: 36px;
+}
+.servises h2 {
+  font-size: 30px;
+  margin: 30px 0 40px 0;
+}
+.servises .complex .title {
+  font-size: 24px;
+  color: #fff;
+  padding: 10px 0;
+  width: 25%;
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  position: absolute;
+}
+.servises .complex .title:nth-of-type(1) {
+  background: #67c76f;
+}
+.servises .complex .title:nth-of-type(2) {
+  background: #f36e61;
+  left: 37.5%;
+}
+.servises .complex .title:nth-of-type(3) {
+  background: #66b8d4;
+  right: 0;
+}
+.servises .complex {
+  height: 300px;
+}
+.servises .complex .wrap {
+  position: absolute;
+  top: 55px;
+}
+.servises .complex .wrap:nth-child(4), .servises .complex .wrap:nth-child(6) {
+  display: none;
+}
+.servises .complex .content {
+  padding: 15px 20px;
+  height: 242px;
+}
+.servises .complex .content p {
+  color: #fff;
+}
+.servises .complex .content h4 {
+  font-size: 24px;
+  text-align: center;
+}
+.servises .complex .img {
+  padding: 0;
+}
+.servises .complex .img img {
+  /*width: 100%;*/
+}
+.servises .complex .wrap:nth-child(2) .content {
+  background: #67c76f;
+}
+.servises .complex .wrap:nth-child(4) .content {
+  background: #f36e61;
+}
+.servises .complex .wrap:nth-child(6) .content {
+  background: #66b8d4;
+}
+.servises .other-servises {
+  padding: 20px 0;
+}
+.servises .other-servises h4 {
+  color: #636161;
+  font-size: 30px;
+  text-align: center;
+  /*padding: 20px 0;*/
+}
+.servises .other-servises p {
+  width: auto;
+  max-width: 70%;
+  float: right;
+  padding: 12px 10px 0 10px;
+}
+.servises .other-servises img {
+  float: left;
+}
+.servises .other-servises:nth-child(odd) {
+  background: #fff;
+}
+.servises .other-servises:nth-child(odd) p {
+  float: left;
+}
+.servises .other-servises:nth-child(odd) img {
+  float: right;
+}
+
+/*interesting*/
+.interesting {
+  background: #9e55aa url(../img/interesting/interesting-bg.png) no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: 20% 0;
+  padding: 15px 0;
+}
+.interesting .container {
+
+}
+.interesting h1 {
+  font-size: 36px;
+  text-align: center; 
+  margin: 40px 0;
+}
+.interesting article h1 {
+  font-size: 28px;
+  margin: 20px 0;
+}
+.interesting article p {
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+/*map*/
+#contact address {
+  position: absolute;
+  right: 10%;
+  background: #66b8d4;
+  z-index: 99;
+  font-style: normal;
+  padding: 20px 0px 0;
+  border: 3px solid #fff;
+}
+#contact .title {
+  text-align: center;
+  font-size: 21px;
+  margin: 0 0 12px 0;
+}
+#contact a, #contact p {
+  font-size: 16px;
+  margin: 0 0 2px 0;
+  padding: 0px 30px;
+}
+#contact img {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+
+}
+footer {
+  background: url(../img/header-bg.png) no-repeat;
+  height: 135px;
+  padding: 20px 0;
+}
+footer nav {
+  position: initial;
+}
+footer nav a {
+  margin: 20px 0;
+  font-size: 21px;
+}
+footer .col:last-of-type a {
+  margin: 7px 0 0 0;
+}
+footer .col:last-of-type a:last-child {
+  margin: 0;
+}
+footer .call {
+  font-size: 21px;
+}
+.copy p {
+ color: #565656;
+ font-size: 13px;
+ line-height: 17px;
+ padding: 20px 0 10px;
+}
+
+/*adaptive*/
+@media only screen and (max-width: 1700px) {
+  .servises .other-servises p {
+    max-width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .servises .other-servises p {
+    max-width: 50%;
+  }
+}

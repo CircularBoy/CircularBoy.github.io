@@ -1,10 +1,10 @@
 $(window).load( function() {
   //Resize block images
 	function resizeGallery() {
-		var width = $('.wrapper .images').width()
-		var height = (795*width)/1200
+		var width = $('.images .effect-ruby').width()
+		var height = (214.0875*width)/380.6
 		console.log(width)
-		$('.wrapper .images').height(height)
+		$('.images .effect-ruby').height(height)
 	};
 	resizeGallery()
 	$(window).resize( function() {
@@ -12,10 +12,10 @@ $(window).load( function() {
 	});
 
   //Add class active
-  $('.images figure.effect-ruby').toggleClass('hover', $(window).width() < 880)
+  $('.images figure.effect-ruby').toggleClass('hover', $(window).width() < 1020)
 
   $(window).on('resize', function () {
-    $('.images figure.effect-ruby').toggleClass('hover', $(window).width() < 880);
+    $('.images figure.effect-ruby').toggleClass('hover', $(window).width() < 1020);
   });
 
 
