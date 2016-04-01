@@ -368,7 +368,7 @@ footer .call {
   }
   header {
     background-size: cover;
-    height: auto;
+    height: 360px;
   }
   nav {
     top: 301px;
@@ -396,6 +396,9 @@ footer .call {
   }
   ul li {
     font-size: 16px;
+  }
+  header {
+    height: auto;
   }
   .container h1 {
     font-size: 26px;
