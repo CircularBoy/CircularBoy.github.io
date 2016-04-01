@@ -19,17 +19,14 @@ ul li {
 a {
   color: #fefefe;
 }
-#nav-wrapper {
-  height: 50px;
-  z-index: 999;
-  position: relative;
-  clear: both;
-}
 .container {
   position: relative;
 }
 .row {
   margin-bottom: 0px;
+}
+h1 {
+  box-sizing: border-box;
 }
 header {
   background: url(../img/header-bg.png) no-repeat;
@@ -44,6 +41,7 @@ header p {
 header .title {
   font-size: 41px;
   line-height: 44px;
+  margin: 0;
 }
 header .slogan {
   margin-top: 20px;
@@ -98,8 +96,7 @@ nav li a {
 nav li a:hover, nav li a.active {
   top: -8px;
   background: none;
-  border-bottom: 4px solid #f36e61;
-
+  border-bottom: 4px solid #FF9800;
 }
 nav li:nth-of-type(2) a:hover, nav li:nth-of-type(2) a.active {
   border-bottom: 4px solid #66b8d4;
@@ -198,13 +195,24 @@ nav li:nth-of-type(3) a:hover, nav li:nth-of-type(3) a.active {
 .servises .complex .wrap {
   position: absolute;
   top: 55px;
+
+}
+.servises .complex .wrap .active {
+  opacity: 1;
 }
 .servises .complex .wrap:nth-child(4), .servises .complex .wrap:nth-child(6) {
   display: none;
+  /*opacity: 0;*/
 }
 .servises .complex .content {
+  /*padding: 15px 20px;*/
+  display: flex;
+}
+.servises .complex .content div {
   padding: 15px 20px;
-  height: 242px;
+}
+.servises .complex .content img {
+  max-height: 230px;
 }
 .servises .complex .content p {
   color: #fff;
@@ -282,7 +290,7 @@ nav li:nth-of-type(3) a:hover, nav li:nth-of-type(3) a.active {
 }
 
 /*map*/
-#contact address {
+#contacts address {
   position: absolute;
   right: 10%;
   background: #66b8d4;
@@ -291,17 +299,17 @@ nav li:nth-of-type(3) a:hover, nav li:nth-of-type(3) a.active {
   padding: 20px 0px 0;
   border: 3px solid #fff;
 }
-#contact .title {
+#contacts .title {
   text-align: center;
   font-size: 21px;
   margin: 0 0 12px 0;
 }
-#contact a, #contact p {
+#contacts a, #contacts p {
   font-size: 16px;
   margin: 0 0 2px 0;
   padding: 0px 30px;
 }
-#contact img {
+#contacts img {
   display: block;
   width: 100%;
   margin-top: 10px;
@@ -328,11 +336,15 @@ footer .col:last-of-type a:last-child {
 footer .call {
   font-size: 21px;
 }
+.copy {
+  background: #fefefe;
+  margin-bottom: 0; 
+}
 .copy p {
- color: #565656;
- font-size: 13px;
- line-height: 17px;
- padding: 20px 0 10px;
+  color: #565656;
+  font-size: 13px;
+  line-height: 17px;
+  padding: 12px 0 10px;
 }
 
 /*adaptive*/
@@ -343,7 +355,158 @@ footer .call {
 }
 
 @media only screen and (max-width: 1250px) {
+  nav .button-collapse {
+    position: fixed;
+    left: 5%;
+    top: 40px;
+  }
+  nav .button-collapse i {
+    color: #404040;
+  }
   .servises .other-servises p {
     max-width: 50%;
+  }
+  header {
+    background-size: cover;
+    height: auto;
+  }
+  nav {
+    top: 301px;
+  }
+  nav ul a {
+    font-size: 21px;
+  }
+  header .logo {
+    margin-top: 70px;
+    text-align: center;
+  }
+  footer nav a {
+    font-size: 18px;
+  }
+  footer .col:last-of-type a {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  p {
+    font-size: 16px;
+  }
+  .program p {
+    font-size: 18px;
+  }
+  ul li {
+    font-size: 16px;
+  }
+  .container h1 {
+    font-size: 26px;
+  }
+  .interesting article h1 {
+    font-size: 21px;
+  }
+  .about h1 span {
+    font-size: 26px;
+  }
+  img {
+    max-width: 100%;
+  }
+  header .info {
+    text-align: center;
+  }
+  header .title {
+    font-size: 36px;
+    margin: -20px 0 -20px;
+  }
+  header .logo {
+    margin-top: 10px;
+  }
+  .servises .other-servises .container {
+    text-align: center;
+  }
+  .servises .other-servises p {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+  .servises .other-servises img {
+    float: none!important;
+    margin: 20px auto 0;
+  }
+  footer {
+    height: auto;
+  }
+  footer nav {
+    margin: 0 auto;
+    width: 100%;
+    display: none;
+  }
+  footer .col:last-of-type {
+    text-align: center;
+    width: 100%;
+  }
+  footer nav a {
+    margin: 3px 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .servises .complex .wrap {
+    top: 47px;
+  }
+  .servises .complex .title {
+    font-size: 18px;
+  }
+  .servises .complex .content {
+    flex-flow: column;
+  }
+  .servises .complex .content img {
+    align-self: center;
+    display: none;
+  }
+  .servises .complex .title {
+    width: 33.33333%;
+  }
+  .servises .complex .title:nth-of-type(2) {
+    left: 33.33333%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #contacts img {
+    display: none;
+    margin-top: 0px;
+  }
+  #contacts .drop-up {
+    display: none;
+  }
+  #contacts .drop {
+    width: 62px;
+    margin: 10px auto 0;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    line-height: 4px;
+  }
+  #contacts .drop i {
+    font-size: 36px;
+  }
+  #contacts a, #contacts p {
+    font-size: 14px;
+  }
+  #contacts .title {
+    font-size: 18px;
+    margin: 0 0 5px 0;
+  }
+  #contacts address {
+    padding: 5px 0px 0;
+  }
+}
+@media only screen and (max-width: 388px) {
+  .servises .complex .wrap {
+    top: 40px;
+  }
+  .servises .complex .title {
+    font-size: 14px;
+  }
+  .servises .complex .content h4 {
+    font-size: 18px;
+    margin: 5px;
   }
 }

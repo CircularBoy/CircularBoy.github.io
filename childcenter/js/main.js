@@ -9,6 +9,9 @@ $(document).ready(function() {
     $('nav ul li a').removeClass('active');
     $(this).addClass('active');
   });
+  
+  // nav mobile
+  $(".button-collapse").sideNav();
 
   //button to top
   $(function() {
@@ -65,6 +68,17 @@ $(document).ready(function() {
       $('body,html').animate({scrollTop:0},800);
     });
   });
+
+  //map trigger
+  $('.drop-down').click(function () {
+    $('.drop-down').fadeOut(0)
+    $('#contacts img, .drop-up').fadeIn(0)
+  })
+  $('.drop-up').click(function () {
+    $('.drop-down').fadeIn(0)
+    $('#contacts img, .drop-up').fadeOut(0)
+  })
+
 
   //modal title
   $('a[href="#modal2"]').click(function () {
