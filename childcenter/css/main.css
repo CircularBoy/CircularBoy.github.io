@@ -313,7 +313,9 @@ nav li:nth-of-type(3) a:hover, nav li:nth-of-type(3) a.active {
   display: block;
   width: 100%;
   margin-top: 10px;
-
+}
+.drop {
+  display: none;
 }
 footer {
   background: url(../img/header-bg.png) no-repeat;
@@ -472,6 +474,9 @@ footer .call {
   }
 }
 @media only screen and (max-width: 600px) {
+  .drop {
+    display: block;
+  }
   #contacts img {
     display: none;
     margin-top: 0px;
