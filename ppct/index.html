@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PPC.tools</title>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="wrapper_searchterms">
+
+    <!-- top nav -->
+    <nav class="navbar navbar-toggleable-md d-flex justify-content-between flex-row" >
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+
+      <div class="navbar-collapse d-flex justify-content-end">
+        <ul class="navbar-nav d-flex align-items-center justify-content-between flex-row">
+          <li class="nav-item">
+            <a class="nav-link" href="#">SKUs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Campaigns</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Keywords</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Searchterms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tracking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Autopilot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help<i class="icon"></i></a>
+          </li>
+          
+        </ul>
+
+        <div class="profile dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="http://example.com" id="dropdown-profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="avatar"></span> <span class="name">Gary</span></a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-profile">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- end top nav -->
+    
+
+    <!-- secondary header -->
+    <div class="secondary-header d-flex justify-content-between align-items-center">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">SearchTerm Tools</li>
+      </ol>
+
+      <div class="currency-options">
+        <select class="js-example-basic-single flag icon" name="flag">
+          <option value="US">A2UZPC5JPB2EX1</option>
+          <option value="US">A2UZPC5JPB2EX2</option>
+          <option value="US">A2UZPC5JPB2EX3</option>
+        </select>
+        <button type="button" class="btn icon add btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Add</button>
+        <span class="title">Currency: </span>
+        <select class="js-example-basic-single currency" name="currency">
+          <option value="USD">USD </option>
+          <option value="EUR">EUR </option>
+          <option value="RUB">RUB </option>
+        </select>
+      </div>
+    </div>
+    <!-- end secondary header -->
+    
+
+    <div class="table">
+
+      <div class="control form-inline  align-items-end justify-content-between">
+        <div class="d-flex flex-column basic-view">
+          <span class="title">Show</span>
+          <div class="d-flex flex-row">
+            <select class="js-example-basic-single length dubleArrow">
+              <option value="10">10 </option>
+              <option value="25">25 </option>
+            </select>
+
+            <div class="label"> 
+              <input type="text" class="form-control search" id="search"  placeholder="Search">
+
+              <div class="search-close"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filters">
+          <div class="group">
+            <button class="btn icon visible btn-outline-primary">Column visability</button>
+            <button data-filter-campaigns-btn class="btn icon filter btn-primary">Filters Campaigns</button>
+            <button data-filter-btn class="btn icon filter btn-primary">Filters</button>
+          </div>
+
+          <div class="visible-container">
+
+            <div class="row">
+              <div class="col-4">
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">Search Query</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck4">
+                  <label class="custom-control-label" for="customCheck4">Details</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck7">
+                  <label class="custom-control-label" for="customCheck7">Neg</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck10">
+                  <label class="custom-control-label" for="customCheck10">Spend</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck13">
+                  <label class="custom-control-label" for="customCheck13">Clicks</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck16">
+                  <label class="custom-control-label" for="customCheck16">Ave CPC</label>
+                </div>
+
+              </div>
+
+              <div class="col-4">
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck2">
+                  <label class="custom-control-label" for="customCheck2">State</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck5">
+                  <label class="custom-control-label" for="customCheck5">Bid</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck8">
+                  <label class="custom-control-label" for="customCheck8">Match</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck11">
+                  <label class="custom-control-label" for="customCheck11">AcoS</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck14">
+                  <label class="custom-control-label" for="customCheck14">Ctr</label>
+                </div>
+
+              </div>
+
+              <div class="col-4">
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck3">
+                  <label class="custom-control-label" for="customCheck3">Keyword</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck6">
+                  <label class="custom-control-label" for="customCheck6">Suggested</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck9">
+                  <label class="custom-control-label" for="customCheck9">Rev</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck12">
+                  <label class="custom-control-label" for="customCheck12">Impress.</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" checked id="customCheck15">
+                  <label class="custom-control-label" for="customCheck15">Orders</label>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+
+
+
+        <div class="date-pickers d-flex flex-row">
+          <div class="d-flex flex-column">
+            <span class="title">Select Data Range (preset, fast)</span>
+            <select class="js-example-basic-single js-states form-control fast-date dubleArrow" data-select2-id="1" tabindex="-1" aria-hidden="true">
+              <optgroup label=""><option label="-- choose preset --" value="object:36">-- choose preset --</option></optgroup><optgroup label="Week"><option label="Jan 22, 2018 - Jan 28, 2018" value="object:37">Jan 22, 2018 - Jan 28, 2018</option><option label="Jan 15, 2018 - Jan 21, 2018" value="object:38">Jan 15, 2018 - Jan 21, 2018</option><option label="Jan 8, 2018 - Jan 14, 2018" value="object:39">Jan 8, 2018 - Jan 14, 2018</option><option label="Jan 1, 2018 - Jan 7, 2018" value="object:40">Jan 1, 2018 - Jan 7, 2018</option><option label="Dec 25, 2017 - Dec 31, 2017" value="object:41">Dec 25, 2017 - Dec 31, 2017</option><option label="Dec 18, 2017 - Dec 24, 2017" value="object:42">Dec 18, 2017 - Dec 24, 2017</option><option label="Dec 11, 2017 - Dec 17, 2017" value="object:43">Dec 11, 2017 - Dec 17, 2017</option><option label="Dec 4, 2017 - Dec 10, 2017" value="object:44">Dec 4, 2017 - Dec 10, 2017</option><option label="Nov 27, 2017 - Dec 3, 2017" value="object:45">Nov 27, 2017 - Dec 3, 2017</option><option label="Nov 20, 2017 - Nov 26, 2017" value="object:46">Nov 20, 2017 - Nov 26, 2017</option><option label="Nov 13, 2017 - Nov 19, 2017" value="object:47">Nov 13, 2017 - Nov 19, 2017</option><option label="Nov 6, 2017 - Nov 12, 2017" value="object:48">Nov 6, 2017 - Nov 12, 2017</option><option label="Oct 30, 2017 - Nov 5, 2017" value="object:49">Oct 30, 2017 - Nov 5, 2017</option></optgroup><optgroup label="Month"><option label="Jan 1, 2018 - Jan 31, 2018" value="object:35" selected="selected">Jan 1, 2018 - Jan 31, 2018</option><option label="Dec 1, 2017 - Dec 31, 2017" value="object:50">Dec 1, 2017 - Dec 31, 2017</option><option label="Nov 1, 2017 - Nov 30, 2017" value="object:51">Nov 1, 2017 - Nov 30, 2017</option><option label="Oct 1, 2017 - Oct 31, 2017" value="object:52">Oct 1, 2017 - Oct 31, 2017</option><option label="Sep 1, 2017 - Sep 30, 2017" value="object:53">Sep 1, 2017 - Sep 30, 2017</option><option label="Aug 1, 2017 - Aug 31, 2017" value="object:54">Aug 1, 2017 - Aug 31, 2017</option><option label="Jul 1, 2017 - Jul 31, 2017" value="object:55">Jul 1, 2017 - Jul 31, 2017</option></optgroup><optgroup label="2 Month"><option label="Dec 1, 2017 - Jan 31, 2018" value="object:56">Dec 1, 2017 - Jan 31, 2018</option><option label="Oct 1, 2017 - Dec 31, 2017" value="object:57">Oct 1, 2017 - Dec 31, 2017</option><option label="Sep 1, 2017 - Nov 30, 2017" value="object:58">Sep 1, 2017 - Nov 30, 2017</option><option label="Aug 1, 2017 - Oct 31, 2017" value="object:59">Aug 1, 2017 - Oct 31, 2017</option><option label="Jul 1, 2017 - Sep 30, 2017" value="object:60">Jul 1, 2017 - Sep 30, 2017</option><option label="Jun 1, 2017 - Aug 31, 2017" value="object:61">Jun 1, 2017 - Aug 31, 2017</option><option label="May 1, 2017 - Jul 31, 2017" value="object:62">May 1, 2017 - Jul 31, 2017</option><option label="Apr 1, 2017 - Jul 31, 2017" value="object:63">Apr 1, 2017 - Jul 31, 2017</option><option label="Mar 1, 2017 - May 31, 2017" value="object:64">Mar 1, 2017 - May 31, 2017</option><option label="Feb 1, 2017 - May 31, 2017" value="object:65">Feb 1, 2017 - May 31, 2017</option></optgroup>
+            </select>
+          </div>
+          <div class="d-flex flex-column">
+            <span class="title">Select Data Range (slow)</span>
+            <input type="text" id="datePicker2" class="form-control datepicker">
+          </div>
+        </div>
+
+        
+        <div class="export">
+
+          <div class="data-export data-copy"></div>
+          <div class="data-export data-print"></div>
+          <div class="data-export data-csv"></div>
+        </div>
+      </div>
+
+      <div data-campaigns-filter-container class="drop-block filter-campaigns">
+        <h3>Filters Campaigns:</h3>
+
+        <div class="row">
+          <div class="col-6">
+
+            <div class="d-flex flex-column basic-view py-3">
+
+              <div class="d-flex flex-row align-items-end">
+                <div class="d-flex flex-column">
+                  <span class="title">Show</span>
+                  <select class="js-example-basic-single length dubleArrow select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                    <option value="10">10 </option>
+                    <option value="25">25 </option>
+                  </select>
+                </div>
+
+                <div class="label"> 
+                  <input type="text" class="form-control search" id="search-campaigns" placeholder="Search">
+
+                  <div class="search-close"></div>
+                </div>
+              </div>
+            </div>
+
+            <table id="filter-compaigns1" class="display responsive" cellspacing="0" width="100%" data-page-length='10'>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="campAll">
+                      <label class="custom-control-label" for="campAll"></label>
+                    </div>
+                  </th>
+                  <th>SKU</th>
+                  <th>Name</th>
+                  <th>Image</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp1">
+                      <label class="custom-control-label" for="camp1"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">3K-CVS8-4O1B</a></td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.adipisci reiciendis doloremque eum corporis officia. Quasi tempore, eius!
+                  </td>
+                  <td><img src="img/tpl_img.png" alt=""></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp1">
+                      <label class="custom-control-label" for="camp1"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">3K-CVS8-4O1B</a></td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.adipisci reiciendis doloremque eum corporis officia. Quasi tempore, eius!
+                  </td>
+                  <td><img src="img/tpl_img.png" alt=""></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp1">
+                      <label class="custom-control-label" for="camp1"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">3K-CVS8-4O1B</a></td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.adipisci reiciendis doloremque eum corporis officia. Quasi tempore, eius!
+                  </td>
+                  <td><img src="img/tpl_img.png" alt=""></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp1">
+                      <label class="custom-control-label" for="camp1"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">3K-CVS8-4O1B</a></td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.adipisci reiciendis doloremque eum corporis officia. Quasi tempore, eius!
+                  </td>
+                  <td><img src="img/tpl_img.png" alt=""></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp1">
+                      <label class="custom-control-label" for="camp1"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">3K-CVS8-4O1B</a></td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.adipisci reiciendis doloremque eum corporis officia. Quasi tempore, eius!
+                  </td>
+                  <td><img src="img/tpl_img.png" alt=""></td>
+
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="camp2">
+                      <label class="custom-control-label" for="camp2"></label>
+                    </div>
+                  </td>
+                  <td><a href="#">3K-CVS8-4O1B</a></td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.adipisci reiciendis doloremque eum corporis officia. Quasi tempore, eius!
+                  </td>
+                  <td><img src="img/tpl_img.png" alt=""></td>
+
+                </tr>
+              </tbody>
+            </table>
+
+
+          </div>
+
+          <div class="col-6 simple-pagin">
+
+           <div class="d-flex flex-column basic-view py-3">
+
+            <div class="d-flex flex-row align-items-end">
+              <div class="d-flex flex-column">
+                <span class="title">Show</span>
+                <select class="js-example-basic-single length dubleArrow select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                  <option value="10">10 </option>
+                  <option value="25">25 </option>
+                </select>
+              </div>
+
+              <div class="label"> 
+                <input type="text" class="form-control search" id="search-campaigns" placeholder="Search">
+
+                <div class="search-close"></div>
+              </div>
+            </div>
+          </div>
+
+          <table id="filter-compaigns2" class="display responsive" cellspacing="0" width="100%" data-page-length='10'>
+            <thead>
+              <tr>
+                <th>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="campAll">
+                    <label class="custom-control-label" for="campAll"></label>
+                  </div>
+                </th>
+                <th>Campaign list</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="camp1">
+                    <label class="custom-control-label" for="camp1"></label>
+                  </div>
+                </td>
+                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, beatae.</a></td>
+                
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="camp1">
+                    <label class="custom-control-label" for="camp1"></label>
+                  </div>
+                </td>
+                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, beatae.</a></td>
+                
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="camp1">
+                    <label class="custom-control-label" for="camp1"></label>
+                  </div>
+                </td>
+                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, beatae.</a></td>
+                
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="camp1">
+                    <label class="custom-control-label" for="camp1"></label>
+                  </div>
+                </td>
+                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, beatae.</a></td>
+                
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="camp1">
+                    <label class="custom-control-label" for="camp1"></label>
+                  </div>
+                </td>
+                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, beatae.</a></td>
+                
+              </tr>
+
+              <tr>
+                <td>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="camp1">
+                    <label class="custom-control-label" for="camp1"></label>
+                  </div>
+                </td>
+                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, beatae.</a></td>
+                
+              </tr>
+
+        
+
+
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="div d-flex mt-3 justify-content-end">
+          <a class="btn btn-secondary">Cancel</a>
+          <a class="btn btn-primary">Save</a>
+        </div>
+
+      </div>
+
+      
+
+    </div>
+    <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+
+  </div>
+  <div data-filter-container class="drop-block filter-campaigns">
+    <h3>Filters:</h3>
+
+    <div class="row">
+      <div class="col-3 offset-3">
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Conversion</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Clicks</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">CPC</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">CTR</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Net</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Spend</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-3">
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Revenue</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Impression</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Orders</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input">
+          <span class="title">Exact</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="number" placeholder="Min" name="filters1">
+            <div class="filters-input-separator"></div>
+            <input type="number" placeholder="Max" name="filters2">
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input filters-input-single">
+          <span class="title">Keyword</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="text" placeholder="Keyword" name="filters1">
+            <div class="filters-input-separator filters-input-separator-help"></div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input filters-input-single">
+          <span class="title">Keyword</span>
+          <div class="d-flex justify-content-between filters-input-group">
+            <input type="text" placeholder="Keyword" name="filters1">
+            <div class="filters-input-separator filters-input-separator-help"></div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column basic-view filters-input filters-input-single">
+          <span class="title">Match Type</span>
+          <select class="js-example-basic-single length dubleArrow">
+            <optgroup label=""><option label="Select multiple" value="object:36">Select multiple</option></optgroup><optgroup label="Week"><option label="Jan 22, 2018 - Jan 28, 2018" value="object:37">Jan 22, 2018 - Jan 28, 2018</option><option label="Jan 15, 2018 - Jan 21, 2018" value="object:38">Jan 15, 2018 - Jan 21, 2018</option><option label="Jan 8, 2018 - Jan 14, 2018" value="object:39">Jan 8, 2018 - Jan 14, 2018</option><option label="Jan 1, 2018 - Jan 7, 2018" value="object:40">Jan 1, 2018 - Jan 7, 2018</option><option label="Dec 25, 2017 - Dec 31, 2017" value="object:41">Dec 25, 2017 - Dec 31, 2017</option><option label="Dec 18, 2017 - Dec 24, 2017" value="object:42">Dec 18, 2017 - Dec 24, 2017</option><option label="Dec 11, 2017 - Dec 17, 2017" value="object:43">Dec 11, 2017 - Dec 17, 2017</option><option label="Dec 4, 2017 - Dec 10, 2017" value="object:44">Dec 4, 2017 - Dec 10, 2017</option>
+          </select>
+        </div>
+
+
+      </div>
+    </div>
+
+      <div class="row">
+        <div class="col-12 d-flex justify-content-end">
+
+          <a class="btn btn-primary">Apply</a>
+          <a class="btn btn-warning">Reset</a>
+          <a class="btn btn-secondary">Cancel</a>
+        </div>
+      </div>
+
+    <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+    </div>
+
+  <div class="legend d-flex align-items-center">
+
+    <div class="indicator d-flex align-items-center">
+      <div class="item">
+        <span class="round enabled"></span><span class="desc">enabled</span>
+      </div>
+
+      <div class="item">
+        <span class="round paused"></span><span class="desc">paused</span>
+      </div>
+
+      <div class="item">
+        <span class="round archived"></span><span class="desc">archived</span>
+      </div>
+    </div>
+
+    <div class="campages d-flex align-items-center">
+      <div class="item">
+        <span class="input">CP</span><span class="desc">Campaign Phrase</span>
+      </div>
+
+      <div class="item">
+        <span class="input">CE</span><span class="desc">Campaign Exact</span>
+      </div>
+
+      <div class="item">
+        <span class="input">AP</span><span class="desc">AdGroup Phrase</span>
+      </div>
+
+      <div class="item">
+        <span class="input">AE</span><span class="desc">AdGroup Exact</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="selected-control d-flex align-items-center justify-content-between">
+
+    <div class="item d-flex align-items-center">
+      <span class="title">Selected(<span class="count">2</span>)</span> 
+      <select class="js-example-basic-single actions icon dubleArrow " name="flag">
+        <option value="1" data-icon='copy'>Copy 2 selected SearchTerm(s)</option>
+        <option value="2" data-icon='add'>Add 2 selected SearchTerm(s) to negative</option>
+        <option value="3" data-icon='delete'>Delete 1 selected SearchTerm(s) from negative</option>
+        <option value="5" data-icon='pause'>Pause 2 selected Keyword(s)</option>
+        <option value="6" data-icon='run'>Run 2 paused Keyword(s)</option>
+      </select>
+      <div class="custom-control custom-checkbox d-flex align-items-center">
+        <input type="checkbox" class="custom-control-input" checked id="acins">
+        <label class="custom-control-label" for="acins">Hide ACINs</label>
+      </div>
+    </div>
+
+    <div class="item filter-table">
+
+      <button type="button" class="btn btn-secondary active">All</button>
+      <button type="button" class="btn btn-secondary">Acos < 25%</button>
+      <button type="button" class="btn btn-secondary">Acos > 50%</button>
+      <button type="button" class="btn btn-secondary">Zero Sales</button>
+      <button type="button" class="btn btn-secondary">Zero Net</button>
+      <button type="button" class="btn btn-secondary">New SearchTerms</button>
+
+    </div>
+  </div>
+
+  <table id="example" class="display" cellspacing="0" width="100%" data-page-length='10'>
+    <thead>
+      <tr>
+        <th data-disable>ID</th>
+        <th>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="tableCheckAll">
+            <label class="custom-control-label" for="tableCheckAll"></label>
+          </div>
+        </th>
+        <th>Search&nbsp;Query</th>
+        <th>State</th>
+        <th>Keyword</th>
+        <th>Details</th>
+        <th>Bid</th>
+        <th>Suggested</th>
+        <th>Neg.</th>
+        <th>Match</th>
+        <th>Rev</th>
+        <th>Spend</th>
+        <th>AcoS,&nbsp;%</th>
+        <th>Impress.</th>
+        <th>Clicks</th>
+        <th>Ctr</th>
+        <th>Orders</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          123
+        </td>
+        <td>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="tableCheck1">
+            <label class="custom-control-label" for="tableCheck1"></label>
+          </div>
+        </td>
+        <td><a href="#">dbu mjuufs cpy</a></td>
+        <td>
+          <select class="js-example-basic-single state dubleArrow">
+            <option value="1">Enabled</option>
+            <option value="2">Paused</option>
+            <option value="3">Archived</option>
+          </select>
+        </td>
+        <td><a href="#">mjuufsktz</a></td>
+        <td>
+          <div class="d-flex">
+            <select class="js-example-basic-single state dubleArrow">
+              <option value="1">Enabled</option>
+              <option value="2">Paused</option>
+              <option value="3">Archived</option>
+            </select>
+            <div class="ml-1">
+              <a href="#">45% BDPT tdsbqjoh -Dbu Mjakson FFTJKZTasAsdkt</a>
+              <small class="table-adgroup">
+                <select class="js-example-basic-single state dubleArrow">
+                  <option value="1">Enabled</option>
+                  <option value="2">Paused</option>
+                  <option value="3">Archived</option>
+                </select>
+                Adgroup 1
+              </small>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="table-edited-value">
+            <input type=text" value="1.81">
+            <button class="btn btn-sm table-edited-value-btn btn-primary">Save</button>
+            <button class="btn btn-sm table-edited-value-btn btn-secondary">Cancel</button>
+          </div>
+          <small>1.20</small>
+        </td>
+        <td>
+          <span class="table-gray-value">$2.00</span><small>$1.26 - $2.00</small>
+        </td>
+        <td class="color-drop-table">
+          <select class="js-example-basic-single table dubleArrow">
+            <option value="1">CE</option>
+            <option value="2">VE</option>
+            <option value="3">PB</option>
+          </select>
+        </td>
+        <td>broad</td>
+        <td>208&nbsp;112</td>
+        <td>421&nbsp;235</td>
+        <td>0.0023</td>
+        <td>2&nbsp;921&nbsp;145</td>
+        <td>1&nbsp;523</td>
+        <td>0.05</td>
+        <td>2&nbsp;312</td>
+        <td>
+          <div class="table-actions">
+            <button class="table-actions-btn table-actions-btn-stats"></button>
+            <button class="table-actions-btn table-actions-btn-edit"></button><br>
+            <button class="table-actions-btn table-actions-btn-automate"></button>
+            <button class="table-actions-btn table-actions-btn-settings"></button>
+          </div>
+        </td>
+      </tr>
+
+
+
+
+
+
+
+
+    </tbody>
+  </table>
+
+  <div class="legend d-flex align-items-center">
+
+    <div class="indicator d-flex align-items-center">
+      <div class="item">
+        <span class="round enabled"></span><span class="desc">enabled</span>
+      </div>
+
+      <div class="item">
+        <span class="round paused"></span><span class="desc">paused</span>
+      </div>
+
+      <div class="item">
+        <span class="round archived"></span><span class="desc">archived</span>
+      </div>
+    </div>
+
+    <div class="campages d-flex align-items-center">
+      <div class="item">
+        <span class="input">CP</span><span class="desc">Campaign Phrase</span>
+      </div>
+
+      <div class="item">
+        <span class="input">CE</span><span class="desc">Campaign Exact</span>
+      </div>
+
+      <div class="item">
+        <span class="input">AP</span><span class="desc">AdGroup Phrase</span>
+      </div>
+
+      <div class="item">
+        <span class="input">AE</span><span class="desc">AdGroup Exact</span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illo aspernatur distinctio et beatae, atque. Aut, totam a eum! Dolore?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer> 
+  <p>&copy; ppc.tools</p>
+</footer>
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/select2.full.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
