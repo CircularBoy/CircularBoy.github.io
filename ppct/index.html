@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="Качественный и недорогой ремонт телефонов, планшетов и ноутбуков.">
+    <meta itemprop="name" content="HelpMobile">
+    <meta itemprop="description" content="Качественный и недорогой ремонт телефонов, планшетов и ноутбуков.">
+    <meta itemprop="image" content="/assets/images/cover.jpg">
+    <meta property="og:title" content="HelpMobile">
+    <meta property="og:site_name" content="HelpMobile">
+    <meta property="og:url" content="https://site.ru">
+    <meta property="og:description" content="Качественный и недорогой ремонт телефонов, планшетов и ноутбуков.">
+    <meta property="og:image" content="/assets/images/cover.jpg">
+    <title>MobileHelp</title>
+    <link href="styles/libs.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/icons/favicon.png" type="image/png">
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="header__container container"><a class="header__logo scroll-to" href="#"></a>
+          <div class="header__wrapper">
+            <div class="header__messenger">
+              <div class="messenger"><a class="messenger__item messenger__item--viber" href="#!"></a><a class="messenger__item messenger__item--telegram" href="#!"></a></div>
+            </div>
+            <div class="header__recall"><a class="header__recall-link" href="tel:123">+38 (093) 333-22-11</a>
+              <button class="header__recall-btn btn--underline" @click="activeModal = 'short-form'">Обратный звонок</button>
+            </div>
+            <div class="header__location">
+              <p class="header__location-text">Как к нам пройти</p>
+              <button class="header__location-btn btn--underline" @click="activeModal = 'video', videoPlay()">Смотреть видео</button>
+            </div>
+            <div class="header__schedule">
+              <div class="header__schedule-text">Пн. - Пт. (10:00 - 18-00)</div>
+              <div class="header__schedule-text">Сб. - Вс. (11:00 - 16-00)</div>
+            </div>
+            <div class="header__social">
+              <div class="social"><a class="social__item social__item--instagram" href="#!"></a></div>
+            </div>
+            <div class="header__mobile-menu" v-bind:class="{ 'header__mobile-menu--open': activeModal == 'menu' }" @click="activeModal == null ? activeModal = 'menu' : activeModal = null">
+              <div class="header__mobile-menu-line"></div>
+              <div class="header__mobile-menu-line"></div>
+              <div class="header__mobile-menu-line"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="hero">
+        <div class="hero__container container">
+          <div class="hero__info">
+            <h1 class="hero__title">Качественный ремонт
+              <div class="hero__title-mark">телефонов</div>,
+              <div class="hero__title-mark">планшетов</div> и
+              <div class="hero__title-mark">ноутбуков</div> в Днепре
+            </h1>
+            <div class="hero__pros">
+              <div class="hero__pros-item">
+                <div class="hero__pros-icon hero__pros-icon--1"></div>
+                <div class="hero__pros-text">Качественный ремонт вашего устройства</div>
+              </div>
+              <div class="hero__pros-item">
+                <div class="hero__pros-icon hero__pros-icon--2"></div>
+                <div class="hero__pros-text">Гарантия до 1 года</div>
+              </div>
+              <div class="hero__pros-item">
+                <div class="hero__pros-icon hero__pros-icon--3"></div>
+                <div class="hero__pros-text">Выезд специалиста на дом</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__form">
+            <order-form title="Заявка на бесплатную консультацию!" text="Укажите ваши данные и причину поломки и наш менеджер свяжется с вами в ближайшее время." textarea="true"></order-form>
+          </div>
+        </div>
+      </div>
+      <div class="works" id="works">
+        <div class="works__img"></div>
+        <div class="container">
+          <div class="works__container">
+            <h2 class="works__title block-title">Как это работает?</h2>
+            <div class="works__list">
+              <div class="works__item">
+                <div class="works__item-icon">01</div>
+                <div class="works__item-text">Ваше устройство сломалось</div>
+              </div>
+              <div class="works__item">
+                <div class="works__item-icon">02</div>
+                <div class="works__item-text">Вы хотите его поченить сэкономив личное время и деньги</div>
+              </div>
+              <div class="works__item">
+                <div class="works__item-icon">03</div>
+                <div class="works__item-text">Вы оставляете заявку на ремонт у нас на сайте</div>
+              </div>
+              <div class="works__item">
+                <div class="works__item-icon">04</div>
+                <div class="works__item-text">Наш менеджер связывается с вами для уточнений всех деталей по ремонту вашего устройства</div>
+              </div>
+              <div class="works__item">
+                <div class="works__item-icon">05</div>
+                <div class="works__item-text">Относите свое устройство в наше отделение или наш мастер выезжает к вам</div>
+              </div>
+              <div class="works__item">
+                <div class="works__item-icon">06</div>
+                <div class="works__item-text">После окончание ремонта мы связываемся с вами и вы забираете уже рабочее устройство</div>
+              </div>
+            </div>
+            <div class="works__btn">
+              <div class="btn" @click="activeModal = 'short-form'">Оставить заявку на ремонт</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="services" id="services">
+        <div class="services__container container">
+          <div class="services__title block-title">Популярные услуги</div>
+          <div class="services__tabs">
+            <div class="services__tabs-item btn btn--outline" @click="activeTabServices=0" v-bind:class="{ active: activeTabServices === 0}">Iphone</div>
+            <div class="services__tabs-item btn btn--outline" @click="activeTabServices=1" v-bind:class="{ active: activeTabServices === 1}">Ipad</div>
+            <div class="services__tabs-item btn btn--outline" @click="activeTabServices=2" v-bind:class="{ active: activeTabServices === 2}">Macbook</div>
+            <div class="services__tabs-item btn btn--outline" @click="activeTabServices=3" v-bind:class="{ active: activeTabServices === 3}">Ipod</div>
+            <div class="services__tabs-item btn btn--outline" @click="activeTabServices=4" v-bind:class="{ active: activeTabServices === 4}">Apple Watch</div>
+          </div>
+        </div>
+        <div class="services__container container">
+          <div class="services__select select" :class="{ open: openSelect }">
+            <div class="select__name" @click="openSelect = !openSelect" v-html="valueSelect"></div>
+            <div class="select__list">
+              <div class="select__item" v-for="(item, index) in devices" @click="selectClick(index), openSelect = !openSelect" :class="{ checked: item.checked }">
+                <div class="select__item-name" v-text="item.model"></div>
+              </div>
+            </div>
+          </div>
+          <div class="glide services__slider">
+            <div class="glide__track" data-glide-el="track">
+              <div class="glide__slides services__slides">
+                <div class="glide__slide services__slide" v-for="service in services[activeTabServices]">
+                  <div class="services__item">
+                    <div class="services__item-photo" v-bind:style="{ 'background-image': 'url(img/services/' + service.img + ')'}"></div>
+                    <div class="services__item-content">
+                      <div class="services__item-title" v-html="service.title"></div>
+                      <div class="services__item-text" v-html="service.time"></div>
+                      <div class="services__item-text">Цена от: 
+                        <div class="services__item-price" v-html="service.price"></div>
+                      </div>
+                      <div class="services__item-btn btn btn--outline-color" @click="activeModal = 'short-form'">Заказать</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="glide__bullets services__bullets" data-glide-el="controls[nav]">
+              <div class="glide__bullet" data-glide-dir="=0"></div>
+              <div class="glide__bullet" data-glide-dir="=1"></div>
+              <div class="glide__bullet" data-glide-dir="=2"></div>
+              <div class="glide__bullet" data-glide-dir="=3"></div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="services__btn" @click="activeModal = 'short-form'">
+            <div class="btn btn--outline">У меня не Apple</div>
+          </div>
+        </div>
+      </div>
+      <div class="why">
+        <div class="container">
+          <h2 class="why__title block-title">Почему именно мы?</h2>
+          <div class="why__list">
+            <div class="why__list-col">
+              <div class="why__item">
+                <div class="why__item-icon why__item-icon--1"></div>
+                <div class="why__item-content">
+                  <div class="why__item-title">Профессиональные мастера</div>
+                  <div class="why__item-text">Ремонт выполняют мастера высокого уровня со стажем работы от 3-х лет</div>
+                </div>
+              </div>
+              <div class="why__item">
+                <div class="why__item-icon why__item-icon--2"></div>
+                <div class="why__item-content">
+                  <div class="why__item-title">Приемлимые цены</div>
+                  <div class="why__item-text">Мы работаем без посредников, что позволяет нам снизить стоимость на все наши услуги</div>
+                </div>
+              </div>
+              <div class="why__item">
+                <div class="why__item-icon why__item-icon--3"></div>
+                <div class="why__item-content">
+                  <div class="why__item-title">Выезд специалиста на дом</div>
+                  <div class="why__item-text">Ремонт вашего устройства не выходя из дома</div>
+                </div>
+              </div>
+            </div>
+            <div class="why__list-col">
+              <div class="why__item">
+                <div class="why__item-icon why__item-icon--4"></div>
+                <div class="why__item-content">
+                  <div class="why__item-title">Гарантия до 1 года</div>
+                  <div class="why__item-text">Мы подтверждаем все выполненые нами работы документально</div>
+                </div>
+              </div>
+              <div class="why__item">
+                <div class="why__item-icon why__item-icon--5"></div>
+                <div class="why__item-content">
+                  <div class="why__item-title">Оригинальные запчасти</div>
+                  <div class="why__item-text">Мы используем только оригинальные запчасти компании Apple для ремонта всех iPhone</div>
+                </div>
+              </div>
+              <div class="why__item">
+                <div class="why__item-icon why__item-icon--6"></div>
+                <div class="why__item-content">
+                  <div class="why__item-title">Быстрый и качественный ремонт</div>
+                  <div class="why__item-text">Наши мастера гарантируют выполнить всю работу по вашему устройству в самые кратчайшие сроки</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews" id="reviews">
+        <div id="reviews-app">
+          <div class="container">
+            <div class="reviews__title block-title">Отзывы наших клиентов</div>
+            <div class="reviews__list">
+              <div class="reviews__item"><img class="reviews__item-photo" src="img/reviews/review-1.jpg">
+                <div class="reviews__item-content">
+                  <div class="reviews__item-title">Мария, г. Москва
+                    <div class="reviews__item-title-mark">(15.10.2018)</div>
+                  </div>
+                  <div class="reviews__item-text">После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до фин. результата), была приятно удивлена оперативностью и качеством работы — за 15 минут уверенно поменяли экран, прямо «не отходя от кассы», все перед тобой ) Спасибо!</div>
+                </div>
+              </div>
+              <div class="reviews__item"><img class="reviews__item-photo" src="img/reviews/review-2.jpg">
+                <div class="reviews__item-content">
+                  <div class="reviews__item-title">Мария, г. Москва
+                    <div class="reviews__item-title-mark">(15.10.2018)</div>
+                  </div>
+                  <div class="reviews__item-text">После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до фин. результата), была приятно удивлена оперативностью и качеством работы — за 15 минут уверенно поменяли экран, прямо «не отходя от кассы», все перед тобой ) Спасибо!</div>
+                </div>
+              </div>
+              <div class="reviews__item"><img class="reviews__item-photo" src="img/reviews/review-3.jpg">
+                <div class="reviews__item-content">
+                  <div class="reviews__item-title">Мария, г. Москва
+                    <div class="reviews__item-title-mark">(15.10.2018)</div>
+                  </div>
+                  <div class="reviews__item-text">После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до фин. результата), была приятно удивлена оперативностью и качеством работы — за 15 минут уверенно поменяли экран, прямо «не отходя от кассы», все перед тобой ) Спасибо!</div>
+                </div>
+              </div>
+              <transition name="fade">
+                <div class="reviews__item" v-if="loadMoreReviews"><img class="reviews__item-photo" src="img/reviews/review-1.jpg">
+                  <div class="reviews__item-content">
+                    <div class="reviews__item-title">Мария, г. Москва
+                      <div class="reviews__item-title-mark">(15.10.2018)</div>
+                    </div>
+                    <div class="reviews__item-text">После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до фин. результата), была приятно удивлена оперативностью и качеством работы — за 15 минут уверенно поменяли экран, прямо «не отходя от кассы», все перед тобой ) Спасибо!</div>
+                  </div>
+                </div>
+              </transition>
+              <transition name="fade">
+                <div class="reviews__item" v-if="loadMoreReviews"><img class="reviews__item-photo" src="img/reviews/review-2.jpg">
+                  <div class="reviews__item-content">
+                    <div class="reviews__item-title">Мария, г. Москва
+                      <div class="reviews__item-title-mark">(15.10.2018)</div>
+                    </div>
+                    <div class="reviews__item-text">После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до фин. результата), была приятно удивлена оперативностью и качеством работы — за 15 минут уверенно поменяли экран, прямо «не отходя от кассы», все перед тобой ) Спасибо!</div>
+                  </div>
+                </div>
+              </transition>
+              <transition name="fade">
+                <div class="reviews__item" v-if="loadMoreReviews"><img class="reviews__item-photo" src="img/reviews/review-3.jpg">
+                  <div class="reviews__item-content">
+                    <div class="reviews__item-title">Мария, г. Москва
+                      <div class="reviews__item-title-mark">(15.10.2018)</div>
+                    </div>
+                    <div class="reviews__item-text">После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до фин. результата), была приятно удивлена оперативностью и качеством работы — за 15 минут уверенно поменяли экран, прямо «не отходя от кассы», все перед тобой ) Спасибо!</div>
+                  </div>
+                </div>
+              </transition>
+            </div>
+            <div class="reviews__btn"><a class="btn btn--outline icon-more" href="https://instagram.com" target="_blank">Смотреть в инстаграмме</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="action">
+        <div class="action__container container">
+          <div class="action__info">
+            <h1 class="action__title">Ремонтируйте свое усройство в
+              <div class="action__title-mark">HelpMobile</div>
+            </h1>
+            <div class="action__pros">
+              <div class="action__pros-item">
+                <div class="action__pros-icon action__pros-icon--1"></div>
+                <div class="action__pros-content">
+                  <div class="action__pros-title">Оплата при получении</div>
+                  <div class="action__pros-text">Вы оплачиваете нашу работу только при получении<br> отремантированного устройства на руки</div>
+                </div>
+              </div>
+              <div class="action__pros-item">
+                <div class="action__pros-icon action__pros-icon--2"></div>
+                <div class="action__pros-content">
+                  <div class="action__pros-title">Конфиденциальнось ваших данных</div>
+                  <div class="action__pros-text">Мы  не требуем паролей от вашего устройства когда это не требуется</div>
+                </div>
+              </div>
+              <div class="action__pros-item">
+                <div class="action__pros-icon action__pros-icon--3"></div>
+                <div class="action__pros-content">
+                  <div class="action__pros-title">Гарантия до 1-го года</div>
+                  <div class="action__pros-text">Предоставляем годовую гарантию на все работы<br> подтвержденную документально</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="action__form">
+            <order-form title="Заявка на бесплатную консультацию!" text="Укажите ваши данные и причину поломки и наш менеджер свяжется с вами в ближайшее время." textarea="true"></order-form>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__copy">
+            <div class="footer__copy-text">2018-2019 ©HelpMobile. All rights reserved</div><a class="footer__copy-link" href="/agreement.html">Политика конфиденциальности</a>
+          </div>
+        </div>
+      </footer>
+      <transition name="fade">
+        <div class="modal" v-show="activeModal === 'short-form'" @click.self="activeModal = null">
+          <div class="modal__content">
+            <div class="modal__close" @click="activeModal = null"></div>
+            <order-form title="Оставьте заявку" text="Укажите ваши данные и наш менеджер свяжется с вами в ближайшее время." textarea="false"></order-form>
+          </div>
+        </div>
+      </transition>
+      <transition name="fade">
+        <div class="modal modal--large" v-show="activeModal === 'all-price'" @click.self="activeModal = null">
+          <div class="modal__content">
+            <div class="modal__close" @click="activeModal = null"></div>
+            <div class="all-price">
+              <div class="all-price__title">Прайс-лист на ремонт iPhone</div>
+              <div class="all-price__tabs">
+                <div class="all-price__tabs-item" @click="activeAllPriseTab=0" v-bind:class="{ active: activeAllPriseTab === 0}">Iphone</div>
+                <div class="all-price__tabs-item" @click="activeAllPriseTab=1" v-bind:class="{ active: activeAllPriseTab === 1}">Ipad</div>
+                <div class="all-price__tabs-item" @click="activeAllPriseTab=2" v-bind:class="{ active: activeAllPriseTab === 2}">Macbook</div>
+                <div class="all-price__tabs-item" @click="activeAllPriseTab=3" v-bind:class="{ active: activeAllPriseTab === 3}">Ipod</div>
+                <div class="all-price__tabs-item" @click="activeAllPriseTab=4" v-bind:class="{ active: activeAllPriseTab === 4}">Apple Watch</div>
+              </div>
+              <div class="table" v-if="activeAllPriseTab === 0">
+                <div class="table__row">
+                  <div class="table__col">Название услуги</div>
+                  <div class="table__col">Время ремонта</div>
+                  <div class="table__col">Цена на ремонт</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Iphone</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Iphone</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Iphone</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Iphone</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Iphone</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Iphone</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Iphone</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Iphone</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Iphone</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+              </div>
+              <div class="table" v-if="activeAllPriseTab === 1">
+                <div class="table__row">
+                  <div class="table__col">Название услуги</div>
+                  <div class="table__col">Время ремонта</div>
+                  <div class="table__col">Цена на ремонт</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipad</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipad</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipad</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipad</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipad</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipad</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipad</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipad</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipad</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+              </div>
+              <div class="table" v-if="activeAllPriseTab === 2">
+                <div class="table__row">
+                  <div class="table__col">Название услуги</div>
+                  <div class="table__col">Время ремонта</div>
+                  <div class="table__col">Цена на ремонт</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Macbook</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Macbook</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Macbook</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Macbook</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Macbook</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Macbook</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Macbook</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Macbook</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Macbook</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+              </div>
+              <div class="table" v-if="activeAllPriseTab === 3">
+                <div class="table__row">
+                  <div class="table__col">Название услуги</div>
+                  <div class="table__col">Время ремонта</div>
+                  <div class="table__col">Цена на ремонт</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipod</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipod</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipod</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipod</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipod</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipod</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipod</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipod</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Ipod</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+              </div>
+              <div class="table" v-if="activeAllPriseTab === 4">
+                <div class="table__row">
+                  <div class="table__col">Название услуги</div>
+                  <div class="table__col">Время ремонта</div>
+                  <div class="table__col">Цена на ремонт</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Apple Watch</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Apple Watch</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Apple Watch</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Apple Watch</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Apple Watch</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Apple Watch</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Apple Watch</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Apple Watch</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Apple Watch</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+                <div class="table__row">
+                  <div class="table__col">Замена разъема для наушников</div>
+                  <div class="table__col">1-2 часа</div>
+                  <div class="table__col">от 1500 руб.</div>
+                </div>
+              </div>
+              <div class="all-price__btn" @click="activeModal = 'short-form'">
+                <div class="btn">Оставить заявку
+                  <div class="btn__mobile-hide">на ремонт</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </transition>
+      <transition name="fade">
+        <div class="modal modal--large" v-show="activeModal === 'video'" @click.self="activeModal = null; videoPlay()">
+          <div class="modal__content">
+            <div class="modal__close" @click="activeModal = null"></div>
+            <video id="video" controls width="100%" height="auto" autoplay v-if="activeModal=='video'">
+              <source src="img/video/videoplayback.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </transition>
+      <transition name="fade">
+        <div class="modal modal--mobile-menu" v-show="activeModal === 'menu'" @click.self="activeModal = null; videoPlay()">
+          <div class="modal__content">
+            <transition name="side">
+              <div class="mobile-menu" v-show="activeModal === 'menu'" v-bind:class="{ 'mobile-menu--open': activeModal }">
+                <div class="mobile-menu__wrapper">
+                  <nav class="header__nav" data-gumshoe="data-gumshoe"><a class="header__nav-link scroll-to" href="#props" @click="activeModal = null">Премущества</a><a class="header__nav-link scroll-to" href="#services" @click="activeModal = null">Услуги</a><a class="header__nav-link scroll-to" href="#reviews" @click="activeModal = null">Отзывы</a><a class="header__nav-link scroll-to" href="#faq" @click="activeModal = null">FAQ</a></nav>
+                  <div class="mobile-menu__recall">
+                    <div class="mobile-menu__title">Колл-центр:</div><a class="mobile-menu__recall-link" href="tel:123">+38 (093) 333-22-111</a>
+                    <button class="mobile-menu__recall-btn btn">Обратный Звонок</button>
+                  </div>
+                  <div class="mobile-menu__schedule">
+                    <div class="mobile-menu__title">Время работы:</div>
+                    <div class="mobile-menu__schedule-text">Пн. - Пт. (10:00 - 18-00))</div>
+                    <div class="mobile-menu__schedule-text">Сб. - Вс. (11:00 - 16-00))</div>
+                  </div>
+                  <div class="mobile-menu__location">
+                    <div class="mobile-menu__title">Как к нам пройти</div>
+                    <button class="header__location-btn btn--underline">Смотреть видео</button>
+                  </div>
+                  <div class="mobile-menu__messenger">
+                    <div class="mobile-menu__title">связь в соц. сетях и месенджерах:</div>
+                    <div class="messenger"><a class="messenger__item messenger__item--viber" href=""></a><a class="messenger__item messenger__item--telegram" href=""></a><a class="social__item social__item--instagram" href="" target="_blank"></a></div>
+                  </div>
+                </div>
+              </div>
+            </transition>
+          </div>
+        </div>
+      </transition>
+      <script type="text/x-template" id="order-form">
+        <form class="form" v-on:submit="submit" action="#!">
+          <transition name="fade">
+            <div class="form__success" v-if="sent">
+              <div class="form__icon"></div>
+              <div class="hero__form-title form__title">Спасибо!</div>
+              <div class="form__text">В ближайшее время наш менеджер перезвонит Вам.</div>
+            </div>
+          </transition>
+          <div class="hero__form-title form__title" v-html="title"></div>
+          <div class="form__text" v-html="text"></div>
+          <div class="input-row">
+            <div class="input input--icon-1" v-bind:class="{ 'input--error': name === null }">
+              <input class="input__elem" type="text" name="name" placeholder="Ваше имя" v-model="name">
+            </div>
+            <div class="input input--icon-2" v-bind:class="{ 'input--error': phone === null }">
+              <input class="input__elem" type="text" name="phone" placeholder="Ваш телефон" v-model="phone">
+            </div>
+          </div>
+          <div class="input input--icon-3" v-if="textarea === 'true'">
+            <textarea class="input__elem" type="text" name="msg" placeholder="Опишите поломку(необязательно)" v-model="msg"></textarea>
+          </div>
+          <div class="input">
+            <button class="btn" type="submit">Отправить заявку</button>
+          </div>
+          <div class="input">
+            <label class="input__checkbox-label">
+              <input class="input__checkbox" v-model="agree" type="checkbox" name="agree" v-bind:class="{ 'input__checkbox--error': agree === null }">
+              <div class="input__checkbox-label-text">
+                <div class="input__checkbox-label-wrap">Принимаю условия <a class="input__checkbox-label-link" href="/agreement.html">Пользовательского соглашения</a></div>
+              </div>
+            </label>
+          </div>
+        </form>
+      </script>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/libs.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="scripts/services.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+  </body>
+</html>
