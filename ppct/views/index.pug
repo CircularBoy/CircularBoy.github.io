@@ -1,0 +1,45 @@
+include inc/var.pug
+include inc/mixins.pug
+doctype html
+html(lang='ru' dir='ltr')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+    block meta
+      meta(name='description', content= meta.description)
+      meta(itemprop='name' content= meta.title)
+      meta(itemprop='description' content= meta.description)
+      meta(itemprop='image' content= meta.image)
+      meta(property='og:title' content= meta.title)
+      meta(property='og:site_name' content= meta.title)
+      meta(property='og:url' content= meta.url)
+      meta(property='og:description' content= meta.description)
+      meta(property='og:image' content= meta.image)
+    block title
+      title MobileHelp
+    block head
+      link(href='styles/libs.min.css' rel='stylesheet')
+      link(href='styles/main.css' rel='stylesheet')
+      link(rel='shortcut icon' href='images/icons/favicon.png' type='image/png')
+
+  body
+    #app
+      include blocks/header.pug
+      include blocks/hero.pug
+      //- include blocks/props.pug
+      include blocks/works.pug
+      include blocks/services.pug
+      include blocks/why.pug
+      include blocks/reviews.pug
+      //- include blocks/faq.pug
+      include blocks/action.pug
+      include blocks/footer.pug
+      include blocks/modal.pug
+      include blocks/form.pug
+
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(type='text/javascript' src='scripts/libs.min.js')
+    script(type='text/javascript' src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js')
+    script(type='text/javascript' src='scripts/services.js')
+    script(type='text/javascript' src='scripts/main.js')

@@ -1,0 +1,29 @@
+transition(name="side")
+  .mobile-menu(v-show="activeModal === 'menu'" v-bind:class="{ 'mobile-menu--open': activeModal }")
+    .mobile-menu__wrapper
+      nav.header__nav(data-gumshoe="data-gumshoe")
+        a.header__nav-link.scroll-to(href="#props" @click="activeModal = null") Премущества
+        a.header__nav-link.scroll-to(href="#services" @click="activeModal = null") Услуги
+        a.header__nav-link.scroll-to(href="#reviews" @click="activeModal = null") Отзывы
+        a.header__nav-link.scroll-to(href="#faq" @click="activeModal = null") FAQ
+
+      .mobile-menu__recall
+        .mobile-menu__title Колл-центр:
+        a.mobile-menu__recall-link(href="tel:123") +38 (093) 333-22-111
+        button.mobile-menu__recall-btn.btn Обратный Звонок
+
+      .mobile-menu__schedule
+        .mobile-menu__title Время работы:
+        .mobile-menu__schedule-text Пн. - Пт. (10:00 - 18-00))
+        .mobile-menu__schedule-text Сб. - Вс. (11:00 - 16-00))
+        
+      .mobile-menu__location
+        .mobile-menu__title Как к нам пройти
+        button.header__location-btn.btn--underline Смотреть видео
+
+      .mobile-menu__messenger
+        .mobile-menu__title связь в соц. сетях и месенджерах:
+        .messenger
+          a.messenger__item.messenger__item--viber(href="")
+          a.messenger__item.messenger__item--telegram(href="")
+          a.social__item.social__item--instagram(href="" target="_blank")

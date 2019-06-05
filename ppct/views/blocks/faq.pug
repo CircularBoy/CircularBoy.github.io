@@ -1,0 +1,20 @@
+#faq.faq
+  .container
+    h2.faq__title.block-title Часто задаваемые вопросы
+
+    .faq__list
+      .faq__list-col
+        each i in [0,1,2]
+          .faq__item(@click="activeTabFaq === " + i + " ? activeTabFaq = null : activeTabFaq = " + i v-bind:class="{ active: activeTabFaq === " + i + "}")
+            .faq__item-icon
+            .faq__item-content
+              .faq__item-title Как сдать устройство iPhone в ремонт?
+              .faq__item-text Выберите услугу на ремонт из представленных на сайте или же оставьте заявку и наш менеджер проконсультирует Вас подробнее о дальнейших действиях
+
+      .faq__list-col
+        each i in [3,4,5]
+          .faq__item(@click="activeTabFaq === " + i + " ? activeTabFaq = null : activeTabFaq = " + i v-bind:class="{ active: activeTabFaq === " + i + "}")
+            .faq__item-icon
+            .faq__item-content
+              .faq__item-title Как сдать устройство iPhone в ремонт?
+              .faq__item-text  Выберите услугу на ремонт из представленных на сайте или же оставьте заявку и наш менеджер проконсультирует Вас подробнее о дальнейших действиях

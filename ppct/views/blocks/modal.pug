@@ -1,0 +1,50 @@
+transition(name="fade")
+  .modal(v-show="activeModal === 'short-form'" @click.self="activeModal = null")
+    .modal__content
+      .modal__close(@click="activeModal = null")
+      +form(3)
+
+transition(name="fade")
+  .modal.modal--large(v-show="activeModal === 'all-price'" @click.self="activeModal = null")
+    .modal__content
+      .modal__close(@click="activeModal = null")
+      .all-price
+        .all-price__title Прайс-лист на ремонт iPhone
+
+        .all-price__tabs
+          each name, i in servicesTabs
+            .all-price__tabs-item(@click="activeAllPriseTab=" + i v-bind:class="{ active: activeAllPriseTab === " + i + "}")= name
+
+        each name, i in servicesTabs
+          .table(v-if="activeAllPriseTab === " + i)
+            .table__row
+              .table__col Название услуги
+              .table__col Время ремонта
+              .table__col Цена на ремонт
+
+            each i in [1,2,3,4,5,6,7,8,9]
+              .table__row
+                .table__col= name
+                .table__col 1-2 часа
+                .table__col от 1500 руб.
+
+              .table__row
+                .table__col Замена разъема для наушников
+                .table__col 1-2 часа
+                .table__col от 1500 руб.
+
+        .all-price__btn(@click="activeModal = 'short-form'")
+          .btn Оставить заявку
+            .btn__mobile-hide на ремонт
+
+transition(name="fade")
+  .modal.modal--large(v-show="activeModal === 'video'" @click.self="activeModal = null")
+    .modal__content
+      .modal__close(@click="activeModal = null")
+      video#video(controls width="100%" height="auto" autoplay v-if="activeModal=='video'")
+        source(src="img/video/videoplayback.mp4" type="video/mp4")
+
+transition(name="fade")
+  .modal.modal--mobile-menu(v-show="activeModal === 'menu'" @click.self="activeModal = null;")
+    .modal__content
+      include mobile-menu.pug

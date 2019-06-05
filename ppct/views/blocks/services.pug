@@ -1,0 +1,47 @@
+#services.services
+  .services__container.container
+    .services__title.block-title Популярные услуги
+
+    .services__tabs
+        .services__tabs-item.btn.btn--outline(
+          v-for="(service, i) in services"
+          @click="activeTabServices = i, valueSelect='Выберите модель', selectIndex = false"
+          v-bind:class="{ active: activeTabServices === i}"
+          v-html="service.type")
+
+  .services__container.container
+    .services__select.select(:class="{ open: openSelect }")
+      .select__name(@click="openSelect = !openSelect" v-html="valueSelect")
+      .select__list
+        .select__item(
+          v-for="(item, index) in services[activeTabServices].devices"
+          @click="glidesl(), selectIndex = index, selectClick(activeTabServices, index), openSelect = !openSelect"
+          :class="{ checked: item.checked }"
+          v-html="item.model"
+          )
+          .select__item-name(v-text="item.model")
+
+    template(v-for="(device, index) in services" )
+      .glide.services__slider(
+        v-for="(model, i) in device.devices"
+        v-bind:class="{'services__slider--show': index === activeTabServices && i === selectIndex}"
+      )
+        .glide__track(data-glide-el='track')
+          .glide__slides.services__slides
+            .glide__slide.services__slide(v-for="(service, v) in model.services" )
+              .services__item
+                .services__item-content
+                  .services__item-title(v-html="service.title")
+                  .services__item-text(v-html="service.time")
+                  .services__item-text Цена от: 
+                    .services__item-price(v-html="service.price")
+
+                  .services__item-btn.btn.btn--outline-color(@click="activeModal = 'short-form'") Заказать
+   
+
+        .glide__bullets.services__bullets(data-glide-el='controls[nav]')
+          .glide__bullet(v-for="(service, v) in model.services" :data-glide-dir="'='+v")
+
+  .container
+    .services__btn(@click="activeModal = 'short-form'")
+      .btn.btn--outline У меня не Apple

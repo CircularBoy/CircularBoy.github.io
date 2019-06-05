@@ -56,25 +56,31 @@ Vue.component("order-form", {
 new Vue({
   el: '#app',
   data: {
-    activeTabServices: 0,
     activeTabFaq: 0,
     activeAllPriseTab: 0,
     activeModal: null,
     loadMoreReviews: false,
     services: services,
-    devices: devices,
+    activeTabServices: 0,
     openSelect: false,
-    valueSelect:  'Выберите модель',
+    valueSelect: 'Выберите модель',
+    selectIndex: false,
     video: false
   },
   methods: {
-    selectClick: function(index) {
-      for(var i=0; i < this.devices.length; i++) {
-        console.log(devices[i]);
-        console.log(i === index);
-        i !== index ? this.devices[i].checked = false : this.devices[i].checked = true;
+    selectClick: function(indexServices, indexDevices) {
+      var devices = this.services[indexServices].devices;
+      for(var i=0; i < devices.length; i++) {
+        i !== indexDevices ? devices[i].checked = false : devices[i].checked = true;
       }
-      this.valueSelect = this.devices[index].model;
+      this.valueSelect = devices[indexDevices].model;
+      // slider(sliderArr);
+      // servicesSliderFn();
+      // console.log(this.services[this.activeTabServices].devices[0]);
+    },
+    glidesl: function() {
+      // setTimeout(slider(sliderArr), 1000);
+      // servicesSliderFn();
     }
   }
 });
@@ -124,15 +130,14 @@ document.body.classList.add('is-load');
 // Services slider
 //
 
-var servicesSlider = document.querySelector('.services__slider');
+var sliderArr = document.querySelectorAll('.services__slider');
 
-if (servicesSlider) {
-  var servicesSliderInit = false;
-
-  const servicesSliderFn = function () {
-    // if (window.innerWidth < 992) {
+function slider(arr) {
+  arr.forEach(function(item) {
+    var servicesSliderInit = false;
+    var servicesSliderFn = function () {
       if (!servicesSliderInit) {
-        servicesSliderInit = new Glide(servicesSlider, {
+        servicesSliderInit = new Glide(item, {
           perView: 4,
           bound: true,
           gap: 20,
@@ -147,34 +152,111 @@ if (servicesSlider) {
             }
           }
         });
-
-        servicesSliderInit.on('move', function () {
-          let prentsNode = servicesSliderInit.selector;
-          let bullets = prentsNode.querySelectorAll('.glide__bullet');
-          bullets.forEach(function (elem) {
-            elem.classList.remove('glide__bullet--active');
-          });
-
-          let activeBullet = prentsNode.querySelector(
-            '.glide__bullet[data-glide-dir="=' + servicesSliderInit.index + '"]'
-          );
-          activeBullet.classList.add('glide__bullet--active');
-        });
-
         servicesSliderInit.mount();
       }
-    // } else {
-    //   // destroy slider if init
-    //   if (typeof servicesSliderInit === 'object') {
-    //     servicesSliderInit.destroy();
-    //     servicesSliderInit = false;
-    //   }
-    // }
-  };
+      servicesSliderInit.on('move', function () {
+        var prentsNode = servicesSliderInit.selector;
+        var bullets = prentsNode.querySelectorAll('.glide__bullet');
+        bullets.forEach(function (elem) {
+          elem.classList.remove('glide__bullet--active');
+        });
 
-  servicesSliderFn();
-
-  window.addEventListener('resize', servicesSliderFn);
-
-  servicesSlider.classList.add('services__slider--show');
+        var activeBullet = prentsNode.querySelector(
+          '.glide__bullet[data-glide-dir="=' + servicesSliderInit.index + '"]'
+        );
+        activeBullet.classList.add('glide__bullet--active');
+      });
+    };
+    servicesSliderFn();
+  });
 }
+// setTimeout(slider(sliderArr), 1000)
+slider(sliderArr);
+// var servicesSlider = document.querySelector('.services__slider');
+
+// if (servicesSlider) {
+//   var servicesSliderInit = false;
+
+//   var servicesSliderFn = function () {
+//     // if (window.innerWidth < 992) {
+//       if (!servicesSliderInit) {
+//         servicesSliderInit = new Glide(servicesSlider, {
+//           perView: 4,
+//           bound: true,
+//           gap: 20,
+//           peek: 20,
+//           breakpoints: {
+//             740: {
+//               perView: 2
+//             },
+//             510: {
+//               perView: 1,
+//               peek: 50
+//             }
+//           }
+//         });
+
+//         // servicesSliderInit.on('move', function () {
+//         //   let prentsNode = servicesSliderInit.selector;
+//         //   let bullets = prentsNode.querySelectorAll('.glide__bullet');
+//         //   bullets.forEach(function (elem) {
+//         //     elem.classList.remove('glide__bullet--active');
+//         //   });
+
+//         //   let activeBullet = prentsNode.querySelector(
+//         //     '.glide__bullet[data-glide-dir="=' + servicesSliderInit.index + '"]'
+//         //   );
+//         //   activeBullet.classList.add('glide__bullet--active');
+//         // });
+
+//         servicesSliderInit.mount();
+//       }
+//     // } else {
+//     //   // destroy slider if init
+//     //   if (typeof servicesSliderInit === 'object') {
+//     //     servicesSliderInit.destroy();
+//     //     servicesSliderInit = false;
+//     //   }
+//     // }
+//   };
+
+//   servicesSliderFn();
+
+//   window.addEventListener('resize', servicesSliderFn);
+
+//   servicesSlider.classList.add('services__slider--show');
+// }
+//
+//parser
+//
+// function parser() {
+//   var arr = [];
+//   var selector = document.querySelectorAll('#pricelist .service');
+//   selector.forEach(function(item) {
+//     var title,time,price;
+//     //title
+//     title = item.textContent;
+//     if(title.indexOf('*') > -1) title = title.substr(1);
+
+//     //price
+//     price = item.nextElementSibling.textContent;
+//     if(price.indexOf('»') > -1) {
+//       var old = price.split('»');
+//       price = old[0] + ' грн.';
+//     }
+//     //time
+//     // time = item.nextElementSibling.nextElementSibling.textContent;
+//     // time = time.substr(0, time.length - 3);
+//     // if(time.indexOf('»') > -1) time = time.substr(0, time.length - 1);
+//     var obj = {
+//       title: title,
+//       time: time,
+//       price: price
+//     };
+//     arr.push(obj);
+//   });
+
+//   return arr;
+// }
+
+// var data = JSON.stringify(parser(), null, 2);

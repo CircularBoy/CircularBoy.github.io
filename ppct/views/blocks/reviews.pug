@@ -1,0 +1,17 @@
+#reviews.reviews
+  #reviews-app
+    .container
+      .reviews__title.block-title Отзывы наших клиентов
+
+      .reviews__list
+        each i in [1,2,3]
+          .reviews__item
+            img.reviews__item-photo(src="img/reviews/review-" + i + ".jpg")
+            .reviews__item-content
+              .reviews__item-title Мария,
+                .reviews__item-title-mark (15.10.2018)
+              .reviews__item-text После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до фин. результата), была приятно удивлена оперативностью и качеством работы — за 15 минут уверенно поменяли экран, прямо «не отходя от кассы», все перед тобой ) Спасибо!
+
+
+      .reviews__btn
+        a.btn.btn--outline.icon-more(href="https://instagram.com" target="_blank") Смотреть в инстаграмме

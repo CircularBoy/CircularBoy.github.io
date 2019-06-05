@@ -30,7 +30,7 @@
             </div>
             <div class="header__location">
               <p class="header__location-text">Как к нам пройти</p>
-              <button class="header__location-btn btn--underline" @click="activeModal = 'video', videoPlay()">Смотреть видео</button>
+              <button class="header__location-btn btn--underline" @click="activeModal = 'video'">Смотреть видео</button>
             </div>
             <div class="header__schedule">
               <div class="header__schedule-text">Пн. - Пт. (10:00 - 18-00)</div>
@@ -116,47 +116,41 @@
         <div class="services__container container">
           <div class="services__title block-title">Популярные услуги</div>
           <div class="services__tabs">
-            <div class="services__tabs-item btn btn--outline" @click="activeTabServices=0" v-bind:class="{ active: activeTabServices === 0}">Iphone</div>
-            <div class="services__tabs-item btn btn--outline" @click="activeTabServices=1" v-bind:class="{ active: activeTabServices === 1}">Ipad</div>
-            <div class="services__tabs-item btn btn--outline" @click="activeTabServices=2" v-bind:class="{ active: activeTabServices === 2}">Macbook</div>
-            <div class="services__tabs-item btn btn--outline" @click="activeTabServices=3" v-bind:class="{ active: activeTabServices === 3}">Ipod</div>
-            <div class="services__tabs-item btn btn--outline" @click="activeTabServices=4" v-bind:class="{ active: activeTabServices === 4}">Apple Watch</div>
+            <div class="services__tabs-item btn btn--outline" v-for="(service, i) in services" @click="activeTabServices = i, valueSelect='Выберите модель', selectIndex = false" v-bind:class="{ active: activeTabServices === i}" v-html="service.type"></div>
           </div>
         </div>
         <div class="services__container container">
           <div class="services__select select" :class="{ open: openSelect }">
             <div class="select__name" @click="openSelect = !openSelect" v-html="valueSelect"></div>
             <div class="select__list">
-              <div class="select__item" v-for="(item, index) in devices" @click="selectClick(index), openSelect = !openSelect" :class="{ checked: item.checked }">
+              <div class="select__item" v-for="(item, index) in services[activeTabServices].devices" @click="glidesl(), selectIndex = index, selectClick(activeTabServices, index), openSelect = !openSelect" :class="{ checked: item.checked }" v-html="item.model">
                 <div class="select__item-name" v-text="item.model"></div>
               </div>
             </div>
           </div>
-          <div class="glide services__slider">
-            <div class="glide__track" data-glide-el="track">
-              <div class="glide__slides services__slides">
-                <div class="glide__slide services__slide" v-for="service in services[activeTabServices]">
-                  <div class="services__item">
-                    <div class="services__item-photo" v-bind:style="{ 'background-image': 'url(img/services/' + service.img + ')'}"></div>
-                    <div class="services__item-content">
-                      <div class="services__item-title" v-html="service.title"></div>
-                      <div class="services__item-text" v-html="service.time"></div>
-                      <div class="services__item-text">Цена от: 
-                        <div class="services__item-price" v-html="service.price"></div>
+          <template v-for="(device, index) in services">
+            <div class="glide services__slider" v-for="(model, i) in device.devices" v-bind:class="{'services__slider--show': index === activeTabServices &amp;&amp; i === selectIndex}">
+              <div class="glide__track" data-glide-el="track">
+                <div class="glide__slides services__slides">
+                  <div class="glide__slide services__slide" v-for="(service, v) in model.services">
+                    <div class="services__item">
+                      <div class="services__item-content">
+                        <div class="services__item-title" v-html="service.title"></div>
+                        <div class="services__item-text" v-html="service.time"></div>
+                        <div class="services__item-text">Цена от: 
+                          <div class="services__item-price" v-html="service.price"></div>
+                        </div>
+                        <div class="services__item-btn btn btn--outline-color" @click="activeModal = 'short-form'">Заказать</div>
                       </div>
-                      <div class="services__item-btn btn btn--outline-color" @click="activeModal = 'short-form'">Заказать</div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="glide__bullets services__bullets" data-glide-el="controls[nav]">
+                <div class="glide__bullet" v-for="(service, v) in model.services" :data-glide-dir="'='+v"></div>
+              </div>
             </div>
-            <div class="glide__bullets services__bullets" data-glide-el="controls[nav]">
-              <div class="glide__bullet" data-glide-dir="=0"></div>
-              <div class="glide__bullet" data-glide-dir="=1"></div>
-              <div class="glide__bullet" data-glide-dir="=2"></div>
-              <div class="glide__bullet" data-glide-dir="=3"></div>
-            </div>
-          </div>
+          </template>
         </div>
         <div class="container">
           <div class="services__btn" @click="activeModal = 'short-form'">
@@ -224,7 +218,7 @@
             <div class="reviews__list">
               <div class="reviews__item"><img class="reviews__item-photo" src="img/reviews/review-1.jpg">
                 <div class="reviews__item-content">
-                  <div class="reviews__item-title">Мария, г. Москва
+                  <div class="reviews__item-title">Мария,
                     <div class="reviews__item-title-mark">(15.10.2018)</div>
                   </div>
                   <div class="reviews__item-text">После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до фин. результата), была приятно удивлена оперативностью и качеством работы — за 15 минут уверенно поменяли экран, прямо «не отходя от кассы», все перед тобой ) Спасибо!</div>
@@ -232,7 +226,7 @@
               </div>
               <div class="reviews__item"><img class="reviews__item-photo" src="img/reviews/review-2.jpg">
                 <div class="reviews__item-content">
-                  <div class="reviews__item-title">Мария, г. Москва
+                  <div class="reviews__item-title">Мария,
                     <div class="reviews__item-title-mark">(15.10.2018)</div>
                   </div>
                   <div class="reviews__item-text">После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до фин. результата), была приятно удивлена оперативностью и качеством работы — за 15 минут уверенно поменяли экран, прямо «не отходя от кассы», все перед тобой ) Спасибо!</div>
@@ -240,42 +234,12 @@
               </div>
               <div class="reviews__item"><img class="reviews__item-photo" src="img/reviews/review-3.jpg">
                 <div class="reviews__item-content">
-                  <div class="reviews__item-title">Мария, г. Москва
+                  <div class="reviews__item-title">Мария,
                     <div class="reviews__item-title-mark">(15.10.2018)</div>
                   </div>
                   <div class="reviews__item-text">После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до фин. результата), была приятно удивлена оперативностью и качеством работы — за 15 минут уверенно поменяли экран, прямо «не отходя от кассы», все перед тобой ) Спасибо!</div>
                 </div>
               </div>
-              <transition name="fade">
-                <div class="reviews__item" v-if="loadMoreReviews"><img class="reviews__item-photo" src="img/reviews/review-1.jpg">
-                  <div class="reviews__item-content">
-                    <div class="reviews__item-title">Мария, г. Москва
-                      <div class="reviews__item-title-mark">(15.10.2018)</div>
-                    </div>
-                    <div class="reviews__item-text">После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до фин. результата), была приятно удивлена оперативностью и качеством работы — за 15 минут уверенно поменяли экран, прямо «не отходя от кассы», все перед тобой ) Спасибо!</div>
-                  </div>
-                </div>
-              </transition>
-              <transition name="fade">
-                <div class="reviews__item" v-if="loadMoreReviews"><img class="reviews__item-photo" src="img/reviews/review-2.jpg">
-                  <div class="reviews__item-content">
-                    <div class="reviews__item-title">Мария, г. Москва
-                      <div class="reviews__item-title-mark">(15.10.2018)</div>
-                    </div>
-                    <div class="reviews__item-text">После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до фин. результата), была приятно удивлена оперативностью и качеством работы — за 15 минут уверенно поменяли экран, прямо «не отходя от кассы», все перед тобой ) Спасибо!</div>
-                  </div>
-                </div>
-              </transition>
-              <transition name="fade">
-                <div class="reviews__item" v-if="loadMoreReviews"><img class="reviews__item-photo" src="img/reviews/review-3.jpg">
-                  <div class="reviews__item-content">
-                    <div class="reviews__item-title">Мария, г. Москва
-                      <div class="reviews__item-title-mark">(15.10.2018)</div>
-                    </div>
-                    <div class="reviews__item-text">После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до фин. результата), была приятно удивлена оперативностью и качеством работы — за 15 минут уверенно поменяли экран, прямо «не отходя от кассы», все перед тобой ) Спасибо!</div>
-                  </div>
-                </div>
-              </transition>
             </div>
             <div class="reviews__btn"><a class="btn btn--outline icon-more" href="https://instagram.com" target="_blank">Смотреть в инстаграмме</a></div>
           </div>
@@ -839,7 +803,7 @@
         </div>
       </transition>
       <transition name="fade">
-        <div class="modal modal--large" v-show="activeModal === 'video'" @click.self="activeModal = null; videoPlay()">
+        <div class="modal modal--large" v-show="activeModal === 'video'" @click.self="activeModal = null">
           <div class="modal__content">
             <div class="modal__close" @click="activeModal = null"></div>
             <video id="video" controls width="100%" height="auto" autoplay v-if="activeModal=='video'">
@@ -849,7 +813,7 @@
         </div>
       </transition>
       <transition name="fade">
-        <div class="modal modal--mobile-menu" v-show="activeModal === 'menu'" @click.self="activeModal = null; videoPlay()">
+        <div class="modal modal--mobile-menu" v-show="activeModal === 'menu'" @click.self="activeModal = null;">
           <div class="modal__content">
             <transition name="side">
               <div class="mobile-menu" v-show="activeModal === 'menu'" v-bind:class="{ 'mobile-menu--open': activeModal }">

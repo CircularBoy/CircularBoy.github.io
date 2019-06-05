@@ -1,0 +1,31 @@
+script(type="text/x-template" id="order-form")
+  form.form(v-on:submit="submit" action="#!")
+    transition(name="fade")
+      .form__success(v-if="sent")
+        .form__icon
+        .hero__form-title.form__title Спасибо!
+        .form__text В ближайшее время наш менеджер перезвонит Вам.
+
+    .hero__form-title.form__title(v-html="title")
+    .form__text(v-html="text")
+
+    .input-row
+      .input.input--icon-1(v-bind:class="{ 'input--error': name === null }")
+        input.input__elem(type="text" name="name" placeholder="Ваше имя" v-model="name")
+
+      .input.input--icon-2(v-bind:class="{ 'input--error': phone === null }")
+        input.input__elem(type="text" name="phone" placeholder="Ваш телефон" v-model="phone")
+
+    .input.input--icon-3(v-if="textarea === 'true'")
+      textarea.input__elem(type="text" name="msg" placeholder="Опишите поломку(необязательно)" v-model="msg")
+
+    .input
+      button.btn(type="submit") Отправить заявку
+
+    .input
+      label.input__checkbox-label
+        input.input__checkbox(v-model="agree" type="checkbox" name="agree" v-bind:class="{ 'input__checkbox--error': agree === null }")
+
+        .input__checkbox-label-text
+          .input__checkbox-label-wrap Принимаю условия 
+            a.input__checkbox-label-link(href="/agreement.html") Пользовательского соглашения
